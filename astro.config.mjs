@@ -11,5 +11,7 @@ export default defineConfig({
     plugins: [astroImageTools]
   },
   server: { port: 1234, host: true},
-  integrations: [svelte(), tailwind(), sitemap()]
+  integrations: [svelte(), tailwind(), sitemap()],
+  site: 'https://rndexe.github.io/',
+  base: 'upagri'
 });

@@ -12,6 +12,4 @@ export default defineConfig({
   },
   server: { port: 1234, host: true},
   integrations: [svelte(), tailwind(), sitemap()],
-  site: 'https://rndexe.github.io/',
-  base: 'upagri'
 });

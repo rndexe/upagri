@@ -1,0 +1,26 @@
+---
+const logos = [
+    { src: 'UEA_2016_Logo.png', url: 'https://www.uea.ac.uk/about/school-of-international-development' },
+    { src: 'iihs.png', url: 'https://iihs.co.in/' },
+    { src: 'TOU_tanzania_74.png', url: 'https://www.out.ac.tz/' },
+    { src: 'TAHA_logo.png', url: 'http://www.taha.or.tz/' },
+    { src: 'ardhi_logo.png', url: 'https://www.aru.ac.tz/' },
+    { src: 'IIT_Madras_Logo.png', url: 'https://www.iitm.ac.in/' },
+    { src: 'APU_logo.png', url: 'https://azimpremjiuniversity.edu.in/' },
+]
+---
+
+<footer>
+    <div class="h-fit mx-8 lg:mx-16 my-12">
+        <p class="font-azeret font-bold text-green text-lg md:text-xl lg:text-2xl my-4 lg:my-2">Partners</p>
+        <div class="flex gap-4 md:gap-8 flex-wrap md:flex-nowrap justify-evenly md:justify-between items-center">
+            {
+            logos.map( (item) => (
+            <a class="shrink" href={item.url}>
+                <img src={"/partner_logos/"+item.src} alt={item.src} />
+            </a>
+            ))
+            }
+        </div>
+    </div>
+</footer>

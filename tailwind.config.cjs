@@ -1,16 +1,27 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-    content: ['./src/**/*.{astro,html,js,jsx,md,svelte,ts,tsx,vue}'],
+    content: ['./src/**/*.{astro,svelte}'],
     theme: {
-        extend: {
-            fontFamily: {
-                'h': ['Azeret Mono', 'monospace']
+        colors: {
+            transparent: 'transparent',
+            current: 'currentColor',
+            'green': {
+                DEFAULT: '#2C5318',
+                dark: '#38503D',
             },
-            colors: {
-                'primary': '#2C5318',
-                'body': '#2D3636',
-                'base': '#F0F2EA'
+            'gray': {
+                DEFAULT: '#2D3636',
+                10: '#BDBDBD',
+                20: '#4F4F4F',
             },
+            'eggshell': '#F0F2EA',
+            'white': '#ffffff',
+            'black': '#000000'
+        },
+        fontFamily: {
+            'azeret': ['Azeret Mono', 'monospace'],
+            'pt': ['PT Sans ', 'sans-serif']
+
         },
     },
     plugins: [],

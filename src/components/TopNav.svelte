@@ -14,7 +14,7 @@
     ];
 </script>
 
-<nav class="fixed flex bg-eggshell w-full h-14 z-100">
+<nav class="fixed flex bg-eggshell w-full h-14 z-50">
     <div class="flex grow items-center justify-between border-b border-green mx-8 lg:mx-16">
         <a class="font-pt text-xl md:text-2xl text-green hover:opacity-50 transition-opacity" href="/upagri/">
             UPAgrI

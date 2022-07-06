@@ -9,14 +9,14 @@
     "preview": "astro preview"
   },
   "devDependencies": {
+    "@astrojs/image": "^0.0.4",
     "@astrojs/sitemap": "^0.2.4",
     "@astrojs/svelte": "^0.2.0",
     "@astrojs/tailwind": "^0.2.2",
     "astro": "^1.0.0-beta.63",
     "svelte": "^3.48.0",
-    "svelte-hamburgers": "^4.0.1"
-  },
-  "dependencies": {
+    "svelte-hamburgers": "^4.0.1",
+    "animate.css": "^4.1.1",
     "astro-imagetools": "^0.6.10"
   }
 }

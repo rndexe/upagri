@@ -3,6 +3,7 @@ dist/
 
 # dependencies
 node_modules/
+src/images/
 
 # logs
 npm-debug.log*

@@ -1,0 +1,22 @@
+---
+const trail = Astro.props.trail
+const url = new URL(Astro.request.url)
+//TODO maybe generate breacrumbs from url?
+---
+
+<nav class="my-2">
+    {trail.map(function (crumb,i,array)  {
+        if (i === array.length -1)
+            return <a href={crumb.url} class="text-gray-20">{crumb.title}</a>
+        else 
+            return <a href={crumb.url} class="text-gray-10">{crumb.title}</a><span class="">/</span>
+    })}
+</nav>
+<style lang="postcss">
+    a {
+        @apply hover:underline;
+    }
+    span {
+        @apply px-1.5 text-gray-10;
+    }
+</style>

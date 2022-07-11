@@ -1,0 +1,19 @@
+---
+//import { Image } from "@astrojs/image/components"
+import team from "@data/about.json"
+//const images = await Astro.glob("../assets/about/*.webp")
+//console.log(images)
+---
+
+{team.map((member,i) =>
+<div class="flex gap-8 my-16">
+    <div class="w-72">
+        <img src={member.pic} alt={member.name} class="rounded-lg shadow-lg shadow-grey" />
+    </div>
+    <div class="max-w-[700px]">
+        <h3 class="font-azeret font-semibold text-xl text-green">{member.name}</h3>
+        <h4 class="font-pt font-bold text-lg text-grey">{member.position}</h4>
+        <p class="my-6 whitespace-pre-line">{member.text}</p>
+    </div>
+</div>
+)}

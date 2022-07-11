@@ -1,0 +1,76 @@
+---
+import Partners from "@components/Partners.astro"
+import Page from "@components/Page.astro"
+import Breadcrumbs from "@components/Breadcrumbs.astro"
+import Team from "@components/Team.astro"
+//import pic from "../images/about/1.webp"
+
+
+//TODO load this data from a file?
+const trail = [
+    { title: "Home", url: "/" },
+    { title: "About", url: "about" }
+]
+
+---
+
+<Page>
+    <Breadcrumbs {trail} />
+    <main class="pl-40 pr-40">
+        <section class="mt-8 mb-12 max-w-[700px]">
+            <h1 class="font-azeret text-4xl font-bold text-green">About</h1>
+            <p class="my-8">
+                Urban and Peri-Urban Agriculture may be an answer to the environmental and wellbeing challenges of a
+                rapidly urbanising world. Through an exploration of seven thematic sections, the exhibition seeks to
+                draw
+                attention to the multifaceted challenges of the urban environment by highlighting the impact of urban
+                agriculture in
+                addressing topics such as climate change, environmental change, food security, gender equality, land
+                security and more.
+            </p>
+            <p class="my-8">
+                The Global South is urbanising at an unprecedented rate: by 2050, urban areas are expected to increase
+                by
+                2.5-3
+                billion people, 90% of whom will be in Asia and Africa. The reality of this ‘urban century’ is twofold.
+                On
+                the
+                one
+                hand, it is marked by growing inequality, increasing demands for urban services, and spreading of
+                ‘mega-city
+                problems’ such as congestion, shrinking green spaces, a proliferation of informal settlements, and
+                increasing
+                greenhouse gas emissions. On the other hand, urban areas are hailed as sites of tremendous opportunity,
+                to
+                improve well-being and enable sustainable development, by leapfrogging unsustainable trajectories. Green
+                infrastructure
+                or
+                nature-based solutions are identified as one of the key ways of achieving the triple goals of
+                sustainable
+                development, human well-being, and climate action through fostering biodiversity, maintaining air
+                quality,
+                regulating water resources, providing food and nutrition, improving public health, and building
+                psychosocial
+                values
+                that improve non-material well-being.
+
+                Recognising the challenges of sustainable urbanisation and focussing on food growing as a key space to
+                examine
+                solutions, the Urban and peri-urban agriculture as green infrastructure (UP-AGrI) project, examines the
+                implications
+                of agriculture in and around cities on human well-being and urban sustainability.</p>
+        </section>
+        <section>
+            <h2 class="font-azeret font-semibold text-2xl text-green">Meet the team</h2>
+            <Team/>
+        </section>
+    </main>
+    
+
+</Page>
+<Partners />
+<style>
+    .grid-column-12 {
+        grid-template-columns: repeat(12, 1fr);
+    }
+</style>

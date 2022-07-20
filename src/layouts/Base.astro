@@ -1,5 +1,5 @@
 ---
-import TopNav from "../components/TopNav.svelte"
+import TopNav from "../components/TopNav.astro"
 import "/src/styles/base.css"
 ---
 <html lang="en">
@@ -20,7 +20,7 @@ import "/src/styles/base.css"
 </head>
 
 <body class="bg-eggshell font-pt">
-    <TopNav client:only="svelte"/>
+    <TopNav client:load/>
     <slot />
 </body>
 

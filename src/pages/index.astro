@@ -1,14 +1,13 @@
 ---
 import Base from "../layouts/Base.astro"
 import Partners from "../components/Partners.astro"
-import TopNav from "../components/TopNav.svelte"
+import TopNav from "../components/TopNav.astro"
 import 'animate.css';
 
 const bgClass = "flex items-center bg-[url('/landing/Background_image.webp')] bg-blend-multiply bg-center bg-gray-20 grow p-8 pt-28 pb-16 md:px-16"
 ---
 
 <Base>
-<TopNav client:only="svelte" />
 <div class="flex flex-col min-h-screen">
     <div class={bgClass}>
         <div class="flex flex-col gap-6 text-white ">

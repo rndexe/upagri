@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    h1 {
+        @apply font-azeret text-3xl md:text-4xl font-bold text-green;
+    }
+    h2 {
+        @apply font-azeret text-3xl font-semibold text-green;
+    }
+    h3 {
+        @apply font-azeret text-2xl font-semibold text-green;
+    }
+    h4 {
+        @apply font-azeret text-xl font-semibold text-green;
+    }
+    h5 {
+        @apply font-pt text-lg font-semibold text-gray-20;
+    }
+}

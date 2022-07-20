@@ -1,0 +1,94 @@
+---
+import Page from "@components/Page.astro"
+import Breadcrumbs from "@components/Breadcrumbs.astro"
+import { Picture } from "@astrojs/image"
+
+import image1 from "src/images/what-is-upa/Insights_from_the_field.jpg"
+import image2 from "src/images/what-is-upa/Voices_from_the_field.jpg"
+
+//TODO load this data from a file?
+const trail = [
+    { title: "Home", url: "/" },
+    { title: "What is UPA", url: "/what-is-upa" }
+]
+
+---
+
+<Page>
+    <Breadcrumbs {trail} slot="breadcrumb" />
+    <Fragment slot="title">
+        <h1>What is UPA?</h1>
+        <p class="my-8">
+            Urban and peri-urban agriculture (UPA) can be described as “horticultural, agricultural, and
+            farming
+            activities carried out on small plots of land in and around urban centres” <sup>[1]</sup>.
+            UPA has been lauded for its potential positive impacts on all three pillars of sustainability
+            <sup>[1][2]</sup>, including enhanced dietary diversity, contribution to ecosystem
+            services and improvements in the social quality of city spaces and peoples’ lives
+            <sup>[1][2][3][4][5][6][7][8]</sup>. There is evidence of UPA reducing indoor temperatures
+            <sup>[9]</sup>, promoting organic household waste recycling, and lowering energy embodied
+            in
+            food transportation <sup>[1]</sup>. UPA can also foster social cohesion and community
+            empowerment, enabling bottom-up innovation and localised sustainability solutions
+            <sup>[10][11][12]</sup>.
+        </p>
+        <p class="my-8">
+            This section of the exhibition showcases UPA farmers', while providing insights into their
+            lifestyles
+            and agricultural methods in and around the city.
+        </p>
+    </Fragment>
+    <section class="flex flex-col lg:flex-row gap-8">
+        <a href="/what-is-upa/personal-encounters" class="relative rounded-lg shadow-lg overflow-clip group">
+            <Picture src={image1} widths={[400, 1000]} sizes="(max-width: 1024px) 100vw, 33vw" />
+            <div
+                class="absolute top-0 right-0 bottom-0 left-0 bg-gradient-to-br from-gray to-transparent group-hover:from-black">
+            </div>
+            <div class="absolute flex items-stretch inset-0 px-6">
+                <div class="flex flex-col justify-around">
+                    <div class="">
+                        <h2 class="text-2xl xl:text-4xl font-semibold text-white">Personal Encounters</h2>
+                        <h2 class="text-2xl xl:text-3xl font-semibold text-white">Voices from the field</h2>
+                    </div>
+                    <p class="flex gap-2 items-center text-white ">Take
+                        me there
+                        <svg width="26" height="8" viewBox="0 0 26 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M1 3.5C0.723858 3.5 0.5 3.72386 0.5 4C0.5 4.27614 0.723858 4.5 1 4.5V3.5ZM25.3536 4.35355C25.5488 4.15829 25.5488 3.84171 25.3536 3.64645L22.1716 0.464466C21.9763 0.269204 21.6597 0.269204 21.4645 0.464466C21.2692 0.659728 21.2692 0.976311 21.4645 1.17157L24.2929 4L21.4645 6.82843C21.2692 7.02369 21.2692 7.34027 21.4645 7.53553C21.6597 7.7308 21.9763 7.7308 22.1716 7.53553L25.3536 4.35355ZM1 4.5H25V3.5H1V4.5Z"
+                                fill="white" />
+                        </svg>
+                    </p>
+                </div>
+            </div>
+        </a>
+        <a href="/what-is-upa/showcasing-upa" class="relative rounded-lg shadow-lg overflow-clip group">
+            <Picture src={image2} widths={[400, 1000]} sizes="(max-width: 1024px) 100vw, 33vw" />
+
+            <div
+                class="absolute top-0 right-0 bottom-0 left-0 bg-gradient-to-br from-gray to-transparent  group-hover:from-black">
+            </div>
+            <div class="absolute flex items-stretch inset-0 px-6">
+                <div class="flex flex-col justify-around">
+                    <div class="">
+                        <h2 class="text-2xl xl:text-4xl font-semibold text-white">Showcasing UPA</h2>
+                        <h2 class="text-2xl xl:text-3xl font-semibold text-white">Insights from the field</h2>
+                    </div>
+                    <p class="flex gap-2 items-center text-white ">Take
+                        me there
+                        <svg width="26" height="8" viewBox="0 0 26 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M1 3.5C0.723858 3.5 0.5 3.72386 0.5 4C0.5 4.27614 0.723858 4.5 1 4.5V3.5ZM25.3536 4.35355C25.5488 4.15829 25.5488 3.84171 25.3536 3.64645L22.1716 0.464466C21.9763 0.269204 21.6597 0.269204 21.4645 0.464466C21.2692 0.659728 21.2692 0.976311 21.4645 1.17157L24.2929 4L21.4645 6.82843C21.2692 7.02369 21.2692 7.34027 21.4645 7.53553C21.6597 7.7308 21.9763 7.7308 22.1716 7.53553L25.3536 4.35355ZM1 4.5H25V3.5H1V4.5Z"
+                                fill="white" />
+                        </svg>
+                    </p>
+                </div>
+            </div>
+        </a>
+    </section>
+</Page>
+
+<style lang="postcss">
+    sup {
+        @apply text-green underline;
+    }
+</style>

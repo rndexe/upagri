@@ -1,0 +1,34 @@
+---
+import Page from "@components/Page.astro"
+import Breadcrumbs from "@components/Breadcrumbs.astro"
+
+
+//TODO load this data from a file?
+const trail = [
+    { title: "Home", url: "/" },
+    { title: "What is UPA", url: "/what-is-upa" },
+    { title: "Personal Encounters - Voices from the field", url: "/personal-encounters" }
+
+]
+
+---
+
+<Page>
+    <Breadcrumbs {trail} slot="breadcrumb" />
+    <Fragment slot="title">
+        <h1>Personal encounters-</h1>
+        <h1>Voices from the field</h1>
+        <p class="my-8">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum saepe autem illum magni architecto, atque
+            molestias nulla deleniti id, veniam, magnam explicabo accusamus modi. Sed eligendi, expedita, est odit
+            repudiandae numquam adipisci, neque nemo quidem voluptas quo ducimus quod modi praesentium? Est rem neque
+            quod ad nostrum placeat magni, exercitationem voluptatibus temporibus esse, unde dignissimos ut harum in
+            mollitia nisi assumenda numquam ratione repellendus ipsa cupiditate alias, tenetur minima ipsam! Pariatur
+            explicabo sint tempora, doloribus, dolorum culpa sit autem id quod, ut aspernatur corporis molestias cum
+            blanditiis architecto perspiciatis mollitia saepe facere? Dolor accusamus corporis adipisci, quasi beatae
+            quibusdam minus.
+        </p>
+    </Fragment>
+
+
+</Page>

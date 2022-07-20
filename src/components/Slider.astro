@@ -1,0 +1,88 @@
+---
+//import { showcasingUpa } from "@data/images";
+//console.log(images2)
+import { Picture } from "@astrojs/image";
+//import imagePaths from "@data/showcasing-upa.json"
+const imageObjects = Astro.props.images
+const links = Astro.props.links;
+const images = imageObjects.map((ele) => {
+    return ele.default;
+})
+//console.log(images[0])
+
+---
+
+<script>
+    import KeenSlider from 'keen-slider'
+    import 'keen-slider/keen-slider.min.css'
+
+    let slider = new KeenSlider("#my-keen-slider", {
+        breakpoints: {
+            "(min-width: 768px)": {
+                slides: { perView: 1.5, spacing: 15 },
+            },
+
+        },
+        slides: {
+            perView: 1.1,
+            spacing: 10,
+        },
+        mode: 'free-snap'
+    })
+
+    const prevButton = document.querySelector('#prev')
+    const nextButton = document.querySelector('#next')
+
+    prevButton.addEventListener("click", () => {
+        slider.prev();
+    })
+    nextButton.addEventListener("click", () => {
+        slider.next()
+    })
+</script>
+<div class="relative">
+    <button id="prev"
+        class="absolute top-1/2 -ml-6 md:-ml-12 -translate-y-1/2 left-0 z-10 bg-green stroke-eggshell p-3 rounded-full">
+        <svg class="w-5 h-5" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15.5758 1L2 15M2 15L15.5758 29M2 15H30" stroke="white" stroke-width="2" />
+        </svg>
+    </button>
+    <div id="my-keen-slider" class="relative keen-slider">
+
+        {images.map((item, index) => (
+        <div class="keen-slider__slide">
+            <a href={links[index].href} class="relative group">
+                <Picture src={item} widths={[400, 1000]} aspectRatio="4:3"
+                    class="group-hover:scale-110 transition-transform duration-500 ease-in-out" />
+
+                <div class="absolute top-0 right-0 bottom-0 left-0 bg-gray/50">
+                    <div class="absolute flex items-stretch inset-0 px-6">
+                        <div class="flex flex-col justify-around">
+                            <div class="">
+                                <h2 class="text-2xl xl:text-4xl font-semibold text-white">{links[index].title}</h2>
+                            </div>
+                            <p class="flex gap-2 items-center text-white ">Take
+                                me there
+                                <svg width="26" height="8" viewBox="0 0 26 8" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M1 3.5C0.723858 3.5 0.5 3.72386 0.5 4C0.5 4.27614 0.723858 4.5 1 4.5V3.5ZM25.3536 4.35355C25.5488 4.15829 25.5488 3.84171 25.3536 3.64645L22.1716 0.464466C21.9763 0.269204 21.6597 0.269204 21.4645 0.464466C21.2692 0.659728 21.2692 0.976311 21.4645 1.17157L24.2929 4L21.4645 6.82843C21.2692 7.02369 21.2692 7.34027 21.4645 7.53553C21.6597 7.7308 21.9763 7.7308 22.1716 7.53553L25.3536 4.35355ZM1 4.5H25V3.5H1V4.5Z"
+                                        fill="white" />
+                                </svg>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        ))}
+
+    </div>
+    <button id="next"
+        class="absolute -mr-6 md:-mr-12 top-1/2 -translate-y-1/2 right-0 z-10 bg-green stroke-eggshell p-3 rounded-full">
+        <svg class="w-5 h-5" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14.4242 29L28 15M28 15L14.4242 1M28 15L2.35641e-06 15" stroke="white" stroke-width="2" />
+        </svg>
+
+    </button>
+</div>

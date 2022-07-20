@@ -1,8 +1,8 @@
 ---
 import Partners from "@components/Partners.astro"
 import Page from "@components/Page.astro"
-import Breadcrumbs from "@components/Breadcrumbs.astro"
 import Team from "@components/Team.astro"
+import Breadcrumbs from "@components/Breadcrumbs.astro";
 //import pic from "../images/about/1.webp"
 
 
@@ -15,8 +15,7 @@ const trail = [
 ---
 
 <Page>
-    <Breadcrumbs {trail} />
-    <main class="pl-40 pr-40">
+        <Breadcrumbs slot="breadcrumb" {trail}/>
         <section class="mt-8 mb-12 max-w-[700px]">
             <h1 class="font-azeret text-4xl font-bold text-green">About</h1>
             <p class="my-8">
@@ -64,13 +63,4 @@ const trail = [
             <h2 class="font-azeret font-semibold text-2xl text-green">Meet the team</h2>
             <Team/>
         </section>
-    </main>
-    
-
 </Page>
-<Partners />
-<style>
-    .grid-column-12 {
-        grid-template-columns: repeat(12, 1fr);
-    }
-</style>

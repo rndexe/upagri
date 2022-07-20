@@ -1,7 +1,7 @@
 <script>
     import { onMount } from "svelte";
     import { Hamburger } from "svelte-hamburgers";
-    import { fade } from "svelte/transition";
+    import { fade, slide } from "svelte/transition";
 
     let loaded = false;
     let open = false;
@@ -12,15 +12,15 @@
 
     const urls = [
         { href: "/about", text: "About" },
-        { href: "/upagri", text: "What is UPA?" },
-        { href: "/upagri", text: "Exhibition Rooms" },
-        { href: "/upagri", text: "Reading Rooms" },
-        { href: "/upagri", text: "Contact" },
+        { href: "/what-is-upa", text: "What is UPA?" },
+        { href: "#", text: "Exhibition Rooms" },
+        { href: "#", text: "Reading Rooms" },
+        { href: "#", text: "Contact" },
     ];
 </script>
 
 {#if loaded}
-    <nav transition:fade class="fixed flex bg-eggshell w-full h-14 z-50">
+    <nav transition:slide class="fixed flex bg-eggshell w-full h-14 z-50">
         <div
             class="flex grow items-center justify-between border-b border-green mx-8 lg:mx-16"
         >

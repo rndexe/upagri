@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-    content: ['./src/**/*.{astro,svelte}'],
+    content: ['./src/**/*.{astro,svelte,html}'],
     theme: {
         colors: {
             transparent: 'transparent',
@@ -12,7 +12,9 @@ module.exports = {
             'gray': {
                 DEFAULT: '#2D3636',
                 10: '#BDBDBD',
+                15: '#828282',
                 20: '#4F4F4F',
+
             },
             'eggshell': '#F0F2EA',
             'white': '#ffffff',
@@ -23,6 +25,11 @@ module.exports = {
             'pt': ['PT Sans ', 'sans-serif']
 
         },
+        extend : {
+            spacing : {
+                '160' : '40rem'
+            }
+        }
     },
     plugins: [],
 }

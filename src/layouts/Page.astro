@@ -1,0 +1,18 @@
+---
+import Base from "@layouts/Base.astro"
+---
+
+<Base>
+<div class="py-16 mx-8 lg:mx-16 text-gray">
+    <slot name="breadcrumb" />
+    <main class="container mx-auto max-w-screen-lg">
+        <section class="my-10">
+            <slot name="title" />
+        </section>
+        <slot />
+    </main>
+    <section class="container mx-auto max-w-screen-lg">
+    <slot name="slider"/>
+    </section>
+</div>
+</Base>

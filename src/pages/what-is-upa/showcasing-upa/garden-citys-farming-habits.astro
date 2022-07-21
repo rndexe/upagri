@@ -1,7 +1,8 @@
 ---
-import Page from "@components/Page.astro"
+import Page from "@layouts/Page.astro"
 import Breadcrumbs from "@components/Breadcrumbs.astro"
 import { YouTube } from '@astro-community/astro-embed-youtube';
+import ArticleTitle from "@components/ArticleTitle.astro";
 
 
 //TODO load this data from a file?
@@ -16,17 +17,13 @@ const trail = [
 
 <Page>
     <Breadcrumbs {trail} slot="breadcrumb" />
-    <Fragment slot="title">
-        <h5 class="font-semibold mb-4 text-gray-15">Showcasing UPA - Insights from the field</h5>
-        <h1 class="mb-4">Garden City's farming habits</h1>
-        <p class="text-gray">Amruth, Maitreyi, Swarnika</p>
-    </Fragment>
-
-
+    <ArticleTitle category="Showcasing UPA - Insights from the field" title="Garden City's farming habits"
+        authors="Amruth, Maitreyi, Swarnika"/>
+    <section>
     <iframe class="w-full aspect-video mb-8" src="https://www.youtube.com/embed/T7KOOlHbT0U"
         title="YouTube video player" frameborder="0"
         allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <div class="">
+    <div>
         <p>
             "In this video ‘Garden city’s farming habits', the UPAGrI project team discusses the
             experiences, perceived benefits and contributions of urban farming to ecological, social and economic
@@ -74,9 +71,10 @@ const trail = [
             employ people to set up and take care of their gardens; on the other hand you have increasing number of
             people/specifically farmers moving to the city as urbanization lead to loss of agricultural land and jobs in
             rural and periurban areas.
-            
+
         </p>
     </div>
+    </section>
 </Page>
 <style lang="postcss">
     p {

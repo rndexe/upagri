@@ -1,0 +1,49 @@
+---
+import Page from "@layouts/Page.astro";
+import Breadcrumbs from "@components/Breadcrumbs.astro"
+import Title from "@components/Title.astro"
+
+const trail = [
+    { title: "Home", url: "/" },
+    { title: "Exhibition Rooms", url: "/exhibition-rooms" }
+]
+---
+
+<Page>
+
+    <Breadcrumbs {trail} slot="breadcrumb" />
+    <Title slot="title" title="Exhibition Rooms">
+        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur cum quod amet tenetur maiores est vel
+            ea, perspiciatis tempore! Deserunt similique earum fugiat magni animi, aperiam beatae tempore delectus quod
+            velit corporis numquam ducimus est! Impedit, culpa autem! Sed esse molestiae minus quo repellendus fuga
+            autem. Odio quas maiores, voluptatum dolore nam veniam nostrum perspiciatis commodi, natus accusamus odit
+            voluptatibus fuga harum aliquid. Tempora eaque quaerat sequi sit sint et. Aperiam quasi, ea eligendi veniam,
+            magni vero optio vitae consectetur esse commodi eveniet tenetur iure hic, accusamus molestias culpa odio
+            omnis? Quam ducimus voluptas nostrum iste reiciendis optio, rerum corrupti.
+        </p>
+    </Title>
+    <section class="grid grid-12 gap-6">
+        <div class="p-16 col-start-1 col-span-4 row-span-2 bg-green/50">
+            <a href="/exhibition-rooms/environmental-sustainability">
+                <h2 class="text-white hover:text-white/70">Environmental sustainability</h2>
+            </a>
+        </div>
+        <div class="p-16 row-start-3 col-start-4 col-span-3 row-span-2 bg-green/60">
+            <a href="/exhibition-rooms/wellbeing">
+                <h2 class="text-white  hover:text-white/70">Wellbeing</h2>
+            </a>
+        </div>
+        <div class="p-16 row-start-4 col-start-0 col-span-3 row-span-3 bg-green/40">
+            <a href="/exhibition-rooms/food-and-nutritional-security">
+                <h2 class="text-white  hover:text-white/70">Food and nutritional security
+                </h2>
+            </a>
+        </div>
+    </section>
+</Page>
+<style>
+    .grid-12 {
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(6, 200px);
+    }
+</style>

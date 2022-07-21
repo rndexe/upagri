@@ -1,30 +1,30 @@
 ---
-//import { showcasingUpa } from "@data/images";
-//console.log(images2)
-import { Picture } from "@astrojs/image";
-//import imagePaths from "@data/showcasing-upa.json"
+import { Picture } from "@astrojs/image/components";
+import 'keen-slider/keen-slider.min.css'
+
 const imageObjects = Astro.props.images
 const links = Astro.props.links;
 const images = imageObjects.map((ele) => {
     return ele.default;
 })
-//console.log(images[0])
 
 ---
 
 <script>
     import KeenSlider from 'keen-slider'
-    import 'keen-slider/keen-slider.min.css'
 
     let slider = new KeenSlider("#my-keen-slider", {
         breakpoints: {
             "(min-width: 768px)": {
-                slides: { perView: 1.5, spacing: 15 },
+                slides: { perView: 1.6, spacing: 12 },
+            },
+            "(min-width: 1024px)": {
+                slides: { perView: 2.1, spacing: 15 },
             },
 
         },
         slides: {
-            perView: 1.1,
+            perView: 1.5,
             spacing: 10,
         },
         mode: 'free-snap'
@@ -42,7 +42,7 @@ const images = imageObjects.map((ele) => {
 </script>
 <div class="relative">
     <button id="prev"
-        class="absolute top-1/2 -ml-6 md:-ml-12 -translate-y-1/2 left-0 z-10 bg-green stroke-eggshell p-3 rounded-full">
+        class="absolute top-1/2 -ml-6 md:-ml-16 -translate-y-1/2 left-0 z-10 bg-green stroke-eggshell p-3 rounded-full">
         <svg class="w-5 h-5" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M15.5758 1L2 15M2 15L15.5758 29M2 15H30" stroke="white" stroke-width="2" />
         </svg>
@@ -79,7 +79,7 @@ const images = imageObjects.map((ele) => {
 
     </div>
     <button id="next"
-        class="absolute -mr-6 md:-mr-12 top-1/2 -translate-y-1/2 right-0 z-10 bg-green stroke-eggshell p-3 rounded-full">
+        class="absolute -mr-6 md:-mr-16 top-1/2 -translate-y-1/2 right-0 z-10 bg-green stroke-eggshell p-3 rounded-full">
         <svg class="w-5 h-5" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M14.4242 29L28 15M28 15L14.4242 1M28 15L2.35641e-06 15" stroke="white" stroke-width="2" />
         </svg>

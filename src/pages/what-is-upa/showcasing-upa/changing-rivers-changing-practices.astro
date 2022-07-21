@@ -1,6 +1,7 @@
 ---
-import Page from "@components/Page.astro"
+import Page from "@layouts/Page.astro"
 import Breadcrumbs from "@components/Breadcrumbs.astro"
+import ArticleTitle from "@components/ArticleTitle.astro";
 
 //TODO load this data from a file?
 const trail = [
@@ -14,31 +15,39 @@ const trail = [
 
 <Page>
     <Breadcrumbs {trail} slot="breadcrumb" />
-    <Fragment slot="title">
-        <h5 class="font-semibold mb-4 text-gray-15">Showcasing UPA - Insights from the field</h5>
-        <h1 class="mb-4">Changing Rivers, Changing Practices: a case of Pune city</h1>
-        <p class="text-gray mb-8">Amruth, Maitreyi, Swarnika</p>
-    </Fragment>
+    <ArticleTitle slot="title" title="Changing Rivers, Changing Practices:" subtitle="A case of Pune city"
+        category="Showcasing UPA - Insights from the field" authors="Amruth, Maitreyi, Swarnika"/>
 
-    <iframe class="w-full aspect-video mb-8" src="https://www.youtube.com/embed/-DhREKeqW6I" title="YouTube video player"
-        frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen></iframe>
-<div class="bg-gray/75 text-white rounded p-16">
-    <div class="">
-    <p class="mb-4">Rivers are a major resource for cities and humankind as such. Like major river-based civilisations, Pune enjoys
-        its settlement on the banks of rivers Mutha and Mula, that originate separately in the Sahyadri ranges in
-        Western Ghats and traverse across Pune to confluence as Mula-Mutha river which further drains itself into the
-        Bhima River. However, over years rampant urbanization coupled with agrresive population growth has taken their
-        toll on its biodiversity and livelihoods of people wherein, the city seems to have lost its connection with the
-        river.
-    </p>
-    <p class="mb-4">Through a series of audio visual narratives, the session showcased how the rivers, Mula and Mutha have
-        transformed over the last 20 years. showcase how development has transformed the Mula and Mutha rivers; how
-        developmental activities have altered the quality and quantity of the river; and how nature in the city is being
-        reimagined, in the light of a rapidly urbanizing Pune
-    </p>
-    <p class="mb-4">In this video, the citizens living by the banks of the river share their experiences, thereby stimulating a
-        dialogue about how and why practices around the rivers in Pune have changed. </p>
-    </div>
-    </div>
+
+    <section>
+        <iframe class="w-full aspect-video mb-8" src="https://www.youtube.com/embed/-DhREKeqW6I"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        <div>
+            <p class="mb-4">Rivers are a major resource for cities and humankind as such. Like major river-based
+                civilisations, Pune enjoys
+                its settlement on the banks of rivers Mutha and Mula, that originate separately in the Sahyadri
+                ranges in
+                Western Ghats and traverse across Pune to confluence as Mula-Mutha river which further drains itself
+                into the
+                Bhima River. However, over years rampant urbanization coupled with agrresive population growth has
+                taken their
+                toll on its biodiversity and livelihoods of people wherein, the city seems to have lost its
+                connection with the
+                river.
+            </p>
+            <p class="mb-4">Through a series of audio visual narratives, the session showcased how the rivers, Mula
+                and Mutha have
+                transformed over the last 20 years. showcase how development has transformed the Mula and Mutha
+                rivers; how
+                developmental activities have altered the quality and quantity of the river; and how nature in the
+                city is being
+                reimagined, in the light of a rapidly urbanizing Pune
+            </p>
+            <p class="mb-4">In this video, the citizens living by the banks of the river share their experiences,
+                thereby stimulating a
+                dialogue about how and why practices around the rivers in Pune have changed. </p>
+        </div>
+    </section>
 </Page>

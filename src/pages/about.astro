@@ -1,6 +1,6 @@
 ---
 import Partners from "@components/Partners.astro"
-import Page from "@components/Page.astro"
+import Page from "@layouts/Page.astro"
 import Team from "@components/Team.astro"
 import Breadcrumbs from "@components/Breadcrumbs.astro";
 //import pic from "../images/about/1.webp"
@@ -16,7 +16,7 @@ const trail = [
 
 <Page>
         <Breadcrumbs slot="breadcrumb" {trail}/>
-        <section class="mt-8 mb-12 max-w-[700px]">
+        <section class="mt-8 mb-12 max-w-[80ch]">
             <h1 class="font-azeret text-4xl font-bold text-green">About</h1>
             <p class="my-8">
                 Urban and Peri-Urban Agriculture may be an answer to the environmental and wellbeing challenges of a
@@ -59,7 +59,7 @@ const trail = [
                 implications
                 of agriculture in and around cities on human well-being and urban sustainability.</p>
         </section>
-        <section>
+        <section class="max-w-screen-lg">
             <h2 class="font-azeret font-semibold text-2xl text-green">Meet the team</h2>
             <Team/>
         </section>

@@ -1,7 +1,8 @@
 ---
-import Page from "@components/Page.astro"
+import Page from "@layouts/Page.astro"
 import Breadcrumbs from "@components/Breadcrumbs.astro"
 import Slider from "@components/Slider.astro";
+import Title from "@components/Title.astro";
 
 const images = await Astro.glob("/src/images/showcasing-upa/*")
 
@@ -19,8 +20,8 @@ const links = [
         "href": "/what-is-upa/showcasing-upa/changing-rivers-changing-practices"
     },
     {
-        "title" : "Lorem Ipsum",
-        "href" : "#"
+        "title": "Lorem Ipsum",
+        "href": "#"
     }
 
 ]
@@ -36,11 +37,6 @@ const trail = [
 
 <Page>
     <Breadcrumbs {trail} slot="breadcrumb" />
-    <Fragment slot="title">
-        <h1>Showcasing UPA</h1>
-        <h1>Insights from the field</h1>
-    </Fragment>
-    <div class="mt-8">
-        <Slider {images} {links} />
-    </div>
+    <Title slot="title" title="Showcasing UPA" subtitle="Insights from the field" />
+    <Slider slot="slider" {images} {links} client:load />
 </Page>

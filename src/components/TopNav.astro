@@ -1,22 +1,37 @@
 <script>
 
+const menuButton = document.querySelector('#toggle')
+const drawer = document.querySelector('#drawer')
+
+menuButton.addEventListener('click', () => {
+    drawer.classList.toggle("mobile")
+    menuButton.classList.toggle('cross')
+})
 
 
 </script>
 
 <header class="bg-eggshell fixed w-full h-14 z-50">
-    <div class="flex items-center h-14 justify-between mx-16 border-b border-b-green">
+    <div class="relative flex items-center h-14 justify-between mx-8 lg:mx-16 border-b border-b-green">
         <div>
             <a class="font-pt text-2xl text-green" href="/">
                 UPAgrI
             </a>
         </div>
         <nav>
-            <ul class="flex gap-6 tracking-tight text-green-dark font-azeret text-base">
+            <button id="toggle" class="block lg:hidden px-2">
+                <svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect y="0.5" width="24" height="1" fill="#2C5318" />
+                    <rect y="7.5" width="24" height="1" fill="#2C5318" />
+                    <rect y="14.5" width="24" height="1" fill="#2C5318" />
+                </svg>
+            </button>
+            <ul id="drawer"
+                class="hidden absolute w-full left-0 top-14 bg-eggshell lg:static lg:flex flex-col lg:flex-row  gap-6 tracking-tight text-green-dark font-azeret text-base">
                 <li><a href="/about">About</a></li>
                 <li class="dropdown group"><a href="/what-is-upa">
                         What is UPA?
-                        <svg class="w-2.5 h-2.5 inline stroke-current" width="16" height="11" viewBox="0 0 16 11"
+                        <svg class="w-2.5 h-2.5 hidden lg:inline stroke-current" width="16" height="11" viewBox="0 0 16 11"
                             fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M1.66675 1.25L8.33341 8.75L15.0001 1.25" stroke-width="2" />
                         </svg>
@@ -35,7 +50,7 @@
                     </ul>
                 </li>
                 <li class="dropdown group"><a href="/exhibition-rooms">Exhibition Rooms
-                        <svg class="w-2.5 h-2.5 inline stroke-current" width="16" height="11" viewBox="0 0 16 11"
+                        <svg class="w-2.5 h-2.5 hidden lg:inline stroke-current" width="16" height="11" viewBox="0 0 16 11"
                             fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M1.66675 1.25L8.33341 8.75L15.0001 1.25" stroke-width="2" />
                         </svg></a>
@@ -68,15 +83,21 @@
         @apply hover:text-green/30 transition-colors duration-300 ease-in-out;
     }
 
+    .mobile {
+        @apply w-screen -ml-8 flex p-8 border-b shadow;
+    }
     .dropdown {
         @apply relative;
     }
 
     .dropdown-wrapper {
-        @apply hidden absolute group-hover:block group-focus-within:block -left-1/2 top-full;
+        @apply block lg:hidden static lg:absolute group-hover:block group-focus-within:block -left-1/2 top-full;
     }
 
     .dropdown-content {
-        @apply flex flex-col gap-y-4 p-6 mt-2.5 border border-green bg-eggshell w-max;
+        @apply flex flex-col gap-y-4 p-0 lg:p-6 mt-2.5 border-0 lg:border border-green bg-eggshell w-max;
+    }
+    .dropdown-content li {
+        @apply list-['-'] lg:list-none ml-3 lg:ml-0 pl-4 lg:pl-0;
     }
 </style>

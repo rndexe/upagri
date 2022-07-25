@@ -4,7 +4,12 @@ import Breadcrumbs from "@components/Breadcrumbs.astro"
 import Slider from "@components/Slider.astro";
 import Title from "@components/Title.astro";
 
-const images = await Astro.glob("/src/images/showcasing-upa/*")
+const images = [
+    "/assets/showcasing-upa/1.jpg",
+    "/assets/showcasing-upa/2.jpg",
+    "/assets/showcasing-upa/Placeholder image (India 1)_2.jpg",
+    "/assets/showcasing-upa/Placeholder image (India 2).jpg",
+]
 
 const links = [
     {
@@ -38,5 +43,5 @@ const trail = [
 <Page>
     <Breadcrumbs {trail} slot="breadcrumb" />
     <Title slot="title" title="Showcasing UPA" subtitle="Insights from the field" />
-    <Slider slot="slider" {images} {links} client:load />
+    <Slider {images} {links} client:load />
 </Page>

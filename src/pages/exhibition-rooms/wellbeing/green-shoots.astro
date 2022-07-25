@@ -1,0 +1,51 @@
+---
+import Page from "@layouts/Page.astro"
+import Breadcrumbs from "@components/Breadcrumbs.astro"
+import ArticleTitle from "@components/ArticleTitle.astro";
+import Slider from "@components/Slider2.astro";
+
+//TODO load this data from a file?
+const trail = [
+    { title: "Home", url: "/" },
+    { title: "Exhibition Rooms", url: "/exhibition-rooms" },
+    { title: "Wellbeing", url: "/exhibition-rooms/wellbeing" },
+    { title: "Green shoots of health, happiness and wellbeing", url: "/exhibition-rooms/wellbeing/green-shoots" }
+]
+const images = [
+    "/assets/7.1/Image 1.jpg",
+    "/assets/7.1/Image 2.jpg",
+    "/assets/7.1/Image 3.jpg",
+    "/assets/7.1/Image 4.jpg",
+    "/assets/7.1/Image 5.jpg",
+    "/assets/7.1/Image 6.jpg",
+    "/assets/7.1/Image 7.jpg",
+    "/assets/7.1/Image 8.jpg",
+    "/assets/7.1/Image 9.jpg",
+    "/assets/7.1/Image 10.jpg",
+    "/assets/7.1/Image 11.jpg",
+    "/assets/7.1/Image 12.jpg",
+    "/assets/7.1/Image 13.jpg",
+    "/assets/7.1/Image 14.jpg",
+    "/assets/7.1/Image 15.jpg",
+]
+
+---
+
+<Page>
+    <Breadcrumbs {trail} slot="breadcrumb" />
+    <ArticleTitle slot="title" category="Wellbeing" title="Green shoots of health, happiness and wellbeing" 
+    authors="Maitreyi Koduganti and Chandni Singh" subauthors="(Design by Satyabrat Sukla and Nivedita Joshi)" />
+    <section class="mb-8">
+        <p class="w-[80ch]">
+        Over 50% of the global population reside in cities where they are constantly challenged by overpopulation,
+        traffic, unemployment, cramped housing, degraded environmental quality and increased health hazards. Given this
+        reality of urban life, citizens are increasingly turning to nature for solace, peace, and mental wellbeing.
+        Urban farming, in the form of backyard and balcony gardens, terrace farms, and community farms are distinct
+        places with restorative qualities that reduce stress, improve moods and boost overall health . In this series,
+        we tap into specific excerpts from city-dwellers to explain how urban farming can have profound impacts on their
+        physical, mental well-being and relations within their homes and communities.
+        </p>
+    </section>
+    <Slider {images} client:load/>
+
+</Page>

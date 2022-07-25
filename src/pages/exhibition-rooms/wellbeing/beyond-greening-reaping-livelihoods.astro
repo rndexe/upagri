@@ -1,0 +1,52 @@
+---
+import Page from "@layouts/Page.astro"
+import Breadcrumbs from "@components/Breadcrumbs.astro"
+import ArticleTitle from "@components/ArticleTitle.astro";
+
+//TODO load this data from a file?
+const trail = [
+    { title: "Home", url: "/" },
+    { title: "Exhibition Rooms", url: "/exhibition-rooms" },
+    { title: "Wellbeing", url: "/exhibition-rooms/wellbeing" },
+    { title: "Beyond Greening and Reaping Livelihoods", url: "/exhibition-rooms/environmental-sustainability/beyond-greening-reaping-livelihoods" }
+]
+
+---
+
+<Page>
+    <Breadcrumbs {trail} slot="breadcrumb" />
+    <ArticleTitle slot="title" category="Wellbeing" title="Beyond Greening and Reaping Livelihoods"
+        authors="Maitreyi Koduganti, Amruth Kiran, Sheetal Patil, Swarnika Sharma" />
+    <section>
+        <iframe class="w-full aspect-video mb-8" src="https://www.youtube.com/embed/tNV1sIQY338"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        <div>
+            <h5>Beyond Greening: Happiness, identity and bonding in Indian Cities</h5>
+            <p>"Urban agriculture is known to have multiple non-material benefits, like better quality of life, personal
+                development, familial bonding and better household relationships. Drawing from interviews, this video
+                will look at how home gardening has a positive impact on wellbeing at an individual level on self-esteem
+                and identity, particularly amidst home gardens; It will also explore how growing their own food has
+                contributed to better intra household relationships, family bonding, social networks and community
+                cohesion. In addition, the talk will highlight how such improved wellbeing can contribute to the SDGs,
+                especially SDG2.
+                "</p>
+            <h5>Reaping livelihoods - Exploring Urban Farming and Livelihood Generation in Indian Cities</h5>
+            <p>
+                "Across multiple scales, practitioners are engaging in innovative ways of urban farming in Indian
+                cities. By highlighting two such business models (commercial enterprise and social enterprise), this
+                video will explore how these enterprises contribute to better access to jobs, income and food security,
+                especially amidst the urban poor. Scaling up such models has the potential to foster a green livelihood
+                strategy and poverty alleviation in cities towards meeting broader SDG targets.
+                "
+            </p>
+
+        </div>
+    </section>
+</Page>
+<style lang="postcss">
+    p {
+        @apply mb-6;
+    }
+</style>

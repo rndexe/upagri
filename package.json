@@ -1,6 +1,6 @@
 {
   "name": "upagri",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "private": true,
   "scripts": {
     "dev": "astro dev",
@@ -9,19 +9,10 @@
     "preview": "astro preview"
   },
   "devDependencies": {
-    "@astro-community/astro-embed-youtube": "^0.1.0",
-    "@astrojs/image": "^0.1.3",
-    "@astrojs/sitemap": "^0.2.6",
-    "@astrojs/svelte": "^0.4.1",
     "@astrojs/tailwind": "^0.2.4",
-    "@fullhuman/postcss-purgecss": "^4.1.3",
     "animate.css": "^4.1.1",
     "astro": "^1.0.0-beta.73",
-    "astro-imagetools": "^0.6.10",
     "autoprefixer": "^10.4.7",
-    "cssnano": "^5.1.12",
-    "keen-slider": "^6.7.0",
-    "svelte": "^3.49.0",
-    "svelte-hamburgers": "^4.0.1"
+    "keen-slider": "^6.7.0"
   }
 }

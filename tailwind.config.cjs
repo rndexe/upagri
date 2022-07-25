@@ -28,6 +28,13 @@ module.exports = {
         extend : {
             spacing : {
                 '160' : '40rem'
+            },
+            screens : {
+                'sm' : '576px',
+                'md' : '768px',
+                'lg' : '992px',
+                'xl' : '1281px',
+                '2xl' : '1440px'
             }
         }
     },

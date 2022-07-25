@@ -2,10 +2,6 @@
 import Page from "@layouts/Page.astro"
 import Breadcrumbs from "@components/Breadcrumbs.astro"
 import Title from "@components/Title.astro"
-import { Picture,Image } from "@astrojs/image/components"
-
-import image1 from "src/images/what-is-upa/Insights_from_the_field.jpg"
-import image2 from "src/images/what-is-upa/Voices_from_the_field.jpg"
 
 //TODO load this data from a file?
 const trail = [
@@ -13,6 +9,19 @@ const trail = [
     { title: "What is UPA", url: "/what-is-upa" }
 ]
 
+const links = [
+    "/pdfs/Ackerman et al., 2014.pdf",
+    "/pdfs/Azunre et al., 2019.pdf",
+    "/pdfs/Chalmin-Pui et al., 2021.pdf",
+    "/pdfs/Fanfani et al., 2022.pdf",
+    "/pdfs/Lwasa et al., 2014.pdf",
+    "/pdfs/Maxwell et al., 1999.pdf",
+    "/pdfs/Padgham et al., 2015.pdf",
+    "/pdfs/Soga et al., 2017.pdf",
+    "/pdfs/Walters _ Midden, 2018.pdf",
+    "/pdfs/Wendelboe-Nelson et al., 2019.pdf",
+    "/pdfs/White _ Stirling, 2013.pdf"
+]
 ---
 
 <Page>
@@ -21,16 +30,31 @@ const trail = [
         <p>
             Urban and peri-urban agriculture (UPA) can be described as “horticultural, agricultural, and
             farming
-            activities carried out on small plots of land in and around urban centres” <sup>[1]</sup>.
+            activities carried out on small plots of land in and around urban centres”
+            <sup><a href={links[0]}target="_blank">[1]</a></sup>.
             UPA has been lauded for its potential positive impacts on all three pillars of sustainability
-            <sup>[1][2]</sup>, including enhanced dietary diversity, contribution to ecosystem
+            <sup><a href={links[0]} target="_blank">[1]</a>
+            <a href={links[1]} target="_blank">[2]</a></sup>, including
+            enhanced dietary diversity, contribution to ecosystem
             services and improvements in the social quality of city spaces and peoples’ lives
-            <sup>[1][2][3][4][5][6][7][8]</sup>. There is evidence of UPA reducing indoor temperatures
-            <sup>[9]</sup>, promoting organic household waste recycling, and lowering energy embodied
+            <sup>
+                <a href={links[0]} target="_blank">[1]</a>
+                <a href={links[1]} target="_blank">[2]</a>
+                <a href={links[3]} target="_blank">[3]</a>
+                <a href={links[4]} target="_blank">[4]</a>
+                <a href={links[5]} target="_blank">[5]</a>
+                <a href={links[6]} target="_blank">[6]</a>
+                <a href={links[7]} target="_blank">[7]</a>
+                <a href="https://books.google.co.uk/books?hl=en&lr=&id=hbWQDwAAQBAJ&oi=fnd&pg=PA135&dq=Mancebo+%26+Certoma,+2019+urban+agriculture&ots=B_4ppm_IaF&sig=skth-Ur7E4c5GnQEEVeTdBDlBPU&redir_esc=y#v=onepage&q=Mancebo%20%26%20Certoma%2C%202019%20urban%20agriculture&f=false"
+                    target="_blank">[8]</a></sup>. There is evidence of UPA reducing indoor temperatures
+            <sup><a href={links[8]} target="_blank">[9]</a></sup>, promoting organic household waste recycling, and
+            lowering energy embodied
             in
-            food transportation <sup>[1]</sup>. UPA can also foster social cohesion and community
+            food transportation <sup><a href={links[1]} target="_blank">[1]</a></sup>. UPA can also foster social
+            cohesion and community
             empowerment, enabling bottom-up innovation and localised sustainability solutions
-            <sup>[10][11][12]</sup>.
+            <sup><a href={links[10]} target="_blank">[10]</a><a href={links[9]} target="_blank">[11]</a><a
+                    href={links[2]} target="_blank">[12]</a></sup>.
         </p>
         <p>
             This section of the exhibition showcases UPA farmers', while providing insights into their
@@ -38,10 +62,10 @@ const trail = [
             and agricultural methods in and around the city.
         </p>
     </Title>
-    <section class="flex flex-col lg:w-full w-3/4 lg:flex-row gap-8">
-        <a href="/what-is-upa/personal-encounters" class="card">
-            <Picture src={image1} widths={[400, 1000]} sizes="(max-width: 1024px) 100vw, 33vw" class="card-img brightness-50"/>
- 
+    <section class="flex flex-col w-full sm:w-2/3 lg:w-full lg:flex-row gap-8">
+        <a href="/what-is-upa/personal-encounters" class="card group">
+            <img src="/assets/what-is-upa/Insights_from_the_field.jpg"
+                class="brightness-50 group-hover:scale-110 transition-transform ease-in-out duration-500" />
             <div class="card-textblock">
                 <div class="flex flex-col justify-around">
                     <div class="">
@@ -59,8 +83,10 @@ const trail = [
                 </div>
             </div>
         </a>
-        <a href="/what-is-upa/showcasing-upa" class="card">
-            <Picture src={image2} widths={[400, 1000]} sizes="(max-width: 1024px) 100vw, 33vw" class="card-img brightness-50 hover:scale-110" />
+        <a href="/what-is-upa/showcasing-upa" class="card group">
+            <img src="/assets/what-is-upa/Voices_from_the_field.jpg"
+                class="brightness-50 group-hover:scale-110 transition-transform ease-in-out duration-500" />
+
             <div class="card-textblock">
                 <div class="flex flex-col justify-around">
                     <div>
@@ -83,28 +109,25 @@ const trail = [
 
 <style lang="postcss">
     sup {
-        @apply text-green underline;
+        @apply text-green;
     }
-
+    a {
+        @apply underline;
+    }
 
     .card {
         @apply relative rounded-lg shadow-lg overflow-clip;
     }
- 
-    .card-img > img{
-        filter: invert(1)
-    }
-    .card-overlay {
-        @apply absolute top-0 right-0 bottom-0 left-0 bg-gradient-to-br from-gray to-transparent;
 
-    }
     .card-textblock {
         @apply absolute flex items-stretch inset-0 px-6;
     }
-    .card-textblock  h2 {
-        @apply text-2xl xl:text-3xl font-semibold text-white;
+
+    .card-textblock h2 {
+        @apply text-2xl sm:text-3xl font-semibold text-white;
     }
-    .card-textblock  p {
-        @apply  text-white;
+
+    .card-textblock p {
+        @apply text-white;
     }
 </style>

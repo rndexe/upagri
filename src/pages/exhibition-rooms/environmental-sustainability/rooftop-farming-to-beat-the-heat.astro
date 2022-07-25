@@ -1,0 +1,198 @@
+---
+import Page from "@layouts/Page.astro";
+import ArticleTitle from "@components/ArticleTitle.astro";
+import Breadcrumbs from "@components/Breadcrumbs.astro";
+
+
+const trail = [
+    { title: "Home", url: "/" },
+    { title: "Exhibition Rooms", url: "/exhibition-rooms" },
+    { title: "Environmental sustainability", url: "/exhibition-rooms/environmental-sustainability" },
+    { title: "Rooftop farming to Beat the Heat in India", url: "/exhibition-rooms/environmental-sustainability/rooftop-farming-to-beat-the-heat" }
+]
+---
+
+<Page>
+    <Breadcrumbs {trail} slot="breadcrumb" />
+    <ArticleTitle title="Rooftop farming to Beat the Heat in India" category="Environmental Sustainability"
+        authors="Chandni, Swarnika, Sheetal" />
+
+    <section class="my-8">
+        <p class="my-8 max-w-[80ch]">
+            In dense, tropical cities such as those in India, extreme heat and heatwaves are already a reality, and are
+            expected to increase under climate change. While many people talk about ”nature-based solutions” such as
+            urban
+            parks and tree-lined roads as a solution to reducing urban heat, we explored if small patches of urban
+            greenery,
+            such as rooftop farms, balcony gardens, or green backyards can reduce indoor heat and improve one's
+            experiences
+            of living in increasingly hot cities. <span class="font-semibold">This photo essay captures farmer
+                perceptions on how home gardens
+                are
+                providing thermal comfort.</span>
+        </p>
+        <div class="my-16 flex flex-col gap-y-24">
+            <div class="flex items-start gap-4">
+                <img src="/assets/6.1/Ann Vinya Thomas.jpg" class="w-1/2" />
+                <p class="w-1/2 self-stretch first-letter:text-2xl">Ann Vinya Thomas practices hydroponics on her
+                    terrace farm in Bangalore
+                    and is the founder of ‘HOME’ or
+                    Heaven on my Earth where she practices and teaches urban farming. She started farming in 2018 and
+                    told
+                    us, <span class="italic">"I grew up in Bangalore, I have seen summer temperatures changing from
+                        22-25°C a decade ago to 38°C
+                        summers now [in 2021]. Most homes have installed ACs, which were unheard of when I was growing
+                        up.
+                        After
+                        I added a greenhouse on my terrace temperatures in my house have come down by 5°C during the
+                        summer.
+                        This has brought down AC charges and my electricity bill is negligible now. Since I get my
+                        produce
+                        fresh, I don’t need the refrigerator as much. I have an instrument to check the temperature and
+                        humidity
+                        in my greenhouse so I am sure I have seen a decrease of 5°C."</span> </p>
+            </div>
+            <div class="flex items-start gap-4">
+                <p class="w-1/3 self-start text-right first-letter:text-2xl">Sarang Ganoo is an industrial designer
+                    who set up a terrace farm
+                    over his
+                    uncle’s mechanics workshop in 2015. He notes that rooftop green cover improves working conditions in
+                    the workshop, <span class="italic">“Our rooftop farm reduces temperatures directly below it. There
+                        are workers who work
+                        with a lot of machinery and find that the ambient temperature has improved.”</span>
+                </p>
+                <img src="/assets/6.1/Sarang Ganoo.jpg" class="w-2/3" />
+            </div>
+            <div class="flex gap-4">
+                <div class="flex flex-col gap-4 w-1/2">
+                    <p class="w-full first-letter:text-2xl">
+                        Asha Ugaongkar from Pune is a well-respected urban farmer and has authored a book on organic
+                        farming
+                        called ‘Sendriya Parasbag’ or ‘Organic Kitchen Gardens’. She has been practicing organic
+                        gardening
+                        for over 25 years and finds her gardening cools her home in an ever-warming Pune.
+                    </p>
+                    <img src="/assets/6.1/Asha Ugaonkar.jpg" class="w-full" />
+                </div>
+                <div class="flex flex-col gap-4 h-full w-1/2">
+                    <img src="/assets/6.1/Asha Ugaonkar2.jpg" class="w-full" />
+                    <p class="italic">
+                        “In terms of
+                        temperature, there is a 3°C difference when you have a garden on the terrace. I say this through
+                        my
+                        own experience. We have a temperature recorder and our guests also feel the difference.”
+
+                    </p>
+                </div>
+            </div>
+            <div class="flex flex-col gap-y-4">
+                <div class="flex gap-x-4">
+                    <img src="/assets/6.1/Low-income settlement_Pune.jpg" class="w-1/2" />
+                    <img src="/assets/6.1/Low-income settlement_Pune2.jpg" class="w-1/2" />
+                </div>
+                <p class="first-letter:text-2xl">
+                    Low-income settlements in Pune, like in other Indian cities, are densely packed and trap heat.
+                    However, many houses grow ornamental plants, herbs and green vegetables, and fruits and flowers.
+                    Field notes from Bopodi: The garden is set up along the sidewall of the bathroom. Lemon, chillies,
+                    and some ornamental plants are growing. As we entered this lane, it was cooler compared to the other
+                    lanes we walked in: the plants cut-off direct sunlight and created a welcoming shade. Some roofs had
+                    weeds, grasses growing on them. Sandhya tai explained,
+                    <span class="italic"> “Thanda rehta hai, isliye nahin hataate”</span>
+                    (it keeps the house cool so we don’t remove it).
+                </p>
+
+            </div>
+            <div class="flex flex-col gap-y-4">
+                <div class="flex gap-x-4">
+                    <img src="/assets/6.1/Suchitra Diwan1.jpg" class="w-7/12" />
+                    <img src="/assets/6.1/Suchitra Diwan3.jpg" class="w-5/12 object-cover object-left	" />
+                </div>
+                <div class="flex gap-x-4">
+                    <img src="/assets/6.1/Suchitra Diwan2.jpg" class="w-5/12 object-cover" />
+                    <img src="/assets/6.1/Suchitra Diwan4.jpg" class="w-7/12" />
+                </div>
+                <p class="first-letter:text-2xl">
+                    In Pune, Suchitra Diwan and her husband Shirish Diwan started their home terrace farm 25 years ago
+                    and took a unique decision not to use any soil and garden using dry leaves and kitchen waste only.
+                    Their terrace is a haven and a lot of birds, butterflies, and bees regularly visit their garden. The
+                    lush, biodiverse space has significantly regulated indoor heat as they explain: <span
+                        class="italic">“Earlier when the
+                        garden was very small, sitting in this room [immediately under the terrace garden] without a fan
+                        was
+                        very difficult in May. An M.Arch student studied the difference in morning, mid-afternoon and
+                        evening temperatures among flats with terrace gardens and those without. She found a difference
+                        of
+                        5-7°C.”</span>
+                </p>
+            </div>
+            <div class="flex flex-col gap-4">
+
+                <div class="flex flex-col gap-4">
+                    <div class="flex gap-4">
+                        <p class="first-letter:text-2xl">
+                            Residents of low-income settlements in Gutahalli, MD block - Malleshwaram, and Pottery town
+                            areas of
+                            Bangalore grow plants for greenery, herbs for cooking, and for their cooling benefits in and
+                            around
+                            their homes.
+                        </p>
+
+                        <img src="/assets/6.1/Low-income settlement_Bangalore.jpg" class="w-2/3 self-end" />
+                    </div>
+                    <div class="flex gap-4">
+                        <img src="/assets/6.1/Low-income settlement_Bangalore2.jpg" class="w-2/3" />
+                        <div class="flex flex-col justify-between">
+                            <p class="text-right">
+                                <span class="italic">“The air is very cool here. I need to see these
+                                    plants as soon as I get
+                                    up. I come every morning to see the plants.”
+                                </span>
+                            </p>
+                            <p>
+                                <span class="italic">“...because of the plants, it is very
+                                    pleasant and
+                                    cool here, and we sit here most of the time”</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <p class="w-1/3 self-end text-right">
+                            <span class="italic">“It is definitely cooler here in the
+                                summer times.
+                                Rainy season is a little challenging for us because of the mosquitoes. We know the
+                                plants
+                                attract
+                                mosquitoes, but they keep the place cool and are nice to see, so we keep it.”</span>
+                        </p>
+                        <img src="/assets/6.1/Low-income settlement_Bangalore3.jpg" class="w-2/3" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h5 class="mt-8">Conclusion</h5>
+        <p class="mt-2 max-w-[80ch]">
+            Having green cover and farms on rooftops, in backyards, and in balconies reduces perceived heat and improves
+            liveability. In a companion study in Chennai, <a
+                href="https://www.thebritishacademy.ac.uk/blog/quantifying-the-long-term-environmental-impacts-of-urban-and-peri-urban-agriculture/"
+                target="_blank" class="underline">Ashwin
+                Mahalingam and others find urban farming can reduce
+                temperatures by approximately 0.7°C from 2017 to 2041.</a> While the heat reduction benefits of urban
+            agriculture
+            are hyperlocal and currently based on peoples’ perceptions, if scaled up across urban rooftops, benefits can
+            potentially increase. India's <a
+                href="https://www.ndma.gov.in/sites/default/files/PDF/Guidelines/Cool-Roof-Handbook.pdf" target="_blank"
+                class="underline">Homeowner’s Handbook on Cool Roofs</a> does not mention rooftop farms/gardens, but
+            as
+            extreme heat rises in Indian cities, we need to explore all solutions to make cities more liveable.</p>
+
+        <h5 class="mt-8">Further Reading</h5>
+        <p class="mt-2 max-w-[80ch]">
+            <a href="https://www.thebritishacademy.ac.uk/blog/quantifying-the-long-term-environmental-impacts-of-urban-and-peri-urban-agriculture/"
+                target="_blank" class="underline">Quantifying the long-term environmental
+                impacts of urban and peri-urban agriculture</a> , a blog by Ashwin Mahalingam, U Srilok Sagar, Yatharth Singh,
+            and Teja Malladi.
+        </p>
+    </section>
+
+</Page>

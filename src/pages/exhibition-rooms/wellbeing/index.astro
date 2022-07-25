@@ -2,6 +2,7 @@
 import Page from "@layouts/Page.astro";
 import Breadcrumbs from "@components/Breadcrumbs.astro"
 import Title from "@components/Title.astro"
+import Card from "@components/Card.astro";
 
 const trail = [
     { title: "Home", url: "/" },
@@ -12,5 +13,19 @@ const trail = [
 
 <Page>
     <Breadcrumbs {trail} slot="breadcrumb" />
-    <Title slot="title" title="Wellbeing"/>
+    <Title slot="title" title="Wellbeing" />
+    <div class="flex flex-wrap md:flex-nowrap h-80 gap-8">
+        <div class="min-h-full w-full md:w-1/2">
+            <Card text="Enter" link="/exhibition-rooms/wellbeing/beyond-greening-reaping-livelihoods"
+                image="/assets/6.1/Asha Ugaonkar.jpg">
+                <h3 class="text-white">Beyond Greening and Reaping Livelihoods</h3>
+            </Card>
+        </div>
+        <div class="w-full md:w-1/2">
+            <Card text="Enter" link="/exhibition-rooms/wellbeing/green-shoots" image="/assets/7.1/7.1_cover.jpg">
+                <h3 class="text-white">Green shoots of health, happiness and wellbeing </h3>
+            </Card>
+        </div>
+    </div>
+
 </Page>

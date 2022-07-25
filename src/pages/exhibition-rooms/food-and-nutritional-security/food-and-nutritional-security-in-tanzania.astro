@@ -1,0 +1,88 @@
+---
+import Page from "@layouts/Page.astro"
+import Breadcrumbs from "@components/Breadcrumbs.astro"
+import ArticleTitle from "@components/ArticleTitle.astro";
+
+//TODO load this data from a file?
+const trail = [
+    { title: "Home", url: "/" },
+    { title: "Exhibition Rooms", url: "/exhibition-rooms" },
+    { title: "Food and Nutritional Security", url: "/exhibition-rooms/food-and-nutritional-security" },
+    { title: "Food and Nutritional Security in Tanzania", url: "/exhibition-rooms/food-and-nutritional-security/food-and-nutritional-security-in-tanzania" }
+
+]
+
+---
+
+<Page>
+    <Breadcrumbs {trail} slot="breadcrumb" />
+    <ArticleTitle slot="title" category="Food and Nutritional Security"
+        title="Food and Nutritional Security in Tanzania" />
+    <section class="mt-16">
+        <p class="columns-2 first-letter:text-2xl">
+            Field studies in Morogoro and Dar es Salaam have shown a growing awareness of food and nutritional security
+            concerns Vegetable growers and livestock keepers have different
+            experiences pertinent to food security and nutritional safety in the two study areas where, in an urban
+            area, the awareness and security are higher as compared to that in the peri-urban areas.
+            Accordingly, vegetable growers particularly in urban areas are motivated by the fact that their
+            consumers demand vegetables based on nutritional contents such as Amaranth (Mchicha) that has a
+            higher ability to increase iron and other vitamins that are essential to children and the elderly . On the
+            other
+            hand, consumers are particular about the type of vegetables they want and know specifically
+            where to get them. When one buyer from Dar es Salaam was asked why he travels such a long way to buy
+            vegetables
+            here, he responded that “I come here because I know the quality of the fertilizer this farmer applies to her
+            farm. Also, the vegetables are healthy and look dark green, he added.” Moreover, it was
+            observed that some wealthier people grow vegetables, not for any other reason but to
+            achieve the nutritional value of the vegetables and fruits. This implies that as the welfare of society
+            increases, people become more aware and specific to the type of food they consume by looking for
+            the nutritional value of the food.
+        </p>
+        <img src="/assets/11.2/Photo 1A.jpg" class="my-8 rounded-lg shadow" />
+
+        <div class="columns-2 my-8">
+            <p>
+                Consumers, especially those who live in urban areas were aware of pesticides and the type of fertilizers
+                used by farmers. For example, one customer said, “I trust this farmer, she is honest, when she applies
+                pesticides, she does not sell her products until after some time”. “This is unlike others who may apply
+                pesticide today and sell the vegetables to consumers the next day. They don’t care about the health and
+                the safety of the consumers”, added the woman from Dar es Salaam while nodding. The two cases above
+                demonstrate that the consumer’s knowledge and awareness in terms of their nutritional food value are
+                of paramount importance.
+            </p>
+            <img src="/assets/11.2/Photo 2B.jpg" class="rounded-lg shadow"/>
+        </div>
+
+        <div class="columns-2">
+            <img src="/assets/11.2/Photo 2C.jpg" class="rounded-lg shadow"/>
+
+            <p>
+                Another farmer went on to say that “I have more than ten years in this poultry business but I do not
+                look
+                for customers nor advertise my business. Customers come from far away, that others call me to supply
+                them with eggs. You know why?” Asked the farmer. “It is because they trust my way of feeding and
+                cleanliness in my farm”. The above shows that food safety is a key factor in maintaining
+                customers on one side but it is also a determining factor in the type of customers a farmer may attract.
+            </p>
+
+        </div>
+
+        <div class="my-8">
+        <p class="columns-1">
+            In urban and peri-urban agriculture, both vegetable growers and livestock keepers do consume part of
+            what they produce. A poultry keeper commented that “I sell some eggs and few trays are left for my
+            family to consume”, likewise, field studies shows that the motivation of some farmers to grow
+            vegetables are both to sell and to consume. This was also noted by a cattle keeper who iterated that he
+            sells some milk wholesale while keeping some for his family members. “Don’t you see how healthy my
+            children are? They drink a cup of milk daily”, said the farmer in Morogoro.
+        </p>
+        <img src="/assets/11.2/Photo 2D.jpg" class="my-8 rounded-lg shadow"/>
+        </div>
+
+        As shown it can be concluded that various farmers and customers have knowledge and awareness of food safety
+        and
+        nutritional security that goes alongside their practice of urban and peri urban agriculture in both Dar es
+        Salaam and Morogoro, Tanzania.
+
+    </section>
+</Page>

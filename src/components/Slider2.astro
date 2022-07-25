@@ -1,0 +1,79 @@
+---
+const images = Astro.props.images
+---
+
+<script is:inline src="https://cdn.jsdelivr.net/npm/keen-slider@6.7.0/keen-slider.min.js"></script>
+
+
+<div class="relative shadow-lg">
+    <button id="prev"
+        class="absolute top-1/2 -ml-6 md:-ml-16 -translate-y-1/2 left-0 z-10 bg-green stroke-eggshell p-3 rounded-full">
+        <svg class="w-5 h-5" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15.5758 1L2 15M2 15L15.5758 29M2 15H30" stroke="white" stroke-width="2" />
+        </svg>
+    </button>
+    <div id="my-keen-slider" class="keen-slider">
+
+        {images.map((item, index) => (
+        <div class="keen-slider__slide ">
+            <img src={item} class="aspect-auto" />
+        </div>
+        ))}
+
+    </div>
+    <button id="next"
+        class="absolute -mr-6 md:-mr-16 top-1/2 -translate-y-1/2 right-0 z-10 bg-green stroke-eggshell p-3 rounded-full">
+        <svg class="w-5 h-5" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14.4242 29L28 15M28 15L14.4242 1M28 15L2.35641e-06 15" stroke="white" stroke-width="2" />
+        </svg>
+
+    </button>
+</div>
+<script is:inline>
+    let slider = new KeenSlider("#my-keen-slider", {
+
+        mode: 'free-snap',
+    },
+        [
+            (slider) => {
+                let timeout
+                let mouseOver = false
+                function clearNextTimeout() {
+                    clearTimeout(timeout)
+                }
+                function nextTimeout() {
+                    clearTimeout(timeout)
+                    if (mouseOver) return
+                    timeout = setTimeout(() => {
+                        slider.next()
+                    }, 2500)
+                }
+                slider.on("created", () => {
+                    slider.container.addEventListener("mouseover", () => {
+                        mouseOver = true
+                        clearNextTimeout()
+                    })
+                    slider.container.addEventListener("mouseout", () => {
+                        mouseOver = false
+                        nextTimeout()
+                    })
+                    nextTimeout()
+                })
+                slider.on("dragStarted", clearNextTimeout)
+                slider.on("animationEnded", nextTimeout)
+                slider.on("updated", nextTimeout)
+            },
+        ]
+    )
+
+    const prevButton = document.querySelector('#prev')
+    const nextButton = document.querySelector('#next')
+
+    prevButton.addEventListener("click", () => {
+        slider.prev();
+    })
+    nextButton.addEventListener("click", () => {
+        slider.next()
+    })
+
+</script>

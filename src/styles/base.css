@@ -10,7 +10,7 @@
         @apply font-azeret text-3xl font-semibold text-green;
     }
     h3 {
-        @apply font-azeret text-2xl font-semibold text-green;
+        @apply font-azeret text-2xl font-semibold text-green leading-tight;
     }
     h4 {
         @apply font-azeret text-xl font-semibold text-green;

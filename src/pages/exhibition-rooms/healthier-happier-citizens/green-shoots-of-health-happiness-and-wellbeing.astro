@@ -1,0 +1,276 @@
+---
+import { BaseLayout, Centered } from "@layouts/index.js";
+import Title from "@components/Title.astro";
+import Breadcrumbs from "@components/Nav/Breadcrumbs.astro";
+import {
+    Slider,
+    ImageSlide,
+    TextSlide,
+    Caption,
+    Quote,
+    Credit,
+} from "@components/Carousel/index.js";
+import Back from "@components/Nav/Back.astro";
+
+const title = "Green Shoots of Health, Happiness and Wellbeing";
+---
+
+<BaseLayout title={title}>
+    <Breadcrumbs title={title} />
+    <Centered>
+        <Title title={title} authors="Maitreyi Koduganti and Chandni Singh" />
+        <div class="w-96 px-16 pt-6 pb-12 float-right">
+            <p class="text-green font-open text-lg italic relative">
+                <span
+                    class="font-medium font-lato text-5xl absolute -left-8 -top-4"
+                    >&ldquo;</span
+                >
+
+                My garden is my getaway from the city’s chaos. The greenery
+                gives me peace and a pause to think.
+                <span
+                    class="font-medium font-lato text-5xl absolute indent-3 -bottom-7"
+                >
+                    &rdquo;</span
+                >
+            </p>
+
+            <p class="text-gray-20 font-bold">
+                Thirty-seven-year-old IT professional from Pune
+            </p>
+        </div>
+        <p>
+            Over 50 per cent of the global population resides in cities, where
+            they are constantly challenged by overpopulation, traffic,
+            unemployment, cramped housing, degraded environmental quality, and
+            increased health hazards. Given this reality of urban life, citizens
+            are increasingly turning to nature for solace, peace, and mental
+            wellbeing.
+        </p>
+        <p>
+            Urban farming, in the form of backyard and balcony gardens, terrace
+            farms, and community farms are places with restorative qualities
+            that reduce stress, improve one’s mood, and boost overall health. In
+            this series, we tap into specific excerpts from city-dwellers to
+            explain how urban farming can have a profound impact on their
+            physical and mental well-being and relations within their homes and
+            communities.
+        </p>
+    </Centered>
+    <Slider>
+        <TextSlide>
+            <h4>1. Gardening every day keeps the doctor away</h4>
+            <Quote>
+                I grow medicinal herbs like thyme, oregano, tulsi, vasuki, mint,
+                and sage because they relieve headaches and menstrual cramps.
+                These teas have a cooling effect and relieve anxiety.
+            </Quote>
+            <p>(A fifty-one-year-old female entrepreneur in Pune)</p>
+        </TextSlide>
+        <ImageSlide src="/assets/7.1/Image 1.jpg">
+            <Caption>Growing Herbs and Medicinal Plants</Caption>
+            <Credit>Source: Saimah Shaikh</Credit>
+        </ImageSlide>
+
+        <TextSlide>
+            <Quote>
+                We come from a village, where we have a culture of having
+                greenery in front of our houses. We grow plants like tulsi and
+                aloe for their medicinal properties. They relieve menstrual
+                cramps and improve digestion. They are used by everyone in our
+                neighbourhood.
+            </Quote>
+            <p>
+                (A thirty-seven-year-old woman from a low-income settlement in
+                Bengaluru)
+            </p>
+        </TextSlide>
+        <ImageSlide src="/assets/7.1/Image 2.jpg">
+            <Caption>
+                Few pots at the entrance of a low-income household in Bopodi,
+                Pune, India
+            </Caption>
+            <Credit>Source: Maitreyi Koduganti</Credit>
+        </ImageSlide>
+        <TextSlide>
+            <Quote>
+                Personally, whenever I am exhausted or get a migraine, I go to
+                my farm and weed or water my plants. These tasks calm me down.
+                Gardening helps keep myself fit.
+            </Quote>
+            <p>(A thirty-two-year-old male IT professional in Pune)</p>
+        </TextSlide>
+        <ImageSlide src="/assets/7.1/Image 3.jpg">
+            <Caption>Community Farming at Jakkur Lake, Bengaluru</Caption>
+            <Credit>Source: ANANAS</Credit>
+        </ImageSlide>
+        <TextSlide>
+            <Quote>
+                After my husband underwent angioplasty, I decided that we will
+                not consume chemically-grown food anymore. That is when I
+                started to grow and harvest my own produce.
+            </Quote>
+            <p>(A forty-seven-year-old homemaker in Bengaluru)</p>
+        </TextSlide>
+        <ImageSlide src="/assets/7.1/Image 4.jpg">
+            <Caption>Fresh produce from a terrace garden in Bengaluru</Caption>
+            <Credit>Source: Karthik Bhaskara</Credit>
+        </ImageSlide>
+        <TextSlide>
+            <h4>2. A healthy mind in a healthy garden</h4>
+            <Quote>
+                Having plants is just beautiful. It gives a beautiful look and
+                positive vibes to the house.
+            </Quote>
+            <p>(A forty-year-old female construction labourer in Bengaluru)</p>
+        </TextSlide>
+        <ImageSlide src="/assets/7.1/Image 5.jpg">
+            <Caption>Gardening in a low-income settlement</Caption>
+
+            <Credit>Source: Maitreyi Koduganti</Credit>
+        </ImageSlide>
+        <TextSlide>
+            <Quote>
+                Gardening allows me to de-stress. I used to watch movies or go
+                to the mall, but now I have a reason to come back home. Spending
+                more time in the sun and fresh air has improved my health. It
+                has also helped me connect better with myself.
+            </Quote>
+            <p>(A forty-three-year-old male IT professional in Bengaluru)</p>
+        </TextSlide>
+        <ImageSlide src="/assets/7.1/Image 6.jpg">
+            <Caption>Home garden in Bengaluru</Caption>
+            <Credit>Source: Prathijna Poonacha</Credit>
+        </ImageSlide>
+        <TextSlide>
+            <Quote>
+                Having just a few pots of plants makes me happy. It is healthy
+                to have plants around you; they give fresh air and it's green.
+                Green is good and a healthy colour.
+            </Quote>
+            <p>(A thirty-seven-year-old female daily wage labourer in Pune)</p>
+        </TextSlide>
+        <ImageSlide src="/assets/7.1/Image 7.jpg">
+            <Caption>Balcony garden in a low-income settlement in Pune</Caption>
+            <Credit>Source: Maitreyi Koduganti</Credit>
+        </ImageSlide>
+        <TextSlide>
+            <Quote>
+                I have always had an interest in growing plants. It is said to
+                bring good luck and health to the ones living in the house. And
+                eating what you grow is a family satisfaction, isn’t it?
+            </Quote>
+            <p>(A fifty-one-year-old homemaker in Bengaluru)</p>
+        </TextSlide>
+        <ImageSlide src="/assets/7.1/Image 8.jpg">
+            <Caption>Fresh produce from garden</Caption>
+            <Credit>Source: Saimah Shaikh</Credit>
+        </ImageSlide>
+        <TextSlide>
+            <Quote>
+                Within a month of having my own garden, I started feeling
+                happiness. I felt like I was taking care of my children. ‘Ata
+                mala masta vatta, tya jhadanna baghun asa vatta jasa majhich
+                mula mothi hotyat (Now when I look at my plants, I feel like my
+                children are growing and blooming).
+            </Quote>
+            <p>(A forty-four-year-old female domestic helper in Pune)</p>
+        </TextSlide>
+        <ImageSlide src="/assets/7.1/Image 9.jpg">
+            <Caption>Growing herbs in a terrace garden</Caption>
+            <Credit>Source: Swarnika Sharma</Credit>
+        </ImageSlide>
+        <TextSlide>
+            <Quote>
+                I wanted to farm on our plot, but my husband did not. I couldn’t
+                drive, so my husband had to drive me up to our plot every time I
+                wanted to go. Initially, he was not interested, but after three
+                weeks, he helped me sow plants, water them, and carry my
+                gardening equipment. We walked out of our farm smiling and
+                holding hands.
+            </Quote>
+            <p>
+                (A sixty-three-year-old retired female government employee in
+                Pune)
+            </p>
+        </TextSlide>
+        <ImageSlide src="/assets/7.1/Image 10.jpg">
+            <Caption>Community farming in Pune</Caption>
+            <Credit>Source: Amruth Kiran</Credit>
+        </ImageSlide>
+        <TextSlide>
+            <Quote>
+                Nowadays, we are getting disconnected from our food and cultural
+                heritage. I am growing native varieties of vegetables and spices
+                to revive the magic our old food recipes had.
+            </Quote>
+            <p>(A thirty-seven-year-old male food entrepreneur in Bengaluru)</p>
+        </TextSlide>
+        <ImageSlide src="/assets/7.1/Image 11.jpg">
+            <Caption>Fresh produce from garden</Caption>
+            <Credit>Source: Saimah Shaikh</Credit>
+        </ImageSlide>
+        <TextSlide>
+            <Quote>
+                We got married recently and moved to India. It was a big change
+                for my husband and I. We started gardening and it brought us
+                closer together. We spoke about our day at work, our likings,
+                and connected better. We learnt to adjust and help each other.
+            </Quote>
+            <p>(A twenty-nine-year-old female IT professional in Pune)</p>
+        </TextSlide>
+        <ImageSlide src="/assets/7.1/Image 12.jpg">
+            <Caption>Backyard of an urban gardener in Bengaluru</Caption>
+            <Credit>Source: Prathijna Poonacha</Credit>
+        </ImageSlide>
+        <TextSlide>
+            <Quote>
+                I have a lot of friends now, not just in India but outside India
+                too. One friend is staying in Thane, another is based in
+                California. I guide them on how to garden through WhatsApp and
+                video calls.
+            </Quote>
+            <p>(A seventy-one-year-old man from Bengaluru)</p>
+        </TextSlide>
+        <ImageSlide src="/assets/7.1/Image 13.jpg">
+            <Caption>Hydroponics farm in Pune</Caption>
+            <Credit>Source: GreenAqua Farms</Credit>
+        </ImageSlide>
+        <TextSlide>
+            <h4>3. Gardening is the ultimate sustainability teacher</h4>
+            <Quote>
+                We don't want to waste the food, because we see how long it
+                takes for plants to grow and we don't have the heart to waste
+                it. Gardening has taught us a lot about patience and discipline.
+                You cannot do anything to make the plants grow faster; rather
+                you see it as it grows. It adds a different dimension to your
+                lifestyle, it's addictive.
+            </Quote>
+            <p>(A family of four in Pune)</p>
+        </TextSlide>
+        <ImageSlide src="/assets/7.1/Image 14.jpg">
+            <Caption>Terrace garden in Bengaluru</Caption>
+            <Credit>Source: Prathima Adiga</Credit>
+        </ImageSlide>
+
+        <TextSlide>
+            <Quote>
+                There is so much to learn from my garden. I have seen how
+                spiders make webs. I have seen tiny birds make their nest using
+                a few brinjal leaves. Their eggs are as small as peanuts with a
+                reddish pink colour. We don't want to waste the food, because we
+                see how long it takes for plants to grow and we don't have the
+                heart to waste it. Gardening has taught us a lot about patience
+                and discipline. You cannot do anything to make the plants grow
+                faster; rather you see it as it grows. It adds a different
+                dimension to your lifestyle, it's addictive.
+            </Quote>
+            <p>(A forty-six-year-old homemaker in Bengaluru)</p>
+        </TextSlide>
+        <ImageSlide src="/assets/7.1/Image 15.jpg">
+            <Caption>Trees and creepers in an urban farm in Bengaluru</Caption>
+            <Credit>Source: Swarnika Sharma</Credit>
+        </ImageSlide>
+    </Slider>
+    <Centered><Back/></Centered>
+</BaseLayout>

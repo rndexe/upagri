@@ -1,0 +1,43 @@
+---
+import { BaseLayout, Centered } from "@layouts/index.js";
+import Title from "@components/Title.astro";
+import Video from "@components/Articles/Video.astro";
+import Desc from "@components/Articles/Desc.astro";
+import Breadcrumbs from "@components/Nav/Breadcrumbs.astro";
+import Back from "@components/Nav/Back.astro";
+
+const title =
+    "Future impacts of Urban and Peri-urban agriculture on carbon stock and land surface temperatures in India";
+---
+
+<BaseLayout title={title}>
+    <Breadcrumbs title={title} />
+    <Centered>
+        <Title title={title} authors="Ashwin Mahalingam" />
+        <Video id="4gyl7CNfDu0"/>
+        <Desc>
+            <p>
+                Over the last two decades, cities in India have seen significant
+                urban growth accompanied by green cover loss. Recently however,
+                there has been a growing interest in urban and peri-urban
+                agriculture (UPA) in these urban areas. The extent to which UPA
+                mitigates the effects of urbanization is unclear. The video
+                describes a study that aims to quantify the impact of UPA in the
+                cities of Chennai and Bengaluru in India. Past trends of urban
+                growth and green cover depletion are used to predict how
+                urbanized Chennai and Bengaluru will be in the future, using CA
+                Markov techniques on GIS data. A survey was then carried out to
+                understand the general perception and growth trends pertaining
+                to UPA. This survey data was then combined with a land use model
+                to predict the growth of UPA in Chennai and Bengaluru in the
+                future. These ‘future maps’ were then used to quantify the
+                impact of UPA on biomass and land surface temperatures. The
+                study finds that UPA can play a small, but not insignificant
+                role in augmenting carbon stock and bringing down land surface
+                temperatures and proposes that urban development policies
+                consciously include the role of UPA.
+            </p>
+        </Desc>
+        <Back/>
+    </Centered>
+</BaseLayout>

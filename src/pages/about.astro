@@ -1,0 +1,54 @@
+---
+import { BaseLayout, Centered } from "@layouts/index";
+import Partners from "@components/Partners.astro";
+import Breadcrumbs from "@components/Nav/Breadcrumbs.astro";
+import Title from "@components/Title.astro";
+
+const title = "About the Exhibition";
+---
+
+<BaseLayout title={title}>
+    <Breadcrumbs title={title} />
+    <Centered>
+        <Title title={title} />
+        <p>
+            Our cities are expanding like never before. By 2050, urban areas are
+            expected to increase by 2.5–3 billion people, 90 per cent of whom
+            will be in Asia and Africa. The reality of this ‘urban century’ is
+            twofold. On the one hand, we are seeing growing inequality,
+            increasing demands for urban services like transport and
+            electricity, and further ‘mega-city problems’ such as congestion and
+            shrinking green spaces. On the other hand, urban areas are also
+            sites of tremendous opportunity, to provide jobs, help people live
+            fulfilling lives, and enable sustainable development.
+        </p>
+        <p>
+            There has been growing interest in ‘green infrastructure’ or
+            ‘nature-based solutions’ in cities. These are actions that foster
+            biodiversity, maintain or improve air quality, provide food and
+            nutrition, improve health, and contribute to a better quality of
+            life. In the <span class="font-bold"
+                >Urban and Peri-urban Agriculture as Green Infrastructure
+                (UP-AGrI) project</span
+            >, we examine one such solution—food grown in and around cities—and
+            how it helps build safer, healthier, and happier cities and
+            citizens.
+        </p>
+        <p>
+            This exhibition brings together stories on urban and peri-urban
+            farming in Indian and Tanzanian cities to showcase the variety of
+            things people are doing, the benefits they experience, and how these
+            relate to broader goals of sustainability and wellbeing. The
+            exhibition has seven themes, each with a room of its own, and we
+            welcome you to visit them in any order.
+        </p>
+        <p>
+            For more information visit <a
+                href="https://www.upagri.net/"
+                target="_blank"
+                class="underline text-green-dark">upagri.net</a
+            >
+        </p>
+        <Partners />
+    </Centered>
+</BaseLayout>

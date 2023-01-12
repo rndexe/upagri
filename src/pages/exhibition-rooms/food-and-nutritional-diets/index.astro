@@ -1,0 +1,44 @@
+---
+import { BaseLayout, Centered, Stack } from "@layouts/index.js";
+import Breadcrumbs from "@components/Nav/Breadcrumbs.astro";
+import Title from "@components/Title.astro";
+import CardStack from "@components/Cards/Cardstack.astro";
+
+const title = "Food and Nutritional Diets";
+---
+
+<BaseLayout title={title}>
+    <Breadcrumbs title={title} />
+    <Centered>
+        <Title title={title} />
+        <p>
+            Urban farmers grow ornamentals, microgreens, herbs, vegetables, and
+            fruits. Many of them meet their daily vegetable needs like tomatoes,
+            chillies, beans, okra, brinjal, and gourds, from their gardens.
+            Since these were organically home-grown, it provides fresh, healthy,
+            and nutritional diets. Growing local and native plants has also led
+            to a revival of forgotten flavours and food-recipes, reviving local
+            food cultures. During the COVID-19 pandemic and related lockdowns,
+            these food gardens became major sources of fresh herbs, fruits and
+            vegetables for many households, including the urban poor.
+        </p>
+        <Stack>
+            <CardStack
+            
+
+                img="/assets/11.1/Photo 8_WP 11.1.jpg"
+                title="The Many Meanings of ‘Good Food’ in the City"
+                href="/exhibition-rooms/food-and-nutritional-diets/the-many-meanings-of-good-food-in-the-city"
+            />
+            <CardStack
+            
+
+                img="/assets/11.2/Photo 1A.jpg"
+                title="Confidence & Mindfulness in Food and Healthy Quality"
+                href="/exhibition-rooms/food-and-nutritional-diets/confidence-and-mindfulness-in-food-and-healthy-quality"
+            />
+            
+            
+        </Stack>
+    </Centered>
+</BaseLayout>

@@ -1,0 +1,38 @@
+---
+import { BaseLayout, Centered, Stack } from "@layouts/index.js";
+import Breadcrumbs from "@components/Nav/Breadcrumbs.astro";
+import Title from "@components/Title.astro";
+import CardStack from "@components/Cards/Cardstack.astro";
+
+const title = "Space";
+---
+
+<BaseLayout title={title}>
+    <Breadcrumbs title={title} />
+
+    <Centered>
+        <Title title={title} />
+        <p>
+            Availability and accessibility to cultivable land continues to be a
+            pressing challenge in urbanising areas. Despite this, citizens adapt
+            to growing on balconies, terraces, rooftops, and empty plots.
+            Citizens in informal settlements also engage in food growing,
+            livestock and poultry rearing, often within the limited space
+            available, from narrow lanes, footpaths or parapet walls to old
+            containers.
+        </p>
+        <Stack>
+            <CardStack
+                img="/assets/8.1/Picture 2.jpg"
+                title="Changing Rivers, Changing Practices: A Case of Pune City"
+                href="/exhibition-rooms/space/changing-rivers-changing-practices-a-case-of-pune-city"
+            />
+            <CardStack
+                img="/assets/9.2/Infographics Pie Chart_Graphics Credits_Nabil Abdallah.png"
+                title="Land Tenure Security in Dar es Salaam and Morogoro"
+                href="/exhibition-rooms/space/land-tenure-security-in-dar-es-salaam-and-morogoro"
+                contain
+            />
+        </Stack>
+    </Centered>
+</BaseLayout>

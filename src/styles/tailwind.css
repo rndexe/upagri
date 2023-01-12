@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    h1 {
+        @apply font-open text-3xl lg:text-4xl font-bold text-green;
+    }
+    h2 {
+        @apply font-open text-xl lg:text-3xl font-bold text-green;
+
+    }
+    h3 {
+        @apply font-oxygen text-xl lg:text-3xl font-semibold;
+    }
+    h4 {
+        @apply font-open text-lg font-bold text-eggshell mb-4;
+    }
+    h5 {
+        @apply font-open text-lg font-medium text-gray-20 mb-4;
+    }
+    p {
+        @apply font-lato mb-4;
+    }
+
+    .desc > h5 {
+        @apply text-green;
+    }
+
+    .mobile > p {
+        @apply text-eggshell font-oxygen text-lg;
+    }
+
+    .mobile > img {
+        @apply w-full h-auto mb-6 border border-eggshell;
+    }
+}
+
+@layer components {
+
+}

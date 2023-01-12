@@ -1,0 +1,187 @@
+---
+import links from "@data/links.json";
+
+let header_class,
+    button_class,
+    nav_class,
+    link_class,
+    dropdown_class,
+    drawer_class;
+if (Astro.url.pathname === "/") {
+    header_class =
+        "fixed top-0 w-full h-14 z-50 text-white bg-black/20 backdrop-blur";
+    button_class = "fill-white";
+    nav_class = "relative flex items-center h-14 justify-between mx-8 lg:mx-16";
+    link_class = "link after:bg-white";
+    dropdown_class = "dropdown-content bg-transparent lg:bg-black/80";
+    drawer_class =
+        "hidden absolute w-screen lg:w-full left-0 top-14 lg:static lg:flex flex-col lg:flex-row gap-8 tracking-tight font-open text-base bg-black/95 lg:bg-transparent";
+} else {
+    header_class = "fixed top-0 w-full h-14 z-50 text-green bg-eggshell";
+    button_class = "fill-green";
+    nav_class =
+        "relative flex items-center h-14 justify-between mx-8 lg:mx-16 border-b border-green";
+    link_class = "link after:bg-green";
+    dropdown_class = "dropdown-content bg-eggshell";
+    drawer_class =
+        "hidden absolute w-screen lg:w-full left-0 top-14 lg:static lg:flex flex-col lg:flex-row gap-8 tracking-tight font-open text-base bg-eggshell";
+}
+---
+
+<header class={header_class}>
+    <nav class={nav_class}>
+        <div>
+            <a rel="prefetch" class="font-open text-2xl" href="/">UPAGrI</a>
+        </div>
+        <div>
+            <button id="toggle" aria-label="Open mobile menu" class="block lg:hidden px-2">
+                <svg
+                    class={button_class}
+                    width="24"
+                    height="16"
+                    viewBox="0 0 24 16"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <rect y="0.5" width="24" height="1"></rect>
+                    <rect y="7.5" width="24" height="1"></rect>
+                    <rect y="14.5" width="24" height="1"></rect>
+                </svg>
+            </button>
+            <ul id="drawer" class={drawer_class}>
+                <li>
+                    <a rel="prefetch" class={link_class} href={links["About"]}
+                        >About</a
+                    >
+                </li>
+                <li>
+                    <a
+                        rel="prefetch"
+                        class={link_class}
+                        href={links["Showcasing UPA"]}>Showcasing UPA</a
+                    >
+                </li>
+                <li class="dropdown group">
+                    <a
+                        rel="prefetch"
+                        class={link_class}
+                        href={links["Exhibition Rooms"]}>Exhibition Rooms</a
+                    >
+                    <svg
+                        class="w-2.5 h-2.5 hidden lg:inline stroke-current"
+                        width="16"
+                        height="11"
+                        viewBox="0 0 16 11"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            d="M1.66675 1.25L8.33341 8.75L15.0001 1.25"
+                            stroke-width="2"></path>
+                    </svg>
+
+                    <ul class="dropdown-wrapper">
+                        <div class={dropdown_class}>
+                            <li>
+                                <a
+                                    rel="prefetch"
+                                    class={link_class}
+                                    href={links["Greener Cities"]}
+                                >
+                                    Greener Cities</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    rel="prefetch"
+                                    class={link_class}
+                                    href={links["Healthier, Happier Citizens"]}
+                                    >Healthier, Happier Citizens</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    rel="prefetch"
+                                    class={link_class}
+                                    href={links["Food and Nutritional Diets"]}
+                                    >Food and Nutritional Diets</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    rel="prefetch"
+                                    class={link_class}
+                                    href={links[
+                                        "Men and Women nurturing Edible Cities"
+                                    ]}>Men and Women Nurturing Edible Cities</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    rel="prefetch"
+                                    class={link_class}
+                                    href={links["Labour and Incomes"]}
+                                    >Labour and Incomes</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    rel="prefetch"
+                                    class={link_class}
+                                    href={links["Space"]}>Space</a
+                                >
+                            </li>
+                        </div>
+                    </ul>
+                </li>
+                <li>
+                    <a
+                        rel="prefetch"
+                        class={link_class}
+                        href={links["Reading Room"]}>Reading Room</a
+                    >
+                </li>
+                <li>
+                    <a rel="prefetch" class={link_class} href={links["Contact"]}
+                        >Contact</a
+                    >
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<script is:inline>
+    const menuButton = document.querySelector("#toggle");
+    const drawer = document.querySelector("#drawer");
+
+    menuButton.addEventListener("click", () => {
+        drawer.classList.toggle("mobile");
+        drawer.classList.toggle("hidden");
+    });
+</script>
+<style>
+    .mobile {
+        @apply w-screen -ml-8 flex p-8 border-b shadow;
+    }
+    .dropdown {
+        @apply relative;
+    }
+
+    .dropdown-wrapper {
+        @apply block lg:hidden static lg:absolute group-hover:block group-focus-within:block -left-1/2 top-full;
+    }
+
+    .dropdown-content {
+        @apply flex flex-col gap-y-4 p-0 lg:py-6 lg:px-5 mt-2.5 border-0 lg:border w-fit lg:w-max;
+    }
+
+    .dropdown-content li {
+        @apply list-['-'] lg:list-none ml-3 lg:ml-0 pl-4 lg:pl-0;
+    }
+    .link {
+        @apply relative after:-bottom-1 after:block after:h-px after:left-1/2 after:absolute after:w-0 after:transition-all after:ease-out after:bg-green;
+    }
+
+    .link:hover:after {
+        @apply w-[96%] left-[2%];
+    }
+</style>

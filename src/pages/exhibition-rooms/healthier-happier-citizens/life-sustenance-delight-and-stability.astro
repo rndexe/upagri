@@ -1,0 +1,42 @@
+---
+import { BaseLayout, Centered } from "@layouts/index.js";
+import { Video, Desc } from "@components/Articles";
+import Title from "@components/Title.astro";
+import Breadcrumbs from "@components/Nav/Breadcrumbs.astro";
+import Back from "@components/Nav/Back.astro";
+
+const title = "Life, Sustenance, Delight and Stability";
+---
+
+<BaseLayout title={title}>
+    <Breadcrumbs title={title} />
+    <Centered>
+        <Title
+            title={title}
+            authors="Betty Mntambo, Ombeni Swai, Mariam Genes"
+        />
+        <Video id="Eqlz1blY86M"/>
+        <Desc>
+            <p>
+                For many city dwellers, urban agriculture has been a source of
+                sustenance. This video, based on an interview, documents a part
+                of this story. Mr Hasunga, a man in his early forties, describes
+                how his plot of land in Morogoro's peri-urban area has brought
+                about remarkable life changes. His decision to leave his job as
+                a bus driver and set up an agricultural business led to both
+                material success as well as intangible benefits, including
+                increased financial freedom and family well-being.
+            </p>
+            <p>
+                In this video, Mr Malinga of Morogoro explains how his farming
+                operations have expanded from a few plots to 3 acres of farming
+                land. His methods for growing tomatoes in the city have changed
+                his life. Motivated by the financial rewards, he has turned to
+                other urban agriculture strategies, which have helped him and
+                his family establish a sustainable lifestyle and enhance their
+                standard of living.
+            </p>
+        </Desc>
+        <Back/>
+    </Centered>
+</BaseLayout>

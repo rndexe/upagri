@@ -1,0 +1,51 @@
+---
+import { BaseLayout, Centered } from "@layouts/index";
+import Title from "@components/Title.astro";
+import Breadcrumbs from "@components/Nav/Breadcrumbs.astro";
+
+const title = "Contact Us";
+---
+
+<BaseLayout title={title}>
+    <Breadcrumbs title={title} />
+    <Centered>
+        <Title title={title} />
+        <p>
+            We hope you enjoyed this exhibition, curated from urban farms and
+            gardens across India and Tanzania. If you have questions or are
+            interested in sharing your own urban farm here, please use the form below.
+        </p>
+        <form
+            data-netlify="true"
+            name="contact"
+            action="/thank-you"
+            class="bg-eggshell"
+        >
+            <ul class="flex flex-col gap-4 max-w-prose">
+                <input
+                    required
+                    name="name"
+                    class="bg-eggshell rounded border border-gray-15 px-4 py-2"
+                    type="text"
+                    placeholder="Enter your name here"
+                />
+                <input
+                    required
+                    name="email"
+                    class="bg-eggshell rounded border border-gray-15 px-4 py-2"
+                    type="email"
+                    placeholder="Enter you email here"
+                />
+                <textarea
+                    required
+                    name="message"
+                    class="h-60 bg-eggshell rounded border border-gray-15 px-4 py-2"
+                    placeholder="Enter your message here"></textarea>
+                <button
+                    class="self-start font-lato font-gray border border-gray-15 px-4 py-2 rounded"
+                    type="submit">Submit</button
+                >
+            </ul>
+        </form>
+    </Centered>
+</BaseLayout>

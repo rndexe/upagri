@@ -1,0 +1,85 @@
+---
+import links from "@data/links.json";
+const { title, src } = Astro.props;
+---
+
+<div class="flip opacity-0 relative inline-block my-2">
+    <div class="">
+        <img
+            class="flip-front absolute h-full w-full object-cover rounded brightness-[40%]"
+            src={src}
+            alt=""
+        />
+        <h1 class="font-oxygen flip-front-text absolute text-eggshell px-8 py-12 text-3xl lg:text-4xl">{title}</h1>
+        <div class="absolute left-8 bottom-12 lg:hidden">
+            <a
+                href={links[title]}
+                class="flex gap-4 items-center w-fit rounded px-4 py-2 text-eggshell border border-eggshell bg-black/80 group hover:bg-black/90 transition-colors ease-in-out"
+            >
+                Enter
+                <svg
+                    width="26"
+                    height="8"
+                    viewBox="0 0 26 8"
+                    fill="none"
+                    class="group-hover:translate-x-2 transition-transform ease-in-out duration-500"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path
+                        d="M1 3.5C0.723858 3.5 0.5 3.72386 0.5 4C0.5 4.27614 0.723858 4.5 1 4.5V3.5ZM25.3536 4.35355C25.5488 4.15829 25.5488 3.84171 25.3536 3.64645L22.1716 0.464466C21.9763 0.269204 21.6597 0.269204 21.4645 0.464466C21.2692 0.659728 21.2692 0.976311 21.4645 1.17157L24.2929 4L21.4645 6.82843C21.2692 7.02369 21.2692 7.34027 21.4645 7.53553C21.6597 7.7308 21.9763 7.7308 22.1716 7.53553L25.3536 4.35355ZM1 4.5H25V3.5H1V4.5Z"
+                        class="fill-eggshell"></path>
+                </svg>
+            </a>
+        </div>
+    </div>
+    <div
+        class="flip-back w-fit lg:w-full h-72 lg:h-full bg-green-dark rounded p-8"
+    >
+        <p class="text-eggshell hidden lg:block">
+            <slot />
+        </p>
+        <a
+            href={links[title]}
+            class="hidden lg:flex gap-4 items-center w-fit rounded px-4 py-2 text-eggshell border border-eggshell bg-black/25 group hover:bg-black/50 transition-colors ease-in-out"
+        >
+            Enter
+            <svg
+                width="26"
+                height="8"
+                viewBox="0 0 26 8"
+                fill="none"
+                class="group-hover:translate-x-2 transition-transform ease-in-out duration-500"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <path
+                    d="M1 3.5C0.723858 3.5 0.5 3.72386 0.5 4C0.5 4.27614 0.723858 4.5 1 4.5V3.5ZM25.3536 4.35355C25.5488 4.15829 25.5488 3.84171 25.3536 3.64645L22.1716 0.464466C21.9763 0.269204 21.6597 0.269204 21.4645 0.464466C21.2692 0.659728 21.2692 0.976311 21.4645 1.17157L24.2929 4L21.4645 6.82843C21.2692 7.02369 21.2692 7.34027 21.4645 7.53553C21.6597 7.7308 21.9763 7.7308 22.1716 7.53553L25.3536 4.35355ZM1 4.5H25V3.5H1V4.5Z"
+                    class="fill-eggshell"></path>
+            </svg>
+        </a>
+    </div>
+</div>
+<style>
+    .flip-back,
+    .flip-front {
+        backface-visibility: hidden;
+        transition: transform 1.5s ease-out;
+    }
+    .flip-front-text {
+        transition: all 0.4s;
+    }
+    .flip-back {
+        transform: rotateY(180deg);
+    }
+    @media screen(lg) {
+        .flip:hover .flip-back {
+            transform: rotateY(0deg);
+        }
+
+        .flip:hover .flip-front {
+            transform: rotateY(180deg);
+        }
+        .flip:hover .flip-front-text {
+            opacity: 0;
+        }
+    }
+</style>

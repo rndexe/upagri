@@ -1,0 +1,307 @@
+---
+import { BaseLayout, Centered } from "@layouts/index.js";
+import Title from "@components/Title.astro";
+import Breadcrumbs from "@components/Nav/Breadcrumbs.astro";
+import {
+    Slider,
+    ImageSlide,
+    TextSlide,
+    Caption,
+    Quote,
+    Credit,
+} from "@components/Carousel/index.js";
+import Back from "@components/Nav/Back.astro";
+
+const title =
+    "Income, Food, and Jobs: Material Benefits of Urban Farming in Indian Cities";
+---
+
+<BaseLayout title={title}>
+    <Breadcrumbs title={title} />
+    <Centered>
+        <Title
+            title={title}
+            authors="Swarnika Sharma, Maitreyi Koduganti, Prathijna Poonacha"
+        />
+        <p>
+            Every decade, millions of new residents move to the ever-growing
+            cities of India in search of a better livelihood. Among the numerous
+            opportunities that cities provide, urban agriculture is a promising
+            entry-point to green jobs and income generation, particularly among
+            the economically weaker sections of society. Several practitioners,
+            entrepreneurs, and collectives offer unique opportunities to urban
+            and peri-urban populations, while individuals continue to find ways
+            to increase their income and save costs on food and health expenses.
+            Through this essay, we provide a bird’s eye view of how urban
+            farming helps in stimulating the local economy, involving
+            individuals and collectives to social enterprises and business
+            platforms.
+        </p>
+    </Centered>
+    <Slider>
+        <TextSlide>
+            <h4>1. Urban farming by individuals</h4>
+            <p>
+                Heaven on My Earth: Ann Vinya Thomas runs Heaven on My Earth
+                (H.O.M.E.), an urban farming initiative in Bengaluru that
+                supplies leafy greens and provides training on starting a home
+                garden. She began her journey in 2017 after realising that she
+                was ‘paying taxes to put poisoned food on her plate’. Within an
+                area of less than 100 sq. feet on her terrace, Ann grows exotic
+                varieties of greens in a greenhouse using hydroponics. Although
+                her target customers are high-income families, she is attempting
+                to supply microgreens to middle-income families using natural
+                farming practices.
+            </p>
+        </TextSlide>
+        <TextSlide>
+            <Quote>
+                 Once the initial investment is done, there
+                is continuous yield, leading to economic sustainability.
+                Hydroponics uses one-tenth of the water that goes into regular
+                farming, and I am reusing this water as well. With this, I am
+                saving the money that I would otherwise spend on outside food.
+                Now I know where my food comes from and all of what I do is
+                sustainable
+            </Quote>
+            <p>- Ann Vinya Thomas</p>
+        </TextSlide>
+        <ImageSlide src="/assets/10.2/Image 1.jpg">
+            <Caption
+                >Exotic Greens Grown in a Greenhouse on a Terrace, Bengaluru</Caption
+            >
+            <Credit
+                >Source:
+                https://www.thebetterindia.com/157032/news-bengaluru-urban-farming-hydroponics/
+            </Credit>
+        </ImageSlide>
+        <TextSlide>
+            <h4>2. Urban farming through farmers’ collectives</h4>
+
+            <p>
+                Abhinav Farmers Club: Several farmers across India struggle to
+                sustain and maximise their income with traditional agriculture.
+                The challenge is greater for peri-urban farmers, who face the
+                additional burden of dealing with the impact of rapid
+                urbanisation. In 1999, a group of 11 farmers came together to
+                set up Abhinav Farmers Club (AFC) in Pune, a farmers’ collective
+                under the leadership of Dhyaneshwar Bhodke. Formalised in 2004,
+                AFC’s primary aim is to support farmers and supply chemical-free
+                food. Today, the collective has more than 1.5 lakh farmers under
+                its ambit, spread across India, and directly links them to over
+                <a
+                    class="underline"
+                    href="https://www.abhinavfarmers.club/about"
+                    target="_blank">3 lakh urban customers in Maharashtra</a
+                > via a mobile application through which they supply milk, fruits,
+                and vegetables. The collective trains its members in chemical-free
+                farming practices at a nominal fee in response to the demands of
+                an urban market to which they supply, demonstrating that such approaches
+                can be made economically viable and sustainable.
+            </p>
+        </TextSlide>
+        <ImageSlide src="/assets/10.2/Image 2.jpg">
+            <Caption>Three-tier Cropping System at AFC, Pune</Caption>
+            <Credit>Source: Swarnika Sharma</Credit>
+        </ImageSlide>
+        <TextSlide>
+            <p>
+                To improve efficiency and reduce input costs, In addition to
+                guaranteed improvements in income for farmers, the AFC has also
+                generated over 700 jobs in packaging, transportation, and
+                marketing along its entire supply chain, with approximately 70
+                per cent of these benefiting women. At a time when many young
+                members of traditional farming families are opting out of
+                agriculture, the AFC is inspiring the youth to continue farming
+                by creating opportunities and exemplifying farming as a viable
+                and lucrative livelihood option. The club makes use of
+                technological innovations like smart watering systems and salt
+                filtration units
+            </p>
+        </TextSlide>
+        <ImageSlide src="/assets/10.2/Image 3.jpg">
+            <Caption>Women Selling Produce at the AFC Store</Caption>
+            <Credit>Source: Swarnika Sharma</Credit>
+        </ImageSlide>
+        <TextSlide>
+            <h4>3. Urban Farming through social enterprises</h4>
+            <p>
+                Social enterprises like iKheti and Urban Mali were set up with
+                an aim to provide livelihood opportunities for the urban poor,
+                particularly those who migrate to cities due to economically
+                unsustainable livelihoods in their villages while responding to
+                the increasing demand for urban gardens and farms.
+            </p>
+            <p>
+                iKheti: Started in Mumbai in 2012, iKheti operates in more than
+                10 cities, enabling urban residents to grow food on their own
+                premises. They help set up gardens, offer the expertise of malis
+                (gardeners), and provide gardening inputs, maintenance, and
+                related services.
+            </p>
+
+            <Quote>
+                 My malis are the backbone of iKheti’s
+                success. We have close to 40 malis and we try to support them by
+                providing meals, travel allowances, and loans in times of
+                emergency.</Quote
+            >
+            <p>- Priyanka Shah, the founder of iKheti. 
+            </p>
+        </TextSlide>
+        <ImageSlide src="/assets/10.2/Image 4.jpg">
+            <Caption>Gardeners Working in the iKheti Nursery, Mumbai</Caption>
+            <Credit>Source: Swarnika Sharma</Credit>
+        </ImageSlide>
+        <TextSlide>
+            <p>
+                UrbanMali: Started in Bengaluru in 2017, Bengaluru’s UrbanMali
+                employs migrant farmers and provides organic farming and
+                gardening solutions to urban residents. They manage over 5,000
+                gardens in the city and have empowered more than 50 gardeners,
+                ‘ensuring dignified employment, a healthy income, and a support
+                network,’ as noted by Vandana Krishnamurthy, the CEO and
+                co-founder.
+            </p>
+            <p>
+                In times of need, the gardeners can avail microfinance options
+                in the form of small loans and salary advances. The enterprise
+                keeps the gardeners at the forefront and relies on their
+                expertise to build and retain their customer base.
+            </p>
+            <Quote>
+                 Our identity is based on the gardeners and
+                their work. Being farmers by profession, working with plants and
+                soil runs in their blood. We don’t have to really train them,
+                since they already know quite a lot</Quote
+            >
+            <p>- Vandana Krishnamurthy</p>
+        </TextSlide>
+        <ImageSlide src="/assets/10.2/Image 5.jpg">
+            <Caption
+                >Founder of UrbanMali in Conversation with Employees
+            </Caption>
+            <Credit>Source: Amruth Kiran</Credit>
+        </ImageSlide>
+        <TextSlide>
+            <h4>4. Urban farming through online platforms</h4>
+            <p>
+                Farmizen: Bengaluru-based business Farmizen uses digital
+                platforms to connect consumers with local farmers and in turn
+                improves income and livelihood opportunities for urban and
+                peri-urban farmers. As a farm-to-fork marketplace, they provide
+                two services. On one hand, they connect farmers with urban
+                consumers, while on the other hand, they provide mini-farm
+                services where customers can opt to grow their own food with the
+                help of local farmers.
+            </p>
+        </TextSlide>
+        <ImageSlide src="/assets/10.2/Image 6.jpg">
+            <Caption>Farmizen Farm</Caption>
+            <Credit>Source: https://www.farmizen.com/</Credit>
+        </ImageSlide>
+        <TextSlide>
+            <Quote>
+                 It is interesting to see that while many
+                traditional farmers leave the profession, there is a new set of
+                young farmers who are also returning to the field. They might
+                not have farming knowledge, but they have better business
+                knowledge. They realise that they cannot depend on just one
+                buyer, but rather diversify and sell to multiple
+                people. 
+            </Quote>
+            <p>- Co-founder Shameek Chakravarthy</p>
+            <p>
+                Farmizen exemplifies how a digital platform provides young
+                farmers with lucrative business opportunities while consumers
+                are able to access fresh organic food.
+            </p>
+        </TextSlide>
+        <TextSlide>
+            <p>
+                My Dream Garden: Set up by Ashok Kumar in a mere two yards of
+                land in 2012, My Dream Garden has now expanded to over 8,500
+                gardensacross Bengaluru, serving private residents, corporate
+                companies, hospitals, and academic institutions. In the process,
+                it has generated livelihood opportunities in both gardening and
+                administrative roles, employing close to 100 people, half of
+                whom are migrant workers from states like Odisha and
+                Chhattisgarh. By 2024, Ashok aims to expand his business across
+                150 Indian cities in a phased franchise model.
+            </p>
+        </TextSlide>
+        <ImageSlide src="/assets/10.2/Image 7.jpg">
+            <Caption
+                >Gardeners Working at My Dream Garden Facility, Bengaluru
+            </Caption>
+            <Credit>Source: Swarnika Sharma</Credit>
+        </ImageSlide>
+        <TextSlide>
+            <Quote>
+                 Some of us have prior experience with
+                farming, while others get trained here by senior gardeners for a
+                period of three months. The company and its founder takes care
+                of us, listens to our problems, and even provides timely loans
+                during difficult times. Even if we make mistakes, they explain
+                it nicely. That’s why we like working here and don’t feel like
+                leaving. 
+            </Quote>
+            <p>- Shiva (name changed)</p>
+        </TextSlide>
+        <ImageSlide src="/assets/10.2/Image 8.jpg">
+            <Caption
+                >Gardening on Empty Plot in a Low-income Settlement, Bengaluru
+            </Caption>
+            <Credit>Source: Maitreyi Koduganti</Credit>
+        </ImageSlide>
+        <TextSlide>
+            <h4>5. Urban farming in low-income settlements</h4>
+            <p>
+                Residents of low-income neighbourhoods find innovative ways to
+                use limited space for growing edible and ornamental plants. For
+                many, this serves as an additional source of food, income, and
+                savings on food and health expenses. For example, a daily-wage
+                labourer from MD Block in Bengaluru grows various fruits and
+                vegetables around his house, making use of the limited space
+                available to him. He says,
+            </p>
+            <Quote
+                > I distribute excess produce in the
+                neighbourhood and people pay me as they wish. I sell some greens
+                and banana leaves. </Quote
+            >
+        </TextSlide>
+        <ImageSlide src="/assets/10.2/Image 9.jpg">
+            <Caption
+                >Goat Rearing in a Low-income Settlement, Bengaluru
+            </Caption>
+            <Credit>Source: Kruthika Nagananda</Credit>
+        </ImageSlide>
+        <TextSlide>
+            <p>
+                Another construction worker in Peenya Industrial Area, Bengaluru
+                maintains a community farm on an empty plot opposite his house.
+                Owing to limited availability of food during the
+                COVID-19-induced lockdown, he dedicated himself to growing
+                fruits, vegetables, and millets. He also owns three goats and
+                uses goat dung as compost for his garden.
+            </p>
+            <Quote>
+                 Rather than buying from the market, I
+                prefer ploughing, growing, and eating [my own food]. Every 3–4
+                days, I get some produce during the growing season. I rely only
+                on my produce, whenever there is enough. This way my spending on
+                food and groceries comes down 
+            </Quote>
+            <p>- A construction worker in Peenya Industrial Area, Bengaluru. 
+            </p>
+        </TextSlide>
+        <ImageSlide src="/assets/10.2/Image 10.jpg">
+            <Caption
+                >Farming on the Roadside in a Low-income Settlement, Bengaluru
+            </Caption>
+            <Credit>Source: Swarnika Sharma </Credit>
+        </ImageSlide>
+    </Slider>
+    <Centered><Back/></Centered>
+</BaseLayout>

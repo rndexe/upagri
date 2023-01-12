@@ -1,0 +1,38 @@
+---
+import { BaseLayout, Centered } from "@layouts/index";
+
+import Video from "@components/Articles/Video.astro";
+import Desc from "@components/Articles/Desc.astro";
+import Breadcrumbs from "@components/Nav/Breadcrumbs.astro";
+import Title from "@components/Title.astro";
+import Back from "@components/Nav/Back.astro";
+
+const title = "Innovative Ways for Water Management";
+---
+
+<BaseLayout title={title}>
+    <Breadcrumbs title={title} />
+    <Centered>
+        <Title
+            title={title}
+            authors="Betty Mntambo, Ombeni Swai, Mariam Genes"
+        />
+        <Video id="CBES3fWqGR8"/>
+        <Desc>
+            <p>
+                Having access to water is essential for agricultural activities.
+                Environmental issues like global warming have gotten worse over
+                time. This has made a farmer from Morogoro to seek an
+                alternative way of using this resource. This video demonstrates
+                farmer's water-related stresses and an innovative counterfeiting
+                method. It shows a farmer who has reported difficulty in
+                accessing water. These stresses have prompted him to think of
+                water recycling methods. Other farmers have constructed shallow
+                and deep wells to store water. This is because during the dry
+                season water availability has hampered their agricultural
+                productivity.
+            </p>
+        </Desc>
+        <Back/>
+    </Centered>
+</BaseLayout>

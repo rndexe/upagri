@@ -1,0 +1,109 @@
+---
+import { BaseLayout, Centered  } from "@layouts/index.js";
+import Title from "@components/Title.astro";
+import Breadcrumbs from "@components/Nav/Breadcrumbs.astro";
+import {
+    Slider,
+     ImageSlide,
+    TextSlide,
+    Caption,
+    Quote,
+    Credit,
+} from "@components/Carousel/index.js";
+import Back from "@components/Nav/Back.astro";
+
+const title = "Livestock Waste Recycling and Sustainable Energy";
+---
+
+<BaseLayout title={title}>
+    <Breadcrumbs title={title} />
+    <Centered>
+        <Title
+            title={title}
+            authors="Betty Mntambo, Ombeni Swai, and Mariam Genes"
+        />
+    </Centered>
+    <Slider>
+        <TextSlide>
+            <p>
+                One of the neglected benefits of urban and peri-urban
+                agriculture (UPA) is the added option of recycling livestock
+                waste, such as cow dung and chicken manure, as a source of
+                energy. For instance, the production of cooking gas and
+                electricity are two possible end products of using cow dung.
+            </p>
+
+            <p>
+                Although some studies suggest that urban and peri-urban
+                agriculture could pose a risk to environmental sustainability,
+                our research reveals that these practices can support the
+                environment by recycling the waste produced by livestock.
+            </p>
+            <p>
+                Livestock waste generates biogas, a renewable energy source that
+                can be used for the production of electricity and cooking gas.
+                In contrast to other energy sources, like hydroelectric power
+                plants that endanger the existence of aquatic life, the use of
+                biogas emits fewer air-polluting greenhouse gases like methane,
+                carbon dioxide, and nitrous oxide.
+            </p>
+        </TextSlide>
+        <ImageSlide src="/assets/6.3/Photo1.jpg">
+        <Caption>A bio-gas plant in Chanika, Dar es .</Caption>
+        <Credit>Credits: Janeth Nandrie</Credit>
+        </ImageSlide>
+        <ImageSlide src="/assets/6.3/Photo2.jpg">
+            <Caption>A biogas cow dung collection point at Chanika, Dar es salaam</Caption>
+            <Credit>Credits: Janeth Nandrie</Credit>
+        </ImageSlide>
+        <TextSlide>
+            <p>
+                Due to lack of knowledge about proper disposal and recycling,
+                most farmers opt to dispose of livestock waste outside the house
+                or in a pit.
+            </p>
+            <p>
+                Farmers are aware that using biogas will reduce the number of
+                trees cut down for the production of charcoal and firewood. They
+                understand that the use of biogas significantly helps in
+                environment protection.
+            </p>
+            <Quote>
+                 If someone chooses to use biogas, they
+                will no longer cut down trees for firewood. We used to have two
+                cattle, but we could still generate biogas. Therefore, I think
+                that using biogas will help us to protect and improve the
+                environment. 
+            </Quote>
+        </TextSlide>
+        <ImageSlide src="/assets/6.3/Photo3.jpg">
+            <Caption>Fresh organic cow manure piled for the garden use at Chanika, Dar es salaam.</Caption>
+            <Credit>Credits: Janeth Nandrie</Credit>
+        </ImageSlide>
+        <TextSlide>
+            <p>
+                Additionally, the use of fresh organic manure in the biogas
+                digester can enhance biological diversity, improve soil
+                fertility, and help in making fish food, while the remaining
+                organic manure from the biogas plant can be used as fertiliser
+                on the farm.
+            </p>
+            <Quote>
+                 Manure is needed to make fish feed. Apart
+                from this, farmers need it to improve soil fertility. So, in
+                general, livestock waste, specifically manure, is a valuable
+                material. 
+            </Quote>
+            <p>
+                Thus, recycling livestock waste into renewable energy, i.e.,
+                biogas, ensures that household needs for cooking and electricity
+                are met, while lowering the use of chemical fertilisers and
+                maintaining a safe and clean environment. Therefore, effective
+                management of livestock waste can contribute to the creation of
+                a renewable energy source that will sustain the urban
+                environment.
+            </p>
+        </TextSlide>
+    </Slider>
+    <Centered><Back/></Centered>
+</BaseLayout>

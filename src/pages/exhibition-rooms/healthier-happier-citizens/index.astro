@@ -1,0 +1,49 @@
+---
+import { BaseLayout, Centered, Stack } from "@layouts/index.js";
+import Breadcrumbs from "@components/Nav/Breadcrumbs.astro";
+import Title from "@components/Title.astro";
+import CardStack from "@components/Cards/Cardstack.astro";
+
+const title = "Healthier, Happier Citizens";
+---
+
+<BaseLayout title={title}>
+    <Breadcrumbs title={title} />
+
+    <Centered>
+        <Title title={title} />
+        <p>
+            Urban agriculture contributes to several benefits like better
+            physical health, improved mental wellbeing, closer communities; all
+            of which improve quality of life. For some, their gardens were a
+            means to bond with family and spend time with their loved ones. For
+            others, it was a space where they could learn more about nature,
+            plants, and insects, and value the process of food growing.
+            Gardening also serves as a respite from chaotic city routines and a
+            way to connect with like-minded individuals and enable lifelong
+            friendships.
+        </p>
+        <Stack>
+            <CardStack
+                img="/assets/7.1/7.1_cover.jpg"
+                title="Green Shoots of Health, Happiness and Wellbeing"
+                href="/exhibition-rooms/healthier-happier-citizens/green-shoots-of-health-happiness-and-wellbeing"
+            />
+            <CardStack
+                title="Beyond Greening: Happiness, Identity and Bonding in Indian Cities"
+                href="/exhibition-rooms/healthier-happier-citizens/beyond-greening-happiness-identity-and-bonding-in-indian-cities"
+                img="/assets/7.2_cover.jpg"
+            />
+            <CardStack
+                img="/assets/7.3/Photo 5.jpg"
+                title="Access to Food, Networking, and Good Health"
+                href="/exhibition-rooms/healthier-happier-citizens/access-to-food-networking-and-good-health"
+            />
+            <CardStack
+                img="/assets/7.4_cover.jpg"
+                title="Life, Sustenance, Delight and Stability"
+                href="/exhibition-rooms/healthier-happier-citizens/life-sustenance-delight-and-stability"
+            />
+        </Stack>
+    </Centered>
+</BaseLayout>

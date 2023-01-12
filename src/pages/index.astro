@@ -1,0 +1,117 @@
+---
+import BaseLayout from "@layouts/Base.astro";
+---
+
+<BaseLayout title="Home">
+    <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="/assets/home/Copy of iKheti Mumbai.jpg" />
+            </div>
+            <div class="swiper-slide">
+                <img src="/assets/home/IMG_0487.jpg" />
+            </div>
+            <div class="swiper-slide">
+                <img src="/assets/home/IMG_0559.jpg" />
+            </div>
+            <div class="swiper-slide">
+                <img src="/assets/home/IMG_0610.jpg" />
+            </div>
+            <div class="swiper-slide">
+                <img src="/assets/home/IMG_0611.jpg" />
+            </div>
+            <div class="swiper-slide">
+                <img src="/assets/home/IMG_0678.jpg" />
+            </div>
+            <div class="swiper-slide">
+                <img src="/assets/home/IMG_20201110_163119.jpg" />
+            </div>
+            <div class="swiper-slide">
+                <img src="/assets/home/An Amaranth garden at Kibamba in Dar es salaam, Credits_ Grace Mpinda.jpg" />
+            </div>
+            <div class="swiper-slide">
+                <img src="/assets/home/Women Harvesting _Mchicha_ (Amaranth)_ Credits Betty Mntambo.jpg" />
+            </div>
+            <div class="swiper-slide">
+                <img src="/assets/home/Tomato Garden at Kingolwira in Morogoro_ Photo Credit Emmanuel.jpg" />
+            </div>
+            <div class="swiper-slide">
+                <img src="/assets/home/A women in her garden farm in Dar es salaam_ Credits Betty mntambo.jpg" />
+            </div>
+            <div class="swiper-slide">
+                <img
+                    src="/assets/home/MEMEBER HAVING BREAKFAST_Susan Thomas.jpg"
+                />
+            </div>
+            <div class="swiper-slide">
+                <img
+                    src="/assets/home/Photo1_ a woman in her rice farm in Kilakala, morogoro.jpg"
+                />
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <div class="opacity-0 absolute z-10 top-1/2 -translate-y-1/2 ml-8 lg:ml-16 animate">
+        <h1 class="font-oxygen font-bold text-eggshell text-5xl lg:text-8xl">
+            Growing Greener Cities
+        </h1>
+        <h2 class="font-oxygen text-eggshell max-w-[80ch] my-12 leading-tight text-xl">
+            This exhibition brings together examples of urban and peri-urban
+            agriculture in India and Tanzania, highlighting its outcomes for
+            human wellbeing and environmental sustainability through life
+            histories, short films, infographics, and photographic essays.
+        </h2>
+        <a
+            href="/about"
+            class="flex gap-4 text-sm lg:text-base items-center w-fit rounded border border-eggshell px-4 py-2 text-eggshell bg-black/25 group hover:bg-black/50 transition-colors"
+            >Read More
+            <svg
+                width="26"
+                height="8"
+                viewBox="0 0 26 8"
+                fill="none"
+                class="group-hover:translate-x-2 transition-transform duration-500"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <path
+                    d="M1 3.5C0.723858 3.5 0.5 3.72386 0.5 4C0.5 4.27614 0.723858 4.5 1 4.5V3.5ZM25.3536 4.35355C25.5488 4.15829 25.5488 3.84171 25.3536 3.64645L22.1716 0.464466C21.9763 0.269204 21.6597 0.269204 21.4645 0.464466C21.2692 0.659728 21.2692 0.976311 21.4645 1.17157L24.2929 4L21.4645 6.82843C21.2692 7.02369 21.2692 7.34027 21.4645 7.53553C21.6597 7.7308 21.9763 7.7308 22.1716 7.53553L25.3536 4.35355ZM1 4.5H25V3.5H1V4.5Z"
+                    class="fill-eggshell"></path>
+            </svg>
+        </a>
+    </div>
+</BaseLayout>
+
+<script is:inline src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"
+></script>
+<script is:inline>
+    let swiper = new Swiper(".swiper", {
+        effect: "fade",
+
+        autoplay: {
+            delay: 5000,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+    });
+</script>
+
+<style>
+    .swiper {
+        --swiper-navigation-color: #f0f2ea;
+        --swiper-theme-color: #f0f2ea;
+        --swiper-pagination-bullet-inactive-color: #f0f2ea;
+    }
+    .swiper-wrapper {
+        @apply w-full h-screen;
+    }
+    .swiper-slide img {
+        @apply w-full h-full;
+    }
+    .swiper-slide img {
+        @apply object-cover brightness-50;
+    }
+</style>

@@ -1,0 +1,101 @@
+---
+const title = Astro.props.title;
+const url = new URL(Astro.url);
+//TODO maybe generate breacrumbs from url?
+
+const paths = url.pathname.slice(1).split("/");
+let trail = [{ title: "Home", url: "/" }];
+
+switch (paths[0]) {
+    case "about":
+        trail.push({ title: "About", url: "/about" });
+        break;
+    case "contact":
+        trail.push({ title: "Contact", url: "/contact" });
+        break;
+    case "reading-room":
+        trail.push({ title: "Reading Room", url: "/reading-room" });
+        break;
+    case "showcasing-upa":
+        trail.push({ title: "Showcasing Urban and Peri-urban Agriculture", url: "/showcasing-upa" });
+        if (paths[1]) {
+            trail.push({ title: title, url: url.pathname });
+        }
+        break;
+    case "exhibition-rooms":
+        trail.push({ title: "Exhibition Rooms", url: "/exhibition-rooms" });
+        if (paths[1]) {
+            switch (paths[1]) {
+                case "greener-cities":
+                    trail.push({
+                        title: "Greener Cities",
+                        url: "/exhibition-rooms/greener-cities",
+                    });
+                    break;
+                case "space":
+                    trail.push({
+                        title: "Space",
+                        url: "/exhibition-rooms/space",
+                    });
+                    break;
+                case "healthier-happier-citizens":
+                    trail.push({
+                        title: "Healthier, Happier Citizens",
+                        url: "/exhibition-rooms/healthier-happier-citizens",
+                    });
+                    break;
+                case "men-and-women-nurturing-edible-cities":
+                    trail.push({
+                        title: "Men and Women Nurturing Edible Cities",
+                        url: "/exhibition-rooms/men-and-women-nurturing-edible-cities",
+                    });
+                    break;
+                case "labour-and-incomes":
+                    trail.push({
+                        title: "Labour and Incomes",
+                        url: "/exhibition-rooms/labour-and-incomes",
+                    });
+                    break;
+                case "food-and-nutritional-diets":
+                    trail.push({
+                        title: "Food and Nutritional Diets",
+                        url: "/exhibition-rooms/food-and-nutritional-diets",
+                    });
+                    break;
+            }
+        }
+        if (paths[2])
+            trail.push({ title: title, url: url.pathname });
+        break;
+}
+---
+
+<nav class="mt-20 mb-8 mx-8 lg:mx-16 bg-eggshell">
+    {
+        trail.map(function (crumb, i, array) {
+            if (i === array.length - 1)
+                return (
+                    <a
+                        rel="prefetch"
+                        href={crumb.url}
+                        class="text-gray-20 hover:underline"
+                    >
+                        {crumb.title}
+                    </a>
+                );
+            else
+                return (
+                    <>
+                        <a
+                            rel="prefetch"
+                            href={crumb.url}
+                            class="text-gray-10 hover:underline"
+                        >
+                            {crumb.title}
+                        </a>
+                        <span class="px-1.5 text-gray-10">/</span>
+                    </>
+                );
+        })
+    }
+</nav>

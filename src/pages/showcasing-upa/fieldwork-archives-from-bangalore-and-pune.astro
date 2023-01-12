@@ -1,0 +1,97 @@
+---
+import { BaseLayout, Centered } from "@layouts/index";
+import { Video, Desc } from "@components/Articles";
+import Title from "@components/Title.astro";
+import Breadcrumbs from "@components/Nav/Breadcrumbs.astro";
+import Back from "@components/Nav/Back.astro";
+
+const title = "Garden City’s Farming Habits";
+---
+
+<BaseLayout title={title}>
+    <Breadcrumbs title={title} />
+    <Centered>
+        <Title
+            title={title + ":"}
+            subtitle="Fieldwork Archives from Bengaluru and Pune"
+            authors="Amruth Kiran, Maitreyi Koduganti, Swarnika Sharma"
+        />
+        <Video id="T7KOOlHbT0U" />
+        <Desc>
+            <p>
+                In this video ‘Garden city’s farming habits', the UPAGrI project
+                team discusses the experiences, perceived benefits, and
+                contributions of urban farming to ecological, social, and
+                economic sustainability. This virtual tour showcases the
+                practices of three urban farmers based in Bengaluru, India, who
+                discuss their journeys of urban agriculture and its outcomes on
+                their personal well-being.
+            </p>
+            <h5>Ashwini Gajendran's terrace garden</h5>
+            <p>
+                Ashwini is an entrepreneur and a home gardener living in
+                Vidyaranyapura, Bengaluru. She nurtures a 30 x 40 sq. feet
+                terrace garden comprising 400 plants, which includes more than
+                50 vegetable plants, herbs, and exotic flowers. In this video,
+                Ashwini explains that her terrace garden offers deeply personal
+                benefits, satisfaction, and learnings, giving access to her own
+                greenery, safe nutritious food, and a new outlook where she
+                views garbage as a valuable resource.
+            </p>
+            <h5>Farming with and for the community: The story of ANANAS</h5>
+            <p>
+                <a href="https://ananas.design/projects" class="underline"
+                    >ANANAS</a
+                > is a permaculture design company from Bengaluru, who design and
+                create different types of urban farms ranging from small kitchen
+                gardens to large community gardens. With a background in environmental
+                and social sciences, Kiri Meili is one of the co-founders of ANANAS.
+                Of the many projects, their restoration work at Jakkur lake along
+                with Jala Poshan trust and fishermen community brings out permaculture
+                to the urban commons. Kiri's narrative clearly indicates that Jakkur
+                community garden holds promise for environmental sustainability in
+                urban areas. With local fishermen, garden workers, regular walkers
+                and volunteers getting engaged in buiding and maintaining the community
+                garden, this becomes a unique example of nature in the city.is a
+                permaculture design company from Bengaluru that designs and creates
+                different types of urban farms, ranging from small kitchen gardens
+                to large community gardens. With a background in environmental and
+                social sciences, Kiri Meili is one of the co-founders of ANANAS.
+                Of their many projects, their restoration work at Jakkur Lake, undertaken
+                along with the Jala Poshan Trust and the fishing community, brings
+                permaculture to the urban commons. Kiri's narrative clearly indicates
+                that the Jakkur community garden holds promise for environmental
+                sustainability in urban areas. With local fisherfolk, garden workers,
+                regular walkers, and volunteers getting engaged in building and maintaining
+                the community garden, this becomes a unique example of nature in
+                the city.
+            </p>
+            <h5>Urban Mali: engaging the migrants through Urban Farming</h5>
+            <p>
+                A social enterprise, <a
+                    href="https://www.urbanmali.com/"
+                    class="underline">Urban Mali Network</a
+                > empowers farmers from rural areas around Bangalore to pursue their
+                livelihood and find regular employment in the city. An urban botanist
+                and a nature lover, Vandana along with her team of gardeners help
+                in setting up and maintaining different types of gardens in Bengaluru
+                city.
+            </p>
+            <p>
+                Urban Mali presents a unique business model that provides job
+                opportunities to the migrants who are coming to cities from
+                rural, farming background. This social entrepreneurial model
+                tends to match the growing demand amongst the urban middle and
+                upper-middle class for malis or gardeners - this group
+                increasingly want to have their own gardens (and even farms at
+                times), but do not have the time to invest and are more than
+                willing to employ people to set up and take care of their
+                gardens; on the other hand you have increasing number of
+                people/specifically farmers moving to the city as urbanization
+                lead to loss of agricultural land and jobs in rural and
+                periurban areas.
+            </p>
+        </Desc>
+        <Back/>
+    </Centered>
+</BaseLayout>

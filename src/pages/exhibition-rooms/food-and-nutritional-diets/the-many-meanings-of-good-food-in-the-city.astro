@@ -1,0 +1,207 @@
+---
+import { BaseLayout, Centered } from "@layouts/index.js";
+import Title from "@components/Title.astro";
+import Breadcrumbs from "@components/Nav/Breadcrumbs.astro";
+import {
+    Slider,
+    ImageSlide,
+    TextSlide,
+    Caption,
+    Quote,
+} from "@components/Carousel/index.js";
+import Back from "@components/Nav/Back.astro";
+
+const title = "The Many Meanings of ‘Good Food’ in the City";
+---
+
+<BaseLayout title={title}>
+    <Breadcrumbs title={title} />
+    <Centered>
+        <Title title={title} authors="Sheetal Patil and Maitreyi Koduganti" />
+        <p>
+            Easy access to good food is one of the key drivers for urban
+            dwellers to grow food by themselves. Many of them start with
+            ornamentals and eventually move to cultivating easy to grow
+            vegetables. Leafy vegetables are usually the first choice, along
+            with chillies and tomatoes. However, the journey of urban farming is
+            not an easy one. Many of them face multiple failures because of
+            inadequate sunlight, space, soil abnormalities, pest attacks or even
+            lack of time to take care of the plants. Despite these setbacks, the
+            need for good food that is fresh, diverse, nutritious, and safe
+            motivates people to keep trying. The happiness experienced while
+            harvesting a tomato or a couple of chillies urges them to continue
+            farming.
+        </p>
+        <p>
+            Good food has multiple meanings and attributions to different
+            people. In this photo essay, we capture these different meanings
+            which emerged through our fieldwork across Bengaluru and Pune in
+            India.
+        </p>
+    </Centered>
+    <Slider>
+        <TextSlide>
+            <h4>1. Good food = Diverse food</h4>
+            <p>
+                Food diversity refers to the inclusion of a range of food items
+                in one’s diet, which ensures balanced nutrition and improved
+                immunity. Depending on the space available for gardening, urban
+                farmers grow a variety of vegetables, from tubers, squashes, and
+                gourds, to leafy greens, herbs, and fruits. Many of them also
+                venture into growing sugarcane, maize, millets, and pulses.
+            </p>
+            <p>
+                Ashwini Gajendran, an entrepreneur by profession, began her
+                journey of growing food in 2015 with just a few vegetable
+                plants. Now, her garden hosts at least 23 varieties of
+                vegetables and fruits.
+            </p>
+        </TextSlide>
+        <TextSlide>
+            <Quote>
+                ...now I am growing everything. I have a whole range of plants.
+                In fact, when I am confused about what to cook, I just go to the
+                terrace and then decide the menu
+            </Quote>
+            <p>- Aswini Gajendran</p>
+        </TextSlide>
+        <ImageSlide src="/assets/11.1/Photo 1_WP 11.1.jpg">
+            <Caption credits="Swarnika Sharma">
+                Ashwini Gajendran’s garden in Bengaluru city.
+            </Caption>
+        </ImageSlide>
+        <TextSlide>
+            <p>
+                Prathima Adiga, a chef by profession, keeps a keen eye on food
+                diversity on her plate. She lauds the diversity of plants in her
+                garden. She imparts her knowledge to gardening amateurs and also
+                helps resolve any issues they face.
+            </p>
+            <Quote>
+                I have grown over 70 varieties of tomatoes, saved all the seeds,
+                and shared them with many people.
+            </Quote>
+            <p>- Prathima Adiga</p>
+        </TextSlide>
+        <ImageSlide src="/assets/11.1/Photo 2_WP 11.1.jpg">
+            <Caption credits="Prathima Adiga">
+                Fresh produce from Prathima’s garden in Bengaluru.
+            </Caption>
+        </ImageSlide>
+        <TextSlide>
+            <h4>2. Good food = Safe food</h4>
+            <p>
+                Safe food has become a matter of concern in cities, owing to the
+                excessive use of poisonous chemical inputs and pesticides. When
+                the COVID-19 pandemic hit the country, access to safe and
+                nutritious food became a matter of primary concern. Hence, many
+                urban residents prefer to grow their own food, especially
+                vegetables like tomatoes, cucumbers, and carrots that are
+                consumed raw.
+            </p>
+        </TextSlide>
+        <TextSlide>
+            <Quote>
+                [people] are slowly but surely becoming aware of the need for
+                safe and good food. This realisation is driving more and more
+                people to see what they can grow for their household
+                consumption. In fact, during the pandemic, I got a number of
+                visits and calls from the medical fraternity. They are the
+                people who are fully knowledgeable about the ill effects of the
+                food they eat.
+            </Quote>
+            <p>- A retired engineer in Mysore</p>
+        </TextSlide>
+        <ImageSlide src="/assets/11.1/Photo 3_WP 11.1.jpg">
+            <Caption credits="Harish Mysore">Harish Mysore’s garden</Caption>
+        </ImageSlide>
+        <ImageSlide src="/assets/11.1/Photo 4_WP 11.1.jpg">
+            <Caption credits="Harish Mysore">
+                Fresh yield from Harish Mysore’s garden
+            </Caption>
+        </ImageSlide>
+        <TextSlide>
+            <Quote>
+                Sometimes, when my son picks up an apple or a guava from the
+                market and bites into it, I stop him. I am scared, since I don’t
+                know how these fruits are grown. I would rather have my son eat
+                what I grow in my garden, since I know that it is more
+                nutritious.
+            </Quote>
+            <p>- A homemaker in Bengaluru.</p>
+        </TextSlide>
+        <TextSlide>
+            <h4>3. Good food = Fresh food</h4>
+            <p>
+                Harvested produce takes approximately 2–4 days to reach
+                consumers in cities. During the long transit and handling at
+                multiple points, perishables like fruits and vegetables lose
+                their freshness and sometimes start rotting. For urban farmers,
+                these issues are not pressing because they have the option to
+                harvest and consume their own produce whenever they wish.
+            </p>
+        </TextSlide>
+        <TextSlide>
+            <Quote>
+                Food systems die out if we harvest and keep them for a while.
+                The core essence, the living force, in the food system is gone.
+                If we eat fresh food, what happens on an immediate level is that
+                you become healthier. For instance, I have noticed personally
+                that the radish grown on the rooftop is richer and tastier than
+                the produce found in the market.
+            </Quote>
+            <p>- An aspiring urban farming entrepreneur</p>
+        </TextSlide>
+
+        <ImageSlide src="/assets/11.1/Photo 5_WP 11.1.jpg">
+            <Caption credits="Karthik Bhaskara">
+                Fresh produce from the garden of a young urban farmer
+            </Caption>
+        </ImageSlide>
+        <ImageSlide src="/assets/11.1/Photo 6_WP 11.1.jpg">
+            <Caption credits="Saimah Shaikh">
+                Urban gardener in Pune growing tomatoes on her terrace.
+            </Caption>
+        </ImageSlide>
+        <TextSlide>
+            <h4>4. Good food = Nutritious food</h4>
+            <p>
+                The importance of a nutritious diet has been in active
+                conversation and practice since the COVID-19 outbreak. For city
+                dwellers, it is also difficult to monitor the nutritional
+                content of food items procured from markets. Owing to this
+                uncertainty, many urbanites engage in farming, with the aim to
+                fulfil the daily nutritional requirement of their families.
+            </p>
+            
+            <Quote>
+                Growing your own food is nourishing. When you nourish the soil
+                with organic matter, the soil, in turn, nourishes the plant, and
+                the plant, in turn, nourishes us.
+            </Quote>
+            <p>
+                - A health and environment conscious urban farmer in Bengaluru
+            </p>
+        </TextSlide>
+
+        <ImageSlide src="/assets/11.1/Photo 7_WP 11.1.jpg">
+            <Caption credits="Vasuki Iyengar">Composting wet waste</Caption>
+        </ImageSlide>
+        <ImageSlide src="/assets/11.1/Photo 8_WP 11.1.jpg">
+            <Caption credits="Swarnika Sharma">
+                Fresh grapes from the garden of a Bengaluru-based urban
+                gardener.
+            </Caption>
+        </ImageSlide>
+        <TextSlide>
+            All these meanings and attributes that urbanites associate with food
+            are interlinked, in the sense that urban agriculture allows access
+            to fresh, diverse, nutritious, and safe food. As cities continue to
+            expand, population growth and limited resources tend to pressurise
+            urban food systems. Hence, urban gardening is one of the means by
+            which one can contribute to the larger goals of SDG2 on Zero Hunger
+            and SDG3 on Good Health and Wellbeing.
+        </TextSlide>
+    </Slider>
+    <Centered><Back/></Centered>
+</BaseLayout>

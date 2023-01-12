@@ -1,0 +1,128 @@
+---
+import { BaseLayout, Centered } from "@layouts/index";
+import Title from "@components/Title.astro";
+import Breadcrumbs from "@components/Nav/Breadcrumbs.astro";
+import {
+    Slider,
+    ImageSlide,
+    TextSlide,
+    Quote,
+} from "@components/Carousel/index";
+import Back from "@components/Nav/Back.astro";
+
+const title =
+    "Confidence & Mindfulness in Food and Healthy Quality";
+---
+
+<BaseLayout title={title}>
+    <Breadcrumbs title={title} />
+    <Centered>
+        <Title
+            title={title}
+            authors="Betty Mntambo, Ombeni Swai, Mariam Genes"
+        />
+    </Centered>
+    <Slider>
+        <TextSlide>
+            <p>
+                Field studies in Morogoro and Dar es Salaam have revealed
+                growing concern over food security and nutritional safety.
+                Vegetable and livestock farmers in the two cities have had
+                different experiences regarding food and nutrition, where
+                awareness is higher in urban areas compared to peri-urban
+                locations.
+            </p>
+            <p>
+                Vegetable farmers, particularly in urban areas, are motivated by
+                the fact that their consumers demand vegetables based on their
+                nutritional content. For instance, mchicha (amaranth) is popular
+                due to its high iron and other vitamin content, which are
+                essential for child development and the elderly. Consumers are
+                also particular in their demands for the type of vegetables and
+                where to get them. When one buyer from Dar es Salaam was asked
+                why he travels such a long way to buy vegetables, he responded,
+            </p>
+        </TextSlide>
+        <TextSlide>
+            <Quote>
+                I come here because I know that the quality of the fertiliser
+                used at this farm is better. Also, the vegetables are healthy
+                and look dark green.</Quote
+            >
+            <p>
+                Moreover, it was observed that some wealthy people grow
+                vegetables solely to ensure the nutritional value of the food
+                they consume. This implies that as the welfare of society
+                increases, people become more particular about the type of food
+                they consume by paying attention to its nutritional value.
+            </p>
+        </TextSlide>
+        <ImageSlide src="/assets/11.2/Photo 1A.jpg" />
+        <TextSlide>
+            <p>
+                Consumers, especially those living in urban areas, are aware of
+                the types of pesticides and fertilisers used by farmers. For
+                example, one customer said:
+            </p>
+            <Quote>
+                I trust this farmer as she is honest. When she applies
+                pesticides, she does not sell her products until after some
+                time. This is unlike the others, who may apply pesticide today
+                and sell the vegetables to consumers the next day. They don’t
+                care about the health and the safety of their consumers.
+            </Quote>
+            <p>
+                The two cases above demonstrate that consumers’ knowledge and
+                awareness regarding the nutritional value of their food is of
+                paramount importance.
+            </p>
+        </TextSlide>
+        <ImageSlide src="/assets/11.2/Photo 2B.jpg" />
+        <TextSlide>
+            <p>Another farmer went on to say,</p>
+            <Quote>
+                I have been in the poultry business for more than 10 years, but
+                I do not look for customers, nor do I advertise my business.
+                Some customers come from far away, others call me to supply them
+                with eggs. You know why? Because they trust my way of feeding
+                and the cleanliness of my farm.
+            </Quote>
+            <p>
+                This shows that food safety is a key factor in maintaining
+                customers on one side but it is also a determining factor in the
+                type of customers a farmer may attract.
+            </p>
+        </TextSlide>
+
+        <ImageSlide src="/assets/11.2/Photo 2C.jpg" />
+        <TextSlide>
+            <p>
+                In urban and peri-urban agriculture, both vegetable and
+                livestock farmers consume part of what they produce. One poultry
+                keeper said,
+            </p>
+            <Quote>
+                I sell some eggs and a few trays are left for my family to
+                consume.’ This was also noted by a cattle keeper in Morogoro who
+                iterated that he sells some milk wholesale while keeping some
+                for his family members. ‘Don’t you see how healthy my children
+                are? They drink a cup of milk daily.
+            </Quote>
+            <p>
+                To conclude,Farmers and consumers are aware of and knowledgeable
+                of food safety and nutritional security. This knowledge relates
+                to health factors in food production and practices. There is a
+                growing awareness of the importance of the use of pesticides and
+                their quality. The use of proper fertilizers for instance, adds
+                value to the produced product. These values, which include
+                health, well-being, satisfaction and others are becoming
+                important. This awareness is an important factor which adds to
+                sustainable agricultural practices.
+            </p>
+        </TextSlide>
+        <ImageSlide src="/assets/11.2/Photo 2D.jpg" />
+    </Slider>
+    <Centered>
+        <Back/>
+    </Centered>
+</BaseLayout>

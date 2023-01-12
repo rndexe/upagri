@@ -1,0 +1,160 @@
+---
+import { BaseLayout, Centered  } from "@layouts/index.js";
+import Title from "@components/Title.astro";
+import Breadcrumbs from "@components/Nav/Breadcrumbs.astro";
+import {
+    Slider,
+     ImageSlide,
+    TextSlide,
+    Caption,
+    Quote,
+    Credit,
+} from "@components/Carousel/index.js";
+import ChangingRiversChangingPracticesACaseOfPuneCity from "../space/changing-rivers-changing-practices-a-case-of-pune-city.astro";
+import Back from "@components/Nav/Back.astro";
+
+const title = "Access to Food, Networking, and Good Health";
+---
+
+<BaseLayout title={title}>
+    <Breadcrumbs title={title} />
+    <Centered>
+        <Title
+            title={title}
+            authors="Ombeni Swai, Betty Mntambo, Mariam Genes"
+        />
+    </Centered>
+    <Slider>
+        <TextSlide>
+            <p>
+                Farmers and urban residents have greatly benefited from urban
+                and peri-urban agriculture (UPA). The most significant of these
+                benefits is the contribution of UPA to food security in
+                metropolitan centres. Farmers believe that their agricultural
+                goods have increased the availability of food in their homes,
+                surrounding towns, and cities. Further, producing food within
+                cities has decreased the cost of living, particularly the
+                transportation costs for food from other regions and nations.
+            </p>
+
+        </TextSlide>
+        <ImageSlide src="/assets/7.3/Photo 1.jpg">
+        <Caption>A farmers tomato vegetable garden in Morogoro.
+        </Caption>
+        <Credit>Credits : Maria J.Millinga</Credit>
+        </ImageSlide>
+
+        <TextSlide>
+            <p>
+                Farmers assert that UPA has supported them in diversifying into
+                non-farm enterprises in order to boost their revenue. For
+                example, one farmer in Morogoro was able to set up a mini
+                service station for repairing car tires using their agricultural
+                income savings. Their standard of living has improved, as
+                farmers can now build their own houses, send their children to
+                school, and take vacations.
+            </p>
+
+
+        </TextSlide>
+        <ImageSlide src="/assets/7.3/Photo 2.jpg">
+            <Caption>A Vegetables farmers shop constructed due to farming profits.
+            </Caption>
+            <Credit>Credits : Emmanuel Nsekela</Credit>
+        </ImageSlide>
+        <TextSlide>
+            <Quote>
+                 Urban and peri-urban agriculture has
+                contributed significantly to the improvement of my livelihood by
+                enabling me to build my own house and expand my mechanical
+                repair shop. 
+            </Quote>
+            <p>
+                UPA also benefits other members of society by creating
+                opportunities for casual labourers; irrigation, planting,
+                milking cows, spraying pesticides, and harvesting are just a few
+                of the labourers' responsibilities. With such employment
+                prospects, they can provide for their families and lead a decent
+                livelihood. Farmers practising UPA also provide employment
+                opportunities for middlemen and hawkers. The middlemen buy from
+                farmers and sell at high rates in the market, whereas the latter
+                buy agricultural items from farmers and street hawkers.
+            </p>
+
+        </TextSlide>
+        <ImageSlide src="/assets/7.3/Photo 3.jpg">
+        </ImageSlide>
+        <TextSlide>
+            <p>
+                Furthermore, farmers maintain good relations among themselves.
+                They often share agricultural expertise and refer customers to
+                other farmers if their products are insufficient or unavailable
+                at the time.
+            </p>
+            <Quote>
+                 I usually connect customers to other
+                farmers in case I don’t have the required products and the same
+                applies to the other farmers when they encounter a similar
+                situation. Though we all produce the same products, this has
+                helped us maintain and improve our
+                relations. 
+            </Quote>
+        </TextSlide>
+        <ImageSlide src="/assets/7.3/Photo 4.jpg">
+            <Caption>Tomato harvested from the vegetable garden.
+            </Caption>
+            <Credit>Credits : Emmanuel Nsekela</Credit>
+        </ImageSlide>
+
+        <TextSlide>
+            <p>
+                Aside from promoting relationships, UPA has allowed farmers to
+                forge connections with a variety of people. Due to the proximity
+                of these farms to urban areas, people from other regions make
+                frequent visits to obtain products, information, and practical
+                experience regarding UPA. This has not only widened farmers’
+                networks, but also their knowledge of topics like environmental
+                management.
+            </p>
+            <Quote>
+                 Being committed to my UPA activities has
+                made me known from the sub-ward level to the municipal level.
+                Through this, I have received people from different
+                organisations and institutes with different interests to learn
+                at my farm. This has helped me increase my network and knowledge
+                of different people. 
+            </Quote>
+        </TextSlide>
+        <ImageSlide src="/assets/7.3/Photo 5.jpg">
+            <Caption>Farmers sharing experiences on various issues regarding their practices.
+            </Caption>
+            <Credit>Credits : Ombeni Swai</Credit>
+        </ImageSlide>
+
+        <TextSlide>
+            <p>
+                Although UPA is the main source of income within their
+                household, all the farmers said that they are the main
+                decision-makers in UPA activities. These decisions are then
+                communicated to their family members
+            </p>
+            <Quote>
+                 I am the sole owner of a farm. All four of
+                my family members believe that I can make all the right
+                decisions for the farm. But being part of a family, I normally
+                inform them of the decisions I make, especially my
+                husband. 
+            </Quote>
+            <p>
+                Above all, UPA has significantly contributed to their physical
+                and emotional wellness. This is because they are usually on
+                their farms completing various tasks even while personnel are
+                present. Though most men and women involved in UPA are of
+                healthy age, these activities keep them physically and mentally
+                active, lowering chances of contracting noncommunicable
+                diseases.
+            </p>
+        </TextSlide>
+    </Slider>
+    <Centered><Back/></Centered>
+</BaseLayout>

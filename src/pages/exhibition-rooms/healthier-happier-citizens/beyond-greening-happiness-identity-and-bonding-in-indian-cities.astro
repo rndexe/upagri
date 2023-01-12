@@ -1,0 +1,37 @@
+---
+import { BaseLayout, Centered } from "@layouts/index.js";
+import { Video, Desc } from "@components/Articles";
+import Title from "@components/Title.astro";
+import Breadcrumbs from "@components/Nav/Breadcrumbs.astro";
+import Back from "@components/Nav/Back.astro";
+
+const title =
+    "Beyond Greening";
+---
+
+<BaseLayout title={title}>
+    <Breadcrumbs title={title} />
+    <Centered>
+        <Title
+            title={title + ":"}
+            subtitle="Happiness, Identity and Bonding in Indian Cities"
+            authors="Maitreyi Koduganti, Amruth Kiran, Sheetal Patil"
+        />
+        <Video id="tNV1sIQY338" />
+        <Desc>
+            <p>
+                Urban agriculture is known to have multiple non-material
+                benefits, like personal development, family bonding, and better
+                quality of life. Drawing from interviews, this video looks at
+                how home gardening has a positive impact on wellbeing at an
+                individual level, on self-esteem and identity. It also explores
+                how growing one’s own food has improved intra-household
+                relationships, social networks, and community cohesion. In
+                addition, the talk highlights how such improved wellbeing can
+                contribute to the Sustainable Development Goals (SDGs),
+                especially SDG2, i.e. Zero Hunger.
+            </p>
+        </Desc>
+        <Back/>
+    </Centered>
+</BaseLayout>

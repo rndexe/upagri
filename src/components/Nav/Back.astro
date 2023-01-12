@@ -1,0 +1,49 @@
+---
+const url = new URL(Astro.url);
+const room = url.pathname.split("/").filter(Boolean).slice(-2)[0];
+let roomTitle, roomurl;
+
+switch (room) {
+    case "space":
+        roomTitle = "Space";
+        roomurl = "/exhibition-rooms/" + room;
+
+        break;
+    case "greener-cities":
+        roomTitle = "Greener Cities";
+        roomurl = "/exhibition-rooms/" + room;
+
+        break;
+    case "healthier-happier-citizens":
+        roomTitle = "Healthier, Happier Citizens";
+        roomurl = "/exhibition-rooms/" + room;
+
+        break;
+    case "men-and-women-nurturing-edible-cities":
+        roomTitle = "Men and Women Nurturing Edible Cities";
+        roomurl = "/exhibition-rooms/" + room;
+
+        break;
+    case "food-and-nutritional-diets":
+        roomTitle = "Food and Nutritional Diets";
+        roomurl = "/exhibition-rooms/" + room;
+
+        break;
+    case "labour-and-incomes":
+        roomTitle = "Labour and Incomes";
+        roomurl = "/exhibition-rooms/" + room;
+        break;
+    case "showcasing-upa":
+        roomTitle = "Showcasing Urban and Peri-urban Agriculture";
+        roomurl = "/showcasing-upa/";
+        break;
+}
+---
+
+<a href={roomurl}>
+    <button
+        class="bg-green-dark mt-4 font-lato text-lg text-eggshell rounded px-4 py-2"
+    >
+        Go back to {roomTitle}
+    </button>
+</a>

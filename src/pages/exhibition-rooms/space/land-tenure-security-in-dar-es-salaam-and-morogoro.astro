@@ -1,0 +1,103 @@
+---
+import { BaseLayout, Centered } from "@layouts/index";
+import Title from "@components/Title.astro";
+import Breadcrumbs from "@components/Nav/Breadcrumbs.astro";
+import Back from "@components/Nav/Back.astro";
+import {
+    Slider,
+    ImageSlide,
+    TextSlide,
+    Quote,
+    Credit,
+    Caption,
+} from "@components/Carousel/index";
+
+const title = "Land Tenure Security in Dar es Salaam and Morogoro";
+---
+
+<BaseLayout title={title}>
+    <Breadcrumbs title={title} />
+    <Centered>
+        <Title
+            title={title}
+            authors="Betty Mntambo, Ombeni Swai, Mariam Genes"
+        />
+    </Centered>
+    <Slider>
+        <TextSlide>
+            <p>
+                Farmers in Dar es Salaam and Morogoro are engaged in various
+                kinds of agricultural practices, ranging from vegetable
+                cultivation to livestock rearing. They have several ways to
+                access land, including renting, borrowing, owning, and
+                encroaching.
+            </p><p>
+                The majority of farmers are livestock keepers. Most of them use
+                their backyards for such activities. Vegetable growers also use
+                the spaces in their homes as well as open spaces for similar
+                purposes.
+            </p>
+        </TextSlide>
+        <ImageSlide
+            src="/assets/9.2/The allocation of Dar es Salaam and Morogoro.png"
+        >
+            <Caption>The allocation of Dar es Salaam and Morogoro.</Caption>
+            <Credit>Source: Nabil Abdallah</Credit>
+        </ImageSlide>
+        <TextSlide>
+            <p>
+                In order to gain this understanding, 20 farmers were chosen for
+                the case study exercise in both Morogoro and Dar es Salaam. They
+                were selected from the 415 respondents of the pilot survey.
+            </p>
+            <p>
+                Only 0.2 per cent of Morogoro residents own and borrow land,
+                while 0.5 per cent own and rent land. It was also noted that 6
+                per cent of the interviewed farmers had acquired land by
+                encroaching on the available open spaces.
+            </p>
+        </TextSlide>
+        <ImageSlide
+            src="/assets/9.2/Infographics Pie Chart_Graphics Credits_Nabil Abdallah.png"
+        >
+            <Credit>Source: Nabil Abdallah</Credit>
+        </ImageSlide>
+        <ImageSlide
+            src="/assets/9.2/Infographics Individual charts_ Graphics credits_ Nabil Abdallah.png"
+        >
+            <Credit>Source: Nabil Abdallah</Credit>
+        </ImageSlide>
+        <TextSlide>
+            <p>
+                The lack of designated agricultural land has caused uncertainty
+                about land tenure for many farmers, which impacts their
+                productivity and crop selection. Farmers who were renting land
+                stated that they were uncomfortable growing crops that take a
+                long time to mature because they were still determining when the
+                owners would want their land back. Due to this, they are
+                compelled to grow vegetables that take a short time to mature.
+            </p>
+            <p>
+                Similarly, because farming activities are typically done in
+                backyards, productivity for farmers who own the land ranges from
+                small to medium scale. Given the benefits of urban and
+                peri-urban agriculture to farmers, communities, and the country
+                as a whole, these findings highlight the need for urban and
+                peri-urban agriculture-friendly policy interventions, such as
+                agricultural land zoning in growing cities.
+            </p>
+        </TextSlide>
+        <ImageSlide
+            src="/assets/9.2/from left-clockwise_ rented Vegetable farms in the undesignated agricultural lands in Dar es Salaam and Morogoro_ Credits_ Grace  Mpinda.jpg"
+        >
+            <Caption
+                >from left-clockwise: rented Vegetable farms in the undesignated
+                agricultural lands in Dar es Salaam and Morogoro</Caption
+            >
+            <Credit>Source: Grace Mpinda</Credit>
+        </ImageSlide>
+    </Slider>
+    <Centered>
+        <Back/>
+    </Centered>
+</BaseLayout>

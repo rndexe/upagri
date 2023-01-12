@@ -1,0 +1,56 @@
+---
+import { BaseLayout, Centered, Stack } from "@layouts/index.js";
+import Breadcrumbs from "@components/Nav/Breadcrumbs.astro";
+import Title from "@components/Title.astro";
+import CardStack from "@components/Cards/Cardstack.astro";
+
+const title = "Greener Cities";
+
+---
+
+<BaseLayout title={title}>
+    <Breadcrumbs title={title} />
+
+    <Centered>
+        <Title title={title} />
+        <p>
+            Urban and peri-urban agriculture (UPA) has many links to improving
+            the local environment and meeting sustainability goals. For example,
+            citizens recycle waste by composting kitchen waste, reuse greywater
+            from their homes for watering, and reuse waste by using old
+            containers and discarded paint cans as pots. Gardens are rich with a
+            variety of flowers, fruits, vegetables, leaf matter, and soil that
+            attract an array of insects, birds, and small animals, providing a
+            haven for biodiversity. Rooftop and backyard gardens also cool down
+            homes: residents report lower indoor temperatures directly under
+            their gardens and this improves liveability, especially during the
+            hot summer months.
+        </p>
+        <Stack>
+            <CardStack
+                
+                img="/assets/6.1/Low-income settlement_Bangalore2.jpg"
+                title="Rooftop Farming to Beat the Heat in India"
+                href="/exhibition-rooms/greener-cities/rooftop-farming-to-beat-the-heat-in-india"
+            />
+            <CardStack
+                
+                img="/assets/6.3/Photo1.jpg"
+                title="Livestock Waste Recycling and Sustainable Energy"
+                href="/exhibition-rooms/greener-cities/livestock-waste-recycling-and-sustainable-energy"
+            />
+            <CardStack
+                
+                img="/assets/Future-impacts-of-Urban-and-Peri-urban-agriculture-on-carbon-stock-and-land-surface-temperatures-in-India.gif"
+                title="Future Impacts of Urban and Peri-urban Agriculture on Carbon Stock and Land Surface Temperatures in India"
+                href="/exhibition-rooms/greener-cities/future-impacts-of-urban-and-peri-urban-agriculture-on-carbon-stock-and-land-surface-temperatures-in-india"
+            />
+            <CardStack 
+            img="/assets/innovative-ways_cover.jpg"
+            title="Innovative Ways for Water Management"
+            href="/exhibition-rooms/greener-cities/innovative-ways-for-water-management"
+            
+            />
+        </Stack>
+    </Centered>
+</BaseLayout>

@@ -1,0 +1,47 @@
+---
+const { img, title, href, contain, order } = Astro.props;
+
+let imgclass;
+if (!contain) {
+    imgclass = "absolute object-cover w-full h-full inset-0 brightness-50";
+} else {
+    imgclass = "absolute object-contain w-full h-full inset-0 brightness-50";
+}
+---
+
+<div tabindex="0" class= "card opacity-0 block relative h-72 lg:h-96 rounded-lg overflow-hidden border border-eggshell bg-gray-15">
+        <img class={imgclass} src={img} alt="" />
+        <h2 class="absolute w-full lg:w-9/12 px-8 py-14 text-eggshell drop-shadow">{title}</h2>
+
+        <a
+            href={href}
+            class="absolute left-8 bottom-16 flex gap-4 items-center w-fit rounded px-4 py-1 border border-eggshell text-eggshell bg-black/25 group hover:bg-black/50 hover:text-eggshell transition-colors ease-in-out"
+            >Enter
+            <svg
+                width="26"
+                height="8"
+                viewBox="0 0 26 8"
+                fill="none"
+                class="group-hover:translate-x-2 transition-transform ease-in-out duration-500"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <path
+                    d="M1 3.5C0.723858 3.5 0.5 3.72386 0.5 4C0.5 4.27614 0.723858 4.5 1 4.5V3.5ZM25.3536 4.35355C25.5488 4.15829 25.5488 3.84171 25.3536 3.64645L22.1716 0.464466C21.9763 0.269204 21.6597 0.269204 21.4645 0.464466C21.2692 0.659728 21.2692 0.976311 21.4645 1.17157L24.2929 4L21.4645 6.82843C21.2692 7.02369 21.2692 7.34027 21.4645 7.53553C21.6597 7.7308 21.9763 7.7308 22.1716 7.53553L25.3536 4.35355ZM1 4.5H25V3.5H1V4.5Z"
+                    class="fill-eggshell group-hover:fill-eggshell"></path>
+            </svg>
+        </a>
+</div>
+
+<style>
+    .card {
+        transition: 0.5s;
+        transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+    .card:not(:first-child) {
+        @apply -mt-60 lg:-mt-72;
+    }
+    .card:hover ~ .card,
+    .card:focus-within ~ .card {
+        @apply translate-y-60 lg:translate-y-72;
+    }
+</style>

@@ -1,0 +1,45 @@
+---
+import { BaseLayout, Centered } from "@layouts/index.js";
+import Title from "@components/Title.astro";
+import Video from "@components/Articles/Video.astro";
+import Desc from "@components/Articles/Desc.astro";
+import Breadcrumbs from "@components/Nav/Breadcrumbs.astro";
+import Back from "@components/Nav/Back.astro";
+
+const title = "Gardening per Square Foot"
+---
+
+<BaseLayout title={title}>
+    <Breadcrumbs title={title} />
+    <Centered>
+    <Title
+        title={title + ":"}
+        subtitle="A Field Tour of Gardens in Bengaluru Slums"
+        authors="Maitreyi Koduganti, Swarnika Sharma and Amruth Kiran"
+    />
+    <Video id="gMeN9BANqvM" />
+    <Desc>
+        <p>
+            Very often, urban gardens bring to mind lush green, compact,
+            manicured gardens that aim to enhance the aesthetics of a place more
+            than anything else. However, there is another side to urban
+            gardens—urban gardening and farming among low-income settlements or
+            slums.
+        </p>
+        <p>
+            Despite substantial research around urban agriculture, scant
+            attention is paid to understanding the enablers, barriers, and
+            outcomes of the practices in different sections of society,
+            particularly low-income settlements.
+        </p>
+        <p>
+            Conversing with three different types of practitioners from urban
+            slums in Bengaluru, this session focuses on urban farming practices.
+            It stimulates the conversation around how urban farming strengthens
+            food security among the urban poor and contributes towards the
+            sustainability of a city.
+        </p>
+    </Desc>
+    <Back/>
+</Centered>
+</BaseLayout>

@@ -1,0 +1,17 @@
+---
+import { BaseLayout, Centered } from "@layouts/index";
+import Breadcrumbs from "@components/Nav/Breadcrumbs.astro";
+import Title from "@components/Title.astro";
+
+const title = "Thank you";
+---
+
+<BaseLayout title={title}>
+    <Breadcrumbs title={title} />
+    <Centered>
+        <Title title={title} />
+        <p>
+            Thank you for reaching out to us, we will get back to you shortly.
+        </p>
+    </Centered>
+</BaseLayout>

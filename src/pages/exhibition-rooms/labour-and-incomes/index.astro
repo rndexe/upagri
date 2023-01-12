@@ -1,0 +1,48 @@
+---
+import { BaseLayout, Stack, Centered } from "@layouts/index";
+import Breadcrumbs from "@components/Nav/Breadcrumbs.astro";
+import Title from "@components/Title.astro";
+import CardStack from "@components/Cards/Cardstack.astro";
+
+const title = "Labour and Incomes";
+---
+
+<BaseLayout title={title}>
+    <Breadcrumbs title={title} />
+    <Centered>
+        <Title title={title} />
+        <p>
+            Diverse forms of urban and peri-urban agriculture have led to
+            multiple models of income generating activities for city dwellers,
+            most prominently for the urban poor. In Tanzania, urban and
+            peri-urban agriculture is a key livelihood for several people and
+            includes food growing and livestock rearing. Having a dynamic supply
+            chain, urban and peri-urban agriculture offers livelihood and
+            employment opportunities across seed shops, farmers, transporters,
+            wholesalers, retail sellers and consumers. Whereas in India, UPA has
+            captured the growing service sector economy. Across the megacities
+            of India - Pune, Bengaluru and Chennai - social enterprises are
+            offering mali or gardening services to city-dwellers. These malis
+            tend to be migrants from rural areas who already possess farming
+            skills. To cater to the growing demand of fresh food in cities,
+            several firms have also ventured into aquaponics, hydroponics and
+            other tech-driven models, which offer various operation and
+            maintenance jobs for technically-skilled youngsters in the city.
+            Finally, several cooperatives and community farms in and around the
+            city are providing fresh fruits, vegetables and dairy products to
+            urban consumers, employing people throughout the supply chain.
+        </p>
+        <Stack>
+            <CardStack
+                img="/assets/10.1_cover.jpg"
+                title="Reaping Livelihoods - Exploring Urban Farming and Livelihood Generation in Indian Cities"
+                href="/exhibition-rooms/labour-and-incomes/reaping-livelihoods-exploring-urban-farming-and-livelihood-generation-in-indian-cities"
+            />
+            <CardStack
+                img="/assets/10.2/Image 3.jpg"
+                title="Income, Food, and Jobs: Material Benefits of Urban Farming in Indian Cities"
+                href="/exhibition-rooms/labour-and-incomes/income-food-and-jobs-material-benefits-of-urban-farming-in-indian-cities"
+            />
+        </Stack>
+    </Centered>
+</BaseLayout>

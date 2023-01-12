@@ -1,0 +1,126 @@
+---
+import { BaseLayout, Centered  } from "@layouts/index.js";
+import Title from "@components/Title.astro";
+import Breadcrumbs from "@components/Nav/Breadcrumbs.astro";
+import {
+    Slider,
+     ImageSlide,
+    TextSlide,
+    Caption,
+    Quote,
+    Credit,
+} from "@components/Carousel/index.js";
+import Back from "@components/Nav/Back.astro";
+
+const title = "Gender Equality and Obligations for Agricultural Development";
+---
+
+<BaseLayout title={title}>
+    <Breadcrumbs title={title} />
+    <Centered>
+        <Title
+            title={title}
+            authors="Betty Mntambo, Ombeni Swai, Mariam Genes"
+        />
+        <p>
+            Men and women have made significant contributions to urban and
+            peri-urban agriculture (UPA). However, the role of women in UPA has
+            often been underestimated. As a result, there is limited information
+            on the gendered division of labour in UPA in Tanzania. We undertook
+            415 surveys among male and female farmers. The results show the
+            percentage of men and women engaged in UPA as 49.2 percent and 50.8
+            percent respectively in Morogoro, and 41.2 percent and 58.8 per cent
+            respectively in Dar es Salaam. Evidently, there is a slight
+            difference between the participation of men and women in the two
+            regions. The survey demonstrates that women's role in UPA must not
+            be underestimated. The results also indicate that women's
+            participation in UPA has economic and social gains as they
+            contribute to household expenditure. Therefore, it is important to
+            address the gendered division of labour in the UPA.
+        </p>
+    </Centered>
+    <Slider>
+        <TextSlide>
+            <p>
+                Results from the survey indicate that most female farmers are
+                over 31 years of age; for instance, 77.4 per cent in Morogoro
+                and 81.4 per cent in Dar es Salaam. They must fulfil their
+                domestic duties alongside farming. The allocation of labour
+                between the two roles and the amount of work they have to do is
+                differentiated by their age, marital status, and number of
+                children.
+            </p>
+            <Quote>
+                 I usually wake up early in the morning to
+                perform domestic activities before engaging in UPA activities. I
+                don’t feel that my duties as a woman hinder my ability to become
+                a great farmer. 
+            </Quote>
+            <p>(69-year-old female farmer, in Morogoro)</p>
+        </TextSlide>
+        <ImageSlide
+            src="/assets/8.3/Photo1; a woman in her rice farm in Kilakala, morogoro.jpg"
+        >
+            <Caption>A woman in  her farm  resting at Kilakala, Morogoro.</Caption>
+            <Credit>Credits: Betty Mntambo</Credit>
+        </ImageSlide>
+
+        <TextSlide>
+            <p>
+                Women with younger children have more domestic activities to
+                take care of before engaging in UPA. Female farmers cultivating
+                outside their households have to go back home during the day to
+                perform these.
+            </p>
+            <p>
+                Activities within UPA are also segregated by gender. For
+                instance, activities that are considered hard are performed by
+                men, including irrigation, cleaning of livestock shelters,
+                preparing livestock feed, and carrying livestock waste to the
+                disposal site, to mention a few. Activities such as collecting
+                chicken eggs and harvesting vegetables are done by women. Some
+                UPA farmers who employ labourers prefer men as they are
+                considered to be more efficient. Women are hired for light work.
+                For instance, in a case study in Chanika, Dar es Salaam, one
+                farmer had hired 107 labourers. Only 27 per cent of these were
+                female labourers. He explained it as follows:
+            </p>
+        </TextSlide>
+
+        <TextSlide>
+            <Quote>
+                 Most of the activities on the poultry farm
+                are male-oriented, so I have more male than female labourers.
+                For example, lifting heavy chicken feed or collecting manure is
+                done by men, while women clean the poultry shades and take care
+                of the chicks. 
+            </Quote>
+            <p>(Male farmer, Dar es Salaam)</p>
+        </TextSlide>
+        <ImageSlide
+            src="/assets/8.3/Photo2; a man collecting eggs in a poultry farm in chanika.jpg"
+        >
+            <Caption>A man collecting eggs in a poultry farm in chanika</Caption
+            >
+            <Credit>Credits: Nabil Abdallah</Credit>
+
+        </ImageSlide>
+        <TextSlide>
+            <p>
+                The findings also reveal that some household members participate
+                in UPA activities because they believe it has made a significant
+                contribution to the community. Therefore, spouses of farmers may
+                assist depending on the type of activity. For example,
+            </p>
+            <Quote>
+                 My husband assists me with the livestock
+                (cattle, pigs, and chickens) at home but not with cultivation.
+                He provides them food and water. When customers come to the
+                house when I am not present, he assists with
+                selling. 
+            </Quote>
+            <p>(42-year-old female farmer, Dar es Salaam)</p>
+        </TextSlide>
+    </Slider>
+    <Centered><Back/></Centered>
+</BaseLayout>

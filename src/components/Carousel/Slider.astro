@@ -1,0 +1,144 @@
+<div class="small bg-green-dark relative lg:overflow-clip">
+    <div>
+        <slot />
+    </div>
+    <div
+        class="hidden lg:flex swiper-button-next rounded-full border border-eggshell"
+    >
+        <svg
+            class="w-5 h-5"
+            width="30"
+            height="30"
+            viewBox="0 0 30 30"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+        >
+            <path
+                d="M14.4242 29L28 15M28 15L14.4242 1M28 15L2.35641e-06 15"
+                stroke="white"
+                stroke-width="2"></path>
+        </svg>
+    </div>
+
+    <div
+        class="hidden lg:flex swiper-button-prev rounded-full shadow border border-eggshell "
+    >
+        <svg
+            class="w-5 h-5"
+            width="30"
+            height="30"
+            viewBox="0 0 30 30"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+        >
+            <path
+                d="M15.5758 1L2 15M2 15L15.5758 29M2 15H30"
+                stroke="white"
+                stroke-width="2"></path>
+        </svg>
+    </div>
+    <button id="fullscreen" class="hidden lg:block top-4 right-4 absolute z-10">
+        <svg
+            id="fs-icon"
+            class="w-10 h-10"
+            viewBox="0 0 70 70"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+        >
+            <circle cx="35.4198" cy="30.869" r="30.4921" fill="white"></circle>
+            <path
+                d="M19.3031 36.4225L19.4665 47.0397M19.4665 47.0397L30.0837 47.203M19.4665 47.0397L30.247 36.2591"
+                stroke="#38503D"
+                stroke-width="2"></path>
+            <path
+                d="M51.7535 25.5316L51.5902 14.9144M51.5902 14.9144L40.9729 14.7511M51.5902 14.9144L40.8096 25.695"
+                stroke="#38503D"
+                stroke-width="2"></path>
+        </svg>
+        <svg
+            id="close-icon"
+            class="w-5 h-5 hidden"
+            viewBox="0 0 26 26"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+        >
+            <path
+                d="M1 1L25 25M25 1L1 25"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="round"></path>
+        </svg>
+    </button>
+</div>
+<script
+    is:inline
+    src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.8.4/swiper-bundle.min.js"
+></script>
+<script is:inline>
+    const mediaQueryList = window.matchMedia("(max-width: 1024px)");
+    const target = document.querySelector(".small");
+
+    if (!mediaQueryList.matches) {
+        target.classList.add("swiper-container");
+        target.querySelector("div").classList.add("swiper-wrapper");
+    }
+    mediaQueryList.addEventListener("change", (event) => {
+        if (event.matches) {
+            target.classList.remove("swiper-container");
+            target.querySelector("div").classList.remove("swiper-wrapper");
+
+        } else {
+            target.classList.add("swiper-container");
+            target.querySelector("div").classList.add("swiper-wrapper");
+        }
+    });
+    let swiper = new Swiper(".swiper-container", {
+        effect: "slide",
+        spaceBetween: 40,
+        slidesPerView: "auto",
+        centeredSlides: true,
+        centeredSlidesBounds: true,
+        grabCursor: true,
+        slidesOffsetAfter: 48,
+        slidesOffsetBefore: 40,
+        keyboard: {
+            enabled: true,
+        },
+        freeMode: true,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+    const s = document.querySelector(".swiper-container");
+    const fs = document.querySelector("#fullscreen");
+    const fsicon = document.querySelector("#fs-icon");
+    const closeicon = document.querySelector("#close-icon");
+    fs.addEventListener("click", () => {
+        let currIndex = swiper.activeIndex;
+        s.classList.toggle("small");
+        s.classList.toggle("fullscreen");
+        fsicon.classList.toggle("hidden");
+        closeicon.classList.toggle("hidden");
+        swiper.update();
+        swiper.slideTo(currIndex);
+    });
+</script>
+<style>
+    .swiper-button-next,
+    .swiper-button-prev {
+        background: theme(colors.gray.DEFAULT);
+        width: var(--swiper-navigation-size);
+        height: var(--swiper-navigation-size);
+    }
+    .swiper-button-next::after,
+    .swiper-button-prev::after {
+        content: "";
+    }
+    .small {
+        @apply lg:h-[560px] lg:ml-[calc(50vw-520px)] lg:mb-8 py-8 px-8 lg:px-0;
+    }
+    .fullscreen {
+        @apply absolute z-50 inset-0 h-screen ml-0 py-16;
+    }
+</style>

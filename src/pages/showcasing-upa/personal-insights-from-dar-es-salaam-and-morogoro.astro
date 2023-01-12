@@ -1,0 +1,95 @@
+---
+import { BaseLayout, Centered } from "@layouts/index.js";
+import Title from "@components/Title.astro";
+import Breadcrumbs from "@components/Nav/Breadcrumbs.astro";
+import {
+    Slider,
+    ImageSlide,
+    TextSlide,
+    Credit,
+    Quote,
+    Caption,
+} from "@components/Carousel/index.js";
+import Back from "@components/Nav/Back.astro";
+
+const title = "Personal Insights from Dar es Salaam and Morogoro, Tanzania";
+---
+
+<BaseLayout title={title}>
+    <Breadcrumbs title={title} />
+    <Centered>
+        <Title
+            title={title}
+            authors="Betty Mntambo, Ombeni Swai, Mariam Genes"
+        />
+    </Centered>
+    <Slider>
+        <ImageSlide src="/assets/3.3/photo1.jpg">
+            <Caption
+                >A female farmer in her vegetable garden in Kibamba, at Dar es
+                salaam.</Caption
+            ><Credit>Credits: Ombeni Swai</Credit>
+        </ImageSlide>
+        <ImageSlide src="/assets/3.3/photo1a.jpg">
+            <Caption
+                >A female farmer in her vegetable farm in Kibamba at Dar es
+                salaam.</Caption
+            ><Credit>Credits: Ombeni Swai</Credit>
+        </ImageSlide>
+        <TextSlide>
+            <Quote>
+                Farming has had a great impact on my life and my family. I can
+                pay my children's school fees. It has become the main source of
+                income in my household. I am no longer financially dependent, I
+                recommend other people to start farming. My plan is to have a
+                big area for cultivation and even start cultivating perennial
+                crops.
+            </Quote>
+        </TextSlide>
+        <ImageSlide src="/assets/3.3/photo2.jpg">
+        <Caption>A female farmer working in her vegetable garden in Dar es salaam.</Caption>
+        <Credit>Credits: Ombeni Swai</Credit>
+        </ImageSlide>
+
+        <ImageSlide src="/assets/3.3/photo2a.jpg">
+            <Caption>A female farmer working in her vegetable garden in Dar es salaam.</Caption>
+            <Credit>Credits: Ombeni Swai</Credit>
+        </ImageSlide>
+
+        <TextSlide>
+            <Quote>
+                Generally, urban and peri-urban activities have had a great
+                impact on my life and my family. Farming has enabled me to pay
+                my children’s school fees, among other expenses. It has become
+                the main source of income in my household. I am no longer
+                financially dependent.
+            </Quote>
+        </TextSlide>
+        <ImageSlide src="/assets/3.3/photo3.jpg">
+            <Caption>A female farmer with her Poultry business</Caption>
+            <Credit>Credits: Ombeni Swai</Credit>
+        </ImageSlide>
+
+        <TextSlide>
+            <Quote>
+                I am a widow. Through poultry keeping, I paid for my children’s
+                school fees and supported them until university. I have built my
+                own house and I can take care of my basic needs.
+            </Quote>
+        </TextSlide>
+        <ImageSlide src="/assets/3.3/photo4.jpg">
+            <Caption>A female farmer watering her vegetable garden in Kibamba at Dar es salaam.</Caption>
+            <Credit>Credits: Nabil Abdallah</Credit>
+        </ImageSlide>
+        <TextSlide>
+            <Quote>
+                People should engage in urban and peri-urban agriculture (UPA)
+                because, based on my experience, these activities are payed
+                highly compared to being employed. This is mainly because no
+                human can live without food. Therefore, by practising UPA, you
+                are sure of earning an income on a daily basis.
+            </Quote>
+        </TextSlide>
+    </Slider>
+    <Centered><Back/></Centered>
+</BaseLayout>

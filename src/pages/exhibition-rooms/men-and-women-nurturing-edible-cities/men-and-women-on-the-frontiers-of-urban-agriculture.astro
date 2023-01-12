@@ -1,0 +1,181 @@
+---
+import { BaseLayout, Centered  } from "@layouts/index.js";
+import Title from "@components/Title.astro";
+import Breadcrumbs from "@components/Nav/Breadcrumbs.astro";
+import {
+    Slider,
+     ImageSlide,
+    TextSlide,
+    Caption,
+    Quote,
+    Credit,
+} from "@components/Carousel/index.js";
+import Back from "@components/Nav/Back.astro";
+
+const title = "Men and Women on the Frontiers of Urban Agriculture";
+---
+
+<BaseLayout title={title} >
+    <Breadcrumbs title={title} />
+    <Centered>
+        <Title title={title} authors="Maitreyi Koduganti and Sheetal Patil" />
+    </Centered>
+    <Slider>
+        <TextSlide>
+            <p>
+                Thousands of urban farmers, consisting of men and women from
+                varying age groups across Indian cities are engaged in urban
+                agriculture in different forms, growing vegetables, fruits,
+                microgreens, millets, and cereals.
+            </p>
+            <p>
+                According to our survey, which collected more than 350 responses
+                from multiple cities across India, women seem to outnumber men,
+                accounting for 58 per cent of urban gardeners (see Figure 1).
+                They tend to play an important role in providing food and
+                nutritional security, and health and wellbeing at the household
+                level. Furthermore, women in the age group of 41 to 50 are more
+                active in urban agriculture as compared to other age groups.
+            </p>
+        </TextSlide>
+        <ImageSlide src="/assets/8.1/Figure 1.jpg">
+            <Caption>Distribution of Women and Men in Urban Agriculture based on an Online Survey Conducted by the Project Team
+            </Caption>
+        </ImageSlide>
+        <TextSlide>
+            <p>
+                However, men and women seem to have different insights about
+                urban agriculture, which shapes their motivations,
+                responsibilities, and the outcomes of the practice itself. A
+                significant proportion of women started urban agriculture as a
+                hobby, to grow food, or for health benefits (see Figure 2). For
+                most men, growing their own food for health benefits was a key
+                motivation.
+            </p>
+            <p>
+                In addition, the types of plants grown by men and women also
+                seem to differ (see Figure 3). Women are engaged in growing
+                ornamental plants, leafy greens, herbs, and medicinal plants,
+                while men are predominantly engaged in growing fruit trees and
+                vegetables. In this piece, we further explore these gendered
+                insights across respondents in Bengaluru and Pune, India.
+            </p>
+        </TextSlide>
+        <ImageSlide src="/assets/8.1/Figure 2.jpg">
+            <Caption>Motivations to Start Urban Farming.</Caption>
+            <Credit>Source: Authors</Credit>
+        </ImageSlide>
+        <ImageSlide src="/assets/8.1/Figure 3.jpg">
+            <Caption>Types of Plants Grown.</Caption>
+            <Credit>Source: Authors</Credit>
+
+        </ImageSlide>
+        <TextSlide>
+            <p>A male urban gardener from Pune notes,</p>
+            <Quote>
+                 Urban gardening is a women's thing because
+                women are closer to nature. It is not just food production.
+                Women are more caring and nurturing, as it comes naturally to
+                them, so they tend to maintain gardens very
+                well. 
+            </Quote>
+        </TextSlide>
+        <ImageSlide src="/assets/8.1/Picture 1.jpg">
+            <Caption>Terrace Garden of a Female Urban Gardener in Pune</Caption>
+            <Credit>Source: Swarnika Sharma</Credit>
+        </ImageSlide>
+        <TextSlide>
+            <p>
+                On the same lines, a forty-year-old female urban gardener from
+                Bengaluru notes,
+            </p>
+            <Quote>
+                 Women have more affinity towards nature
+                and aesthetics, which also involves beautifying their homes and
+                terraces. Apart from growing fresh and safe food, we want to
+                teach our children about growing and nurturing. However, men see
+                gardens as more functional spaces, like a project, and think
+                about how much they can grow in the
+                gardens. 
+            </Quote>
+        </TextSlide>
+        <ImageSlide src="/assets/8.1/Picture 2.jpg">
+            <Caption>Garden of Female Urban Gardener in Bengaluru</Caption>
+            <Credit>Source: Prathijna Poonacha</Credit>
+        </ImageSlide>
+        <TextSlide>
+            <p>
+                In terms of dividing gardening responsibilities, a female
+                gardener from Pune in her mid-forties responded,
+            </p>
+            <Quote>
+                 Initially, I started gardening alone
+                because my husband was a little apprehensive about the whole
+                thing. Now, the garden has changed me. It has helped me build
+                myself, giving me an identity. My husband helps me with
+                composting and watering, while I am more engaged in sowing and
+                transplanting. 
+            </Quote>
+        </TextSlide>
+        <ImageSlide src="/assets/8.1/Picture 3.jpg">
+            <Caption>Woman Gardening on a Farm</Caption>
+            <Credit>Credits: Pooja Bhale</Credit>
+        </ImageSlide>
+        <TextSlide>
+            <p>
+                Several respondents affirm that daily management is mostly
+                handled by women, whereas heavy work, such as lifting pots,
+                transporting heavy gardening material, bringing gardening tools
+                and so on are undertaken by men. This is not just in
+                middle-income households. A similar story emerges from
+                low-income households too, where a woman in her mid-forties
+                mentioned,
+            </p>
+            <Quote>
+                 I am the watchman and the caretaker of my
+                garden. No one else takes care of it. Children in the community
+                are my only source of help. I am the one to tirelessly maintain
+                the gardens. 
+            </Quote>
+        </TextSlide>
+        <ImageSlide src="/assets/8.1/Picture 4.jpg">
+            <Caption>Men Engaged in Heavy Gardening Work</Caption>
+            <Credit>Source: ANANAS</Credit>
+        </ImageSlide>
+        <ImageSlide src="/assets/8.1/Picture 5.jpg">
+            <Caption
+                >Children Maintaining a Garden within a Slum in Bengaluru</Caption
+            >
+            <Credit>Source: Kruthika Nagananda</Credit>
+        </ImageSlide>
+        <TextSlide>
+            <p>
+                A fifty-year old male construction worker who started a
+                community farm within urban slums in Bengaluru noted,
+            </p>
+            <Quote>
+                 I get help from my family members to
+                nurture the farm. No one from our slum helps me out voluntarily,
+                but they are always ready to get the fruits. So, I always ensure
+                one of my family members is available to handle the farm when I
+                am away. 
+            </Quote>
+        </TextSlide>
+        <ImageSlide src="/assets/8.1/Picture_6.jpg">
+            <Caption>Community Garden in Bengaluru Slums</Caption>
+            <Credit>Source: Maitreyi Koduganti</Credit>
+        </ImageSlide>
+        <TextSlide>
+            <p>
+                While it is true that women lead the practice of urban
+                agriculture, men also contribute significantly to growing
+                practices. Regardless of who predominates the practice,
+                acknowledging these insights will only help improve and expand
+                urban agricultural practices.
+            </p>
+
+        </TextSlide>
+
+    </Slider>
+    <Centered><Back/></Centered>
+</BaseLayout>

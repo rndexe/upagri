@@ -1,0 +1,573 @@
+---
+import { BaseLayout, Centered } from "@layouts/index.js";
+import Title from "@components/Title.astro";
+import Breadcrumbs from "@components/Nav/Breadcrumbs.astro";
+
+const title = "Reading Room";
+
+---
+
+<BaseLayout title={title}>
+    <Breadcrumbs title={title} />
+    <Centered>
+        <Title title={title} />
+        <p>
+            Urban agriculture, farming, or gardening is the practice of
+            cultivating, processing, and distributing food in or around urban
+            areas. Although not predefined in an urban context, it has citizens,
+            farmers, local communities, associations and companies as
+            stakeholders and farming takes the form of backyard, roof-top and
+            balcony gardening, community gardening in vacant lots and parks, and
+            roadside urban fringe agriculture.
+        </p>
+
+        <div
+            id="selection"
+            class="flex gap-4 flex-wrap text-white static lg:sticky top-12 py-6 bg-eggshell lg:-mx-2 lg:px-2"
+        >
+            <a href="#section1" class="bg-gray rounded py-2 px-4"
+                >Background Resources</a
+            >
+            <a href="#section2" class="bg-gray rounded py-2 px-4"
+                >Data and Statistics</a
+            >
+            <a href="#section3" class="bg-gray rounded py-2 px-4"
+                >Glossaries and Encyclopedias</a
+            >
+            <a href="#section4" class="bg-gray rounded py-2 px-4"
+                >News & Videos
+            </a>
+            <a href="#section5" class="bg-gray rounded py-2 px-4"
+                >Blogs and photo essays
+            </a>
+            <a href="#section6" class="bg-gray rounded py-2 px-4"
+                >Popular Writing by UPAGrI Team
+            </a>
+            <a href="#section7" class="bg-gray rounded py-2 px-4"
+            >Open Access Books 
+
+        </a>
+            <a href="#section8" class="bg-gray rounded py-2 px-4"
+                >Working Papers 
+
+            </a>
+            <a href="#section9" class="bg-gray rounded py-2 px-4"
+                >Journal Articles
+
+            </a>
+            <a href="#section10" class="bg-gray rounded py-2 px-4"
+                >Journals
+            </a>
+            <a href="#section11" class="bg-gray rounded py-2 px-4"
+                >More Books
+            </a>
+        </div>
+        <div>
+            <section id="section1">
+                <h5>Background Resources</h5>
+                <p>
+                    These resources will provide a broader context to urban
+                    agriculture--its definitions, scales and types of practices,
+                    and a ‘how-to’ guide for setting up your own urban garden.
+                </p>
+                <div>
+                    <a
+                        target="_blank"
+                        href="https://idl-bnc-idrc.dspacedirect.org/bitstream/handle/10625/26429/117785.pdf?sequence=12"
+                    >
+                        Urban Agriculture: Definition, Presence, Potentials and
+                        Risks, and Policy Challenges
+                    </a>
+                    <a
+                        target="_blank"
+                        href="https://www.fibl.org/fileadmin/documents/shop/1141-organic-farming-principles.pdf"
+                    >
+                        Organic farming: Basic Principles and good practices
+                    </a>
+                    <a
+                        target="_blank"
+                        href="https://iwaponline.com/bgs/article/2/1/1/71141/Urban-agriculture-as-a-keystone-contribution"
+                    >
+                        Urban agriculture as a keystone contribution towards
+                        securing sustainable and healthy development for cities
+                        in the future
+                    </a>
+                    <a
+                        target="_blank"
+                        href="http://www.fao.org/3/a1471e/a1471e.pdf"
+                    >
+                        Profitability and sustainability of urban and peri-urban
+                        agriculture
+                    </a>
+                    <a
+                        target="_blank"
+                        href="http://www.fao.org/3/i2177e/i2177e00.pdf"
+                    >
+                        The place of urban and peri-urban agriculture (Upa) in
+                        National Food Security Programmes</a>
+                </div>
+            </section>
+            <section id="section2">
+                <h5>Data and Statistics</h5>
+                <div>
+                    <a
+                        target="_blank"
+                        href="http://www.fao.org/faostat/en/#home"
+                    >
+                        Food and agriculture data</a
+                    >
+                    <a target="_blank" href="https://krishikosh.egranth.ac.in/">
+                        National Science Digital Library</a
+                    >
+                    <a target="_blank" href="https://krishikosh.egranth.ac.in/">
+                        Krishikosh - Agriculture Repository of ICAR</a
+                    >
+                    <a
+                        target="_blank"
+                        href="https://bengaluruurban.nic.in/en/departments/agriculture-department/"
+                    >
+                        Bengaluru Urban District</a
+                    >
+                </div>
+            </section>
+            <section id="section3">
+                <h5>Glossary and Encyclopedias</h5>
+                <p>
+                    Keen to understand the vocabulary of urban farming? Here are
+                    some encyclopedias that are frequently used by urban
+                    agriculture researchers and practitioners to define key
+                    terms.
+                </p>
+                <div>
+                    <a
+                        target="_blank"
+                        href="https://www.encyclopedia.com/sports-and-everyday-life/food-and-drink/food-and-cooking/sustainable-agriculture"
+                    >
+                        Sustainable agriculture</a
+                    >
+                    <a
+                        target="_blank"
+                        href="https://dicoagroecologie.fr/en/consult-the-dictionary/"
+                    >
+                        Dictionary of Agroecology</a
+                    >
+                    <a
+                        target="_blank"
+                        href="https://agclass.nal.usda.gov/glossary-search"
+                    >
+                        NAL Agricultural Thesaurus and Glossary</a
+                    >
+                    <a
+                        target="_blank"
+                        href="http://www.fao.org/3/as988e/as988e.pdf"
+                    >
+                        FAO Term Portal [PDF]</a
+                    >
+                    <a
+                        target="_blank"
+                        href="https://agrovoc.fao.org/browse/agrovoc/en/"
+                    >
+                        AGROVOC Multilingual Thesaurus</a
+                    >
+                </div>
+            </section>
+            <section id="section4">
+                <h5>News & Videos</h5>
+                <div>
+                    <!--Link to google drive? -->
+                    <a
+                        target="_blank"
+                        href="https://drive.google.com/file/d/1tMmXwhH6pfaWoMX9PaVMR3ZxKQ2F4nzH/view?usp=sharing"
+                    >
+                        This rooftop garden will floor you for sure</a
+                    >
+                    <a
+                        target="_blank"
+                        href="https://www.youtube.com/watch?v=2ueVw83Plec"
+                    >
+                        Singapore’s Bold Plan to Build the Farms of the Future
+                    </a>
+                    <a
+                        target="_blank"
+                        href="https://www.britannica.com/video/180102/farming-Japan"
+                    >
+                        Discover the future of Japanese farming by using
+                        artificial high-tech LEDs and through Hydroponics, or
+                        soilless cultivation
+                    </a>
+                    <a
+                        target="_blank"
+                        href="https://www.deccanherald.com/city/life-in-bengaluru/blooming-with-health-herbal-garden-bolsters-mindpower-for-school-children-1116268.html"
+                    >
+                        Blooming with health: Herbal garden bolsters mindpower
+                        for school children
+                    </a>
+                </div>
+            </section>
+            <section id="section5">
+                <h5>Blogs and photo essays</h5>
+                <p>
+                    Students, the elderly, techies, government officials and
+                    many others are experimenting with innovative ways of urban
+                    farming in India, creating a positive impact on their
+                    environment. Here are some blogs, photo essays and open
+                    access books that’ll give you a glimpse into their journey
+                    and struggles with urban farming.
+                </p>
+                <div>
+                    <a
+                        target="_blank"
+                        href="https://www.thenatureofcities.com/"
+                    >
+                        The Nature of Cities</a
+                    >
+
+                    <a
+                        target="_blank"
+                        href="https://www.thebetterindia.com/?s=urban+agriculture"
+                    >
+                        Better India - Urban agriculture</a
+                    >
+
+                    <a target="_blank" href="https://scroll.in/"> Scroll.in</a>
+
+                    <a target="_blank" href="https://citizenmatters.in/">
+                        Citizen Matters</a
+                    >
+
+                    <a
+                        target="_blank"
+                        href="https://www.epw.in/engage?0=ip_login_no_cache%3D7d89feaff4b3611239f6c55dce4c26ae"
+                    >
+                        EPW Engage</a
+                    >
+
+                    <a target="_blank" href="https://www.ecoideaz.com/">
+                        Eco Ideaz</a
+                    >
+
+                    <a target="_blank" href="https://cityfarmer.info/">
+                        City farmer news</a
+                    >
+
+                    <a target="_blank" href="https://savitahiremath.com/">
+                        Endlessly Green</a
+                    >
+
+                    <a
+                        target="_blank"
+                        href="https://prcindia.in/publications/beejpatra/beejpatra-1/"
+                    >
+                        BeejPatra, PRC</a
+                    >
+                    <a target="_blank" href="https://edibleroutes.com/">
+                        Edible Routes</a
+                    >
+                    <a
+                        target="_blank"
+                        href="https://edibleissues.in/2020/09/10/who-feeds-bengaluru/"
+                        >Edible Issues - Who feeds Bengaluru?
+                    </a>
+                </div>
+            </section>
+            <section id="section6">
+                <h5>Popular writing by UPAGrI Team:</h5>
+                <div>
+                    <a href="https://prcindia.in/publications/beejpatra-6/">
+                        Growing green jobs: Can urban and peri-urban
+                        agricultural entrepreneurship generate livelihoods? Case
+                        examples from Pune and Bengaluru.
+                    </a>
+                    <a
+                        href="https://urbanmorph.medium.com/climate-change-well-being-and-agriculture-in-indian-cities-1ae3b5b7269c"
+                    >
+                        Climate Change, Well-Being and Agriculture in Indian
+                        Cities.
+                    </a>
+                    <a
+                        target="_blank"
+                        href="https://www.thebritishacademy.ac.uk/blog/quantifying-the-long-term-environmental-impacts-of-urban-and-peri-urban-agriculture/"
+                        >Quantifying the long-term environmental impacts of
+                        urban and peri-urban agriculture
+                    </a>
+                    <a
+                        target="_blank"
+                        href="https://www.thehindu.com/opinion/op-ed/cities-are-taking-climate-action/article36827667.ece"
+                        >Cities are taking climate action
+                    </a>
+                    <a
+                        target="_blank"
+                        href="https://prcindia.in/publications/beejpatra/beejpatra-leaflet-3/"
+                        >Urban farming - just a hobby or a new sustainable
+                        lifestyle choice? - Insights from Bengaluru and Pune.
+                    </a>
+                    <a
+                        target="_blank"
+                        href="https://www.upagri.net/gift-a-garden-mission"
+                        >Gift a Garden Mission.
+                    </a>
+                    <a
+                        target="_blank"
+                        href="https://citizenmatters.in/urban-agriculture-trends-during-lockdown-in-bengaluru-pune-25653"
+                        >Why the growth of Urban Agriculture during the lockdown
+                        is a promising trend?
+                    </a>
+                    <a
+                        target="_blank"
+                        href="https://weather.com/en-IN/india/environment/news/2021-06-04-gardens-of-bengaluru-urban-agriculture-world-environment-day"
+                        >Hidden Gardens of Bengaluru: Reimagining resilience
+                        through urban agriculture.
+                    </a>
+                    <a
+                        target="_blank"
+                        href="https://www.thebritishacademy.ac.uk/blog/reimagining-urban-food-systems-after-covid-19/"
+                        >Reimagining urban food systems after COVID-19
+                    </a>
+                    <a
+                        target="_blank"
+                        href="https://www.thehansindia.com/life-style/building-backyards-better-an-approach-for-urban-agriculture-in-india-642687"
+                        >Building ‘backyards’ better - an approach for urban
+                        agriculture in India
+                    </a>
+                    <a
+                        target="_blank"
+                        href="https://www.thehindu.com/opinion/open-page/produce-of-the-city/article32302584.ece"
+                        >Produce of the city
+                    </a>
+                </div>
+            </section>
+            <section id="section7">
+                <h5>Open Access Books</h5>
+                <div class="grid-cols-4 items-start">
+                    <a class="p-0" href="https://directory.doabooks.org/handle/20.500.12854/66830">
+                        <img class="rounded-t" src="/assets/reading-room/image3.png"/>
+                        <p class="p-4">Urban Agriculture / <span class="italic font-normal">Mohamed Samer</span>
+                        </p>
+                    </a>
+                    <a class="p-0" href="https://library.oapen.org/handle/20.500.12657/22829">
+                        <img class="rounded-t" src="/assets/reading-room/image6.png"/>
+                        <p class="p-4">Transforming Food Systems for a Rising India / <span class="italic font-normal">Prabhu Pingali, Anaka Aiyar, Mathew Abraham, Andaleeb Rahman</span>
+                        </p>
+                    </a>
+                    <a class="p-0" href="https://library.oapen.org/handle/20.500.12657/27505">
+                        <img class="rounded-t" src="/assets/reading-room/image1.png"/>
+                        <p class="p-4">Integrating Food into Urban Planning / <span class="italic font-normal">Edited by Yves Cabannes & Cecilia Marocchino</span>
+
+                        </p>
+                    </a>
+                    <a class="p-0" href="https://open.umn.edu/opentextbooks/textbooks/from-growing-to-biology-plants-1e">
+                        <img class="rounded-t" src="/assets/reading-room/image2.png"/>
+                        <p class="p-4">From Growing to Biology: Plants 1e / <span class="italic font-normal">Gokhan Hacisalihoglu</span>
+
+                        </p>
+                    </a>
+                    <a class="p-0" href="https://link.springer.com/book/10.1007/978-981-10-8336-5#toc">
+                        <img class="rounded-t" src="/assets/reading-room/image4.png"/>
+                        <p class="p-4">Agrarian change and urbanization in Southern India - India Studies in Business and Economics / <span class="italic font-normal">Seema Purushothaman and Sheetal Patil</span>
+                        </p>
+                    </a>
+                    <a class="p-0" href="https://iihs.co.in/knowledge-gateway/inclusive-growth-and-the-informal-food-sector-in-bangalore-india/">
+                        <img class="rounded-t" src="/assets/reading-room/image8.png"/>
+                        <p class="p-4">Inclusive growth and the informal food sector in Bangalore, India
+
+                        </p>
+                    </a>
+                    <a class="p-0" href="https://iihs.co.in/knowledge-gateway/the-state-of-household-food-security-in-bangalore-india/">
+                        <img class="rounded-t" src="/assets/reading-room/image7.png"/>
+                        <p class="p-4">The State of Household Food Security in Bangalore, India
+
+                        </p>
+                    </a>
+                    <a class="p-0" href="https://iihs.co.in/knowledge-gateway/the-urban-food-system-of-bangalore-india/">
+                        <img class="rounded-t w-full h-auto" src="/assets/reading-room/image5.png"/>
+                        <p class="p-4">The Urban Food System of Bangalore, India
+
+                        </p>
+                    </a>
+                </div>
+            </section>
+            <section id="section8">
+                <h5>Working Papers</h5>
+                <div>
+                    <a
+                        href="https://www.future-agricultures.org/category/publications/working-papers-document/"
+                        target="_blank"
+                        >Future Agricultures Working Papers
+                    </a>
+                    <a
+                        href="https://www.manage.gov.in/publications/working%20papers/workingpapers.asp"
+                        target="_blank"
+                        >National Institute of Agricultural Extension Management
+                        Working Papers
+                    </a>
+                    <a
+                        href="https://www.iwmi.cgiar.org/publications/iwmi-working-papers/"
+                        target="_blank"
+                        >IWMI Working Papers
+                    </a>
+                </div>
+            </section>
+            <section id="section9">
+                <h5>Journal Articles</h5>
+                <div>
+                    <a
+                        href="https://ecoinsee.org/journal/ojs/index.php/ees/article/view/414"
+                        target="_blank"
+                        >When the “Field” Moves Online:
+                        Reflections on Virtual Data Collection during COVID-19.
+                        
+                    </a>
+                    <a
+                        href="https://dx.doi.org/10.2139/ssrn.4061025"
+                        target="_blank"
+                        >Future Impacts of Urban and Peri-Urban
+                        Agriculture on Carbon Stock and Land Surface</a
+                    >
+                    <a
+                        href="https://doi.org/10.1016/j.scs.2022.104063"
+                        target="_blank"
+                        >Cultivating sustainable
+                        and healthy cities: A Systematic Literature Review of
+                        the Outcomes of Urban and Peri-urban Agriculture.
+                        Sustainable Cities and Society.</a
+                    >
+                </div>
+            </section>
+            <section id="section10">
+                <h5>Journals</h5>
+                <div>
+                    <a
+                        href="https://acsess.onlinelibrary.wiley.com/journal/25751220"
+                        target="_blank"
+                        >Urban Agriculture & Regional Food Systems
+                    </a>
+                    <a
+                        href="https://openagriculturejournal.com/index.php"
+                        target="_blank"
+                        >The Open Agriculture Journal
+                    </a>
+                    <a
+                        href="http://epubs.icar.org.in/ejournal/index.php/IJAgS/index"
+                        target="_blank"
+                        >The Indian Journal of Agricultural Sciences
+                    </a>
+                    <a
+                        href="https://www.frontiersin.org/journals/sustainable-food-systems"
+                        target="_blank"
+                        >Frontiers in Sustainable Food Systems
+                    </a>
+                    <a
+                        href="https://www.mdpi.com/journal/sustainability"
+                        target="_blank"
+                        >Sustainability
+                    </a>
+                    <a href="https://www.nature.com/natsustain/" target="_blank"
+                        >Nature Sustainability
+                    </a>
+                    <a
+                        href="https://journals.sagepub.com/home/eau"
+                        target="_blank"
+                        >Environment & Urbanization
+                    </a>
+                    <a href="https://www.ecologyandsociety.org/" target="_blank"
+                        >Ecology and Society
+                    </a>
+                    <a
+                        href="https://www.journals.elsevier.com/world-development"
+                        target="_blank"
+                        >World Development
+                    </a>
+                    <a
+                        href="https://www.journals.elsevier.com/food-policy"
+                        target="_blank"
+                        >Food Policy
+                    </a>
+                </div>
+            </section>
+            <section id="section11">
+                <h5>More Books</h5>
+                <div>
+                    <a
+                        href="https://catalogue.iihs.co.in/cgi-bin/koha/opac-detail.pl?biblionumber=14702"
+                        target="_blank"
+                        >Grow a garden : sowing, growing and harvesting tips /
+                        <span class="italic font-normal">Manorama Joshi & Sunita Rao</span>
+                    </a>
+                    <a
+                        href="https://catalogue.iihs.co.in/cgi-bin/koha/opac-detail.pl?biblionumber=6292"
+                        target="_blank"
+                        >My Pumpkin roof : how to grow your own urban food
+                        garden / <span class="italic font-normal">Malvika Pathak</span>
+                    </a>
+                    <a
+                        href="https://catalogue.iihs.co.in/cgi-bin/koha/opac-detail.pl?biblionumber=3576"
+                        target="_blank"
+                        >Urban sanctuaries : peaceful havens for the city
+                        gardener / <span class="italic font-normal">Stephen Anderton</span>
+                    </a>
+                    <a
+                        href="https://catalogue.iihs.co.in/cgi-bin/koha/opac-detail.pl?biblionumber=12888"
+                        target="_blank"
+                        >Urban forests, trees, and greenspace : a political
+                        ecology perspective / <span class="italic font-normal">L. Anders Sandberg, Adrina
+                        Bardekjian, and Sadia Butt</span>
+                    </a>
+                    <a
+                        href="https://catalogue.iihs.co.in/cgi-bin/koha/opac-detail.pl?biblionumber=8305"
+                        target="_blank"
+                        >Green infrastructure : incorporating plants and
+                        enhancing biodiversity in buildings and urban
+                        environments / <span class="italic font-normal">John W. Dover</span>
+                    </a>
+                    <a
+                        href="https://catalogue.iihs.co.in/cgi-bin/koha/opac-detail.pl?biblionumber=16331"
+                        target="_blank"
+                        >A historical dictionary of Indian food / <span class="italic font-normal">Achaya, K. T</span>
+                    </a>
+                    <a
+                        href="https://catalogue.iihs.co.in/cgi-bin/koha/opac-detail.pl?biblionumber=13205&query_desc=Garden%20plants"
+                        target="_blank"
+                        >Garden plants : flowers & trees in India / <span class="italic font-normal">Premananda
+                        Das, Rupinder & Reeta Khullar</span>
+                    </a>
+                    <a
+                        href="https://catalogue.iihs.co.in/cgi-bin/koha/opac-detail.pl?biblionumber=3064&query_desc=Flowering%20trees%20of%20Bangalore%20"
+                        target="_blank"
+                        >Flowering trees of Bangalore / <span class="italic font-normal">S. Karthikeyan</span>
+                    </a>
+                    <a
+                        href="https://catalogue.iihs.co.in/cgi-bin/koha/opac-detail.pl?biblionumber=11018"
+                        target="_blank"
+                        >Feasts and fasts : a history of food in India / <span class="italic font-normal">Colleen
+                        Taylor Sen</span>
+                    </a>
+                    <a
+                        href="https://catalogue.iihs.co.in/cgi-bin/koha/opac-detail.pl?biblionumber=9683"
+                        target="_blank"
+                        >First food : culture of taste / <span class="italic font-normal">Edited by Sunita Narain</span>
+                    </a>
+                    <a
+                        href="https://catalogue.iihs.co.in/cgi-bin/koha/opac-detail.pl?biblionumber=2540"
+                        target="_blank"
+                        >First food : a taste of India's biodiversity /
+                        <span class="italic font-normal">editorial direction Sunita Narain</span>
+                    </a>
+                </div>
+            </section>
+        </div>
+    </Centered>
+</BaseLayout>
+<style>
+    section {
+        @apply my-6 scroll-my-52;
+    }
+    section h5 {
+        @apply font-bold mb-2 text-green;
+    }
+    section > div {
+        @apply grid grid-cols-1 lg:grid-cols-2 gap-4;
+    }
+    section > div a {
+        @apply font-semibold text-eggshell rounded p-6 bg-green-dark;
+    }
+</style>

@@ -1,0 +1,41 @@
+---
+const logos = [
+    { src: 'UEA.png', url: 'https://www.uea.ac.uk/about/school-of-international-development' },
+    { src: 'IIHS.png', url: 'https://iihs.co.in/' },
+    { src: 'IIT-M.png', url: 'https://www.iitm.ac.in/' },
+    { src: 'AU.png', url: 'https://www.aru.ac.tz/' },
+    { src: 'TOUT.png', url: 'https://www.out.ac.tz/' },
+    { src: 'Taha.png', url: 'http://www.taha.or.tz/' },
+    { src: 'APU.png', url: 'https://azimpremjiuniversity.edu.in/' },
+]
+---
+
+<footer class="border-t border-green mt-16 -mb-24 pt-8">
+    <h2 class="font-open text-green text-2xl">Partners</h2>
+
+    <div class="grid grid-cols-3 lg:flex justify-between gap-4 flex-wrap lg:flex-nowrap">
+
+        <a rel="prefetch" href={logos[0].url}>
+            <img src={"/assets/about/Partner logos/"+logos[0].src} alt={logos[0].src}  />
+        </a>
+        <a rel="prefetch"  href={logos[1].url}>
+            <img src={"/assets/about/Partner logos/"+logos[1].src} alt={logos[1].src} />
+        </a>
+        <a rel="prefetch"  href={logos[2].url}>
+            <img src={"/assets/about/Partner logos/"+logos[2].src} alt={logos[2].src}  />
+        </a>
+        <a rel="prefetch"  href={logos[3].url}>
+            <img src={"/assets/about/Partner logos/"+logos[3].src} alt={logos[3].src} />
+        </a>
+        <a rel="prefetch"  href={logos[4].url}>
+            <img src={"/assets/about/Partner logos/"+logos[4].src} alt={logos[4].src}  />
+        </a>
+        <a rel="prefetch"  href={logos[5].url}>
+            <img src={"/assets/about/Partner logos/"+logos[5].src} alt={logos[5].src}  />
+        </a>
+        <a rel="prefetch"  href={logos[6].url}>
+            <img src={"/assets/about/Partner logos/"+logos[6].src} alt={logos[6].src}  />
+        </a>
+
+    </div>
+</footer>

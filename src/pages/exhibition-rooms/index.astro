@@ -1,0 +1,97 @@
+---
+import { BaseLayout, Centered } from "@layouts/index.js";
+import Breadcrumbs from "@components/Nav/Breadcrumbs.astro";
+import Title from "@components/Title.astro";
+import Flipcard from "@components/Cards/Flipcard.astro";
+
+const title = "Exhibition Rooms";
+---
+
+<BaseLayout title={title}>
+    <Breadcrumbs title={title} />
+        <Centered>
+        <Title title={title} />
+        <div class="my-12 columns-none flex flex-col lg:block lg:columns-2 gap-4">
+            
+            <Flipcard title="Greener Cities" src="/assets/exhibition-rooms/greener_cities.jpg">
+                Urban and peri-urban agriculture (UPA) has many links to
+                improving the local environment and meeting sustainability
+                goals. For example, citizens recycle waste by composting kitchen
+                waste, reuse greywater from their homes for watering, and reuse
+                waste by using old containers and discarded paint cans as pots.
+                Gardens are rich with a variety of flowers, fruits, vegetables,
+                leaf matter, and soil that attract an array of insects, birds,
+                and small animals, providing a haven for biodiversity. Rooftop
+                and backyard gardens also cool down homes: residents report
+                lower indoor temperatures directly under their gardens and this
+                improves liveability, especially during the hot summer months.
+            </Flipcard>
+            <Flipcard title="Healthier, Happier Citizens" src="/assets/exhibition-rooms/citiziens.jpg">
+                Urban agriculture contributes to several benefits like better
+                physical health, improved mental wellbeing, closer communities;
+                all of which improve quality of life. For some, their gardens
+                were a means to bond with family and spend time with their loved
+                ones. For others, it was a space where they could learn more
+                about nature, plants, and insects, and value the process of food
+                growing. Gardening also serves as a respite from chaotic city
+                routines and a way to connect with like-minded individuals and
+                enable lifelong friendships.
+            </Flipcard>
+            <Flipcard title="Men and Women Nurturing Edible Cities" src="/assets/exhibition-rooms/ediblecities.jpg">
+                Women have largely been at the forefront of urban agriculture,
+                from maintaining gardens, growing fresh herbs, vegetables and
+                microgreens or ensuring a nutritional diet for the family. For
+                some, gardening is a passion and hobby, while for others
+                gardening armed them with an identity where they ventured beyond
+                their households to set up urban farming enterprises. Though
+                women outnumber men in urban farming, a significant proportion
+                of men are involved as well which offer both men and women to
+                carve new possibilities of growing food in the city.
+            </Flipcard>
+            <Flipcard title="Space" src="/assets/exhibition-rooms/space.jpg">
+                Availability and accessibility to cultivable land continues to
+                be a pressing challenge in urbanising areas. Despite this,
+                citizens adapt to growing on balconies, terraces, rooftops, and
+                empty plots. Citizens in informal settlements also engage in
+                food growing, livestock and poultry rearing, often within the
+                limited space available, from narrow lanes, footpaths or parapet
+                walls to old containers.
+            </Flipcard>
+            <Flipcard title="Labour and Incomes" src="/assets/exhibition-rooms/labour.jpg">
+                Diverse forms of urban and peri-urban agriculture have led to
+                multiple models of income generating activities for city
+                dwellers, most prominently for the urban poor. In Tanzania,
+                urban and peri-urban agriculture is a key livelihood for several
+                people and includes food growing and livestock rearing. Having a
+                dynamic supply chain, urban and peri-urban agriculture offers
+                livelihood and employment opportunities across seed shops,
+                farmers, transporters, wholesalers, retail sellers and
+                consumers. Whereas in India, UPA has captured the growing
+                service sector economy. Across the megacities of India - Pune,
+                Bengaluru and Chennai - social enterprises are offering mali or
+                gardening services to city-dwellers. These malis tend to be
+                migrants from rural areas who already possess farming skills. To
+                cater to the growing demand of fresh food in cities, several
+                firms have also ventured into aquaponics, hydroponics and other
+                tech-driven models, which offer various operation and
+                maintenance jobs for technically-skilled youngsters in the city.
+                Finally, several cooperatives and community farms in and around
+                the city are providing fresh fruits, vegetables and dairy
+                products to urban consumers, employing people throughout the
+                supply chain.
+            </Flipcard>
+            <Flipcard title="Food and Nutritional Diets" src="/assets/exhibition-rooms/food.jpg">
+                Urban farmers grow ornamentals, microgreens, herbs, vegetables,
+                and fruits. Many of them meet their daily vegetable needs like
+                tomatoes, chillies, beans, okra, brinjal, and gourds, from their
+                gardens. Since these were organically home-grown, it provides
+                fresh, healthy, and nutritional diets. Growing local and native
+                plants has also led to a revival of forgotten flavours and
+                food-recipes, reviving local food cultures. During the COVID-19
+                pandemic and related lockdowns, these food gardens became major
+                sources of fresh herbs, fruits and vegetables for many
+                households, including the urban poor.
+            </Flipcard>
+        </div>
+        </Centered>
+</BaseLayout>

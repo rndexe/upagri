@@ -1,0 +1,135 @@
+---
+import { BaseLayout, Centered } from "@layouts/index";
+import Breadcrumbs from "@components/Nav/Breadcrumbs.astro";
+import Title from "@components/Title.astro";
+import Card from "@components/Cards/Card.astro";
+
+const title = "Showcasing Urban and Peri-urban Agriculture";
+---
+
+<BaseLayout title={title}>
+    <Breadcrumbs title={title} />
+    <Centered>
+        <Title
+            title={title + ":"}
+            subtitle="Insights from the field"
+        />
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 my-8">
+            <div class="flex items-center">
+                <p>
+                    Urban agriculture and peri-urban agriculture are two
+                    different terms, but often used in combination as urban and
+                    peri-urban agriculture (UPA). UPA refers to farming
+                    practices in geographies around human settlements. While
+                    urban agriculture comprises farming areas within the bounds
+                    of a city, peri-urban agriculture includes farming in places
+                    on the fringes of urban areas. Urban agriculture is also
+                    called intra-urban agriculture and popularly termed as urban
+                    farming or urban gardening. When used in combination, it
+                    refers to crop cultivation, animal husbandry, fisheries, and
+                    forestry on small plots of land in and around urban centers.
+                </p>
+                <!--<button
+                    id="button"
+                    class="flex gap-2 items-center w-fit rounded text-sm px-4 py-1 border border-green text-green bg-eggshell group hover:bg-green-dark hover:text-eggshell transition-colors ease-in-out"
+                    >Read More
+                    <svg
+                        width="26"
+                        height="8"
+                        viewBox="0 0 26 8"
+                        fill="none"
+                        class="group-hover:translate-x-2 transition-transform ease-in-out duration-500"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            d="M1 3.5C0.723858 3.5 0.5 3.72386 0.5 4C0.5 4.27614 0.723858 4.5 1 4.5V3.5ZM25.3536 4.35355C25.5488 4.15829 25.5488 3.84171 25.3536 3.64645L22.1716 0.464466C21.9763 0.269204 21.6597 0.269204 21.4645 0.464466C21.2692 0.659728 21.2692 0.976311 21.4645 1.17157L24.2929 4L21.4645 6.82843C21.2692 7.02369 21.2692 7.34027 21.4645 7.53553C21.6597 7.7308 21.9763 7.7308 22.1716 7.53553L25.3536 4.35355ZM1 4.5H25V3.5H1V4.5Z"
+                            class="fill-green group-hover:fill-eggshell"></path>
+                    </svg>
+                </button>-->
+            </div>
+            <Card
+                link="/showcasing-upa/fieldwork-archives-from-bangalore-and-pune"
+                image="/assets/showcasing-upa/1.jpg"
+                text="Garden City’s Farming Habits: Fieldwork Archives from Bengaluru and Pune"
+                ratio="aspect-[3/2]"
+            />
+            <Card
+                link="/showcasing-upa/gardening-per-square-foot"
+                image="/assets/showcasing-upa/2.jpg"
+                text="Gardening per Square Foot: A Field Tour of Gardens in Bengaluru Slums"
+                ratio="aspect-[3/2]"
+            />
+            <Card
+                link="/showcasing-upa/personal-insights-from-dar-es-salaam-and-morogoro"
+                image="/assets/showcasing-upa/3.jpg"
+                text="Personal Insights from Dar es Salaam and Morogoro, Tanzania"
+                ratio="aspect-[3/2]"
+            />
+        </div>
+    </Centered>
+    <div
+        id="modal"
+        class="hidden shadow rounded absolute left-1/2 top-1/2 lg:-translate-y-1/2 -translate-x-1/2 pt-16 pb-8 px-16 h-fit bg-green-dark text-eggshell overflow-y-auto w-full lg:w-160"
+    >
+        <svg
+            id="close"
+            class="w-6 h-6 absolute right-8 top-8 cursor-pointer"
+            xmlns="http://www.w3.org/2000/svg"
+            x="0px"
+            y="0px"
+            width="50"
+            height="50"
+            viewBox="0 0 50 50"
+            ><path
+                class="fill-eggshell"
+                d="M 7.71875 6.28125 L 6.28125 7.71875 L 23.5625 25 L 6.28125 42.28125 L 7.71875 43.71875 L 25 26.4375 L 42.28125 43.71875 L 43.71875 42.28125 L 26.4375 25 L 43.71875 7.71875 L 42.28125 6.28125 L 25 23.5625 Z"
+            ></path>
+        </svg>
+        <p>
+            Urban agriculture and peri-urban agriculture are two different
+            terms, but often used in combination as urban and peri-urban
+            agriculture (UPA). UPA refers to farming practices in geographies
+            around human settlements. While urban agriculture comprises farming
+            areas within the bounds of a city, peri-urban agriculture includes
+            farming in places on the fringes of urban areas. Urban agriculture
+            is also called intra-urban agriculture and popularly termed as urban
+            farming or urban gardening. When used in combination, it refers to
+            crop cultivation, animal husbandry, fisheries, and forestry on small
+            plots of land in and around urban centers.
+        </p>
+        <p>
+            UPA includes a variety of livelihoods, ranging from subsistence
+            production (small vegetable patches) and food processing and
+            distribution at household levels to more commercialised farming at
+            larger scales. UPA emerges in different locations like balconies,
+            backyards, empty spaces, and terraces, and under varying
+            socio-economic conditions and land tenure systems (owned, borrowed,
+            encroached, collectives, and so on). Even though practiced on a
+            micro scale, diversity is one of the main attributes of UPA as it
+            can be adapted to a wide range of urban situations involving diverse
+            stakeholders. UPA is practiced with many different approaches that
+            include ground-level farming or open farming, rooftop farming,
+            vertical farming, greenhouses, hydroponics, and other technologies.
+            The type of plants grown in UPA largely includes food crops for
+            local consumption, especially perishables, and less of staples.
+            Although practiced mainly for subsistence, UPA is also emerging as
+            an entrepreneurial opportunity in and around urbanising areas.
+        </p>
+        <p>
+            We hope these glimpses, through videos and pictures from our project
+            sites in India and Tanzania, will help you appreciate the diversity
+            of UPA.
+        </p>
+    </div>
+</BaseLayout>
+<!--<script is:inline>
+    const b = document.querySelector("#button");
+    const modal = document.getElementById("modal");
+    const close = document.getElementById("close");
+    b.addEventListener("click", () => {
+        modal.classList.toggle("hidden");
+    });
+    close.addEventListener("click", () => {
+        modal.classList.toggle("hidden");
+    });
+</script>-->

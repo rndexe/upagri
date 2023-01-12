@@ -15,5 +15,6 @@ Steps to generate website:
  
  `src/pages/exhibition-rooms/food-and-nutritional-diets/confidence-and-mindfulness-in-food-and-healthy-quality.astro`
  
+ Keep in mind the names of the pages should be in kebab-case.
  ## Layout
  
